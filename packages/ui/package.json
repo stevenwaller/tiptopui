@@ -14,18 +14,19 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "build": "rm -rf dist && tsup ",
+    "dev": "rm -rf dist && tsup --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "esbuild-plugin-css-module": "^0.0.1",
     "eslint": "^8.56.0",
     "react": "^18.2.0",
-    "@repo/typescript-config": "workspace:*",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
