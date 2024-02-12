@@ -1,18 +1,17 @@
-import cssModule from "./avatar.module.css";
+import classNames from 'classnames'
 
-export interface AvatarProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+import './avatar.css'
+
+export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode
 }
 
-// console.log("cssModule", cssModule);
-
-export function Avatar({ children, ...other }: AvatarProps): JSX.Element {
+export function Avatar({ className, children, ...restProps }: AvatarProps): JSX.Element {
   return (
-    <button type="button" {...other} className={cssModule.avatar}>
+    <button type='button' className={classNames('tiptopui-Avatar', className)} {...restProps}>
       {children}
     </button>
-  );
+  )
 }
 
-Avatar.displayName = "Avatar";
+Avatar.displayName = 'Avatar'

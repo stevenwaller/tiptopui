@@ -1,37 +1,37 @@
-.spinner,
-.spinner > div {
+.tiptopui-Spinner,
+.tiptopui-Spinner > div {
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.spinner {
+.tiptopui-Spinner {
   display: block;
   font-size: 0;
 }
 
-.spinner--light {
+.tiptopui-Spinner--light {
   color: #fff;
 }
 
-.spinner--dark {
+.tiptopui-Spinner--dark {
   color: #333;
 }
 
-.spinner > div {
+.tiptopui-Spinner > div {
   display: inline-block;
   float: none;
   background-color: currentColor;
   border: 0 solid currentColor;
 }
 
-.spinner {
+.tiptopui-Spinner {
   width: 32px;
   height: 32px;
 }
 
-.spinner > div {
+.tiptopui-Spinner > div {
   width: 32px;
   height: 32px;
   background: transparent;
@@ -44,34 +44,34 @@
   animation: spinner-rotate 0.75s linear infinite;
 }
 
-.spinner--small {
+.tiptopui-Spinner--small {
   width: 16px;
   height: 16px;
 }
 
-.spinner--small > div {
+.tiptopui-Spinner--small > div {
   width: 16px;
   height: 16px;
   border-width: 1px;
 }
 
-.spinner--large {
+.tiptopui-Spinner--large {
   width: 64px;
   height: 64px;
 }
 
-.spinner--large > div {
+.tiptopui-Spinner--large > div {
   width: 64px;
   height: 64px;
   border-width: 4px;
 }
 
-.spinner--extra-large {
+.tiptopui-Spinner--extra-large {
   width: 96px;
   height: 96px;
 }
 
-.spinner--extra-large > div {
+.tiptopui-Spinner--extra-large > div {
   width: 96px;
   height: 96px;
   border-width: 6px;
