@@ -9,7 +9,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export function Button({ className, children, ...restProps }: ButtonProps): JSX.Element {
   return (
     <button type='button' className={classNames('tiptopui-Button', className)} {...restProps}>
-      {children}
+      Before {children} After
     </button>
   )
 }

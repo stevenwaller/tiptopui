@@ -3,13 +3,18 @@ import classNames from 'classnames'
 
 import './spinner.css'
 
-interface IProps {
+export interface SpinnerProps {
   className?: string
   color?: 'light' | 'dark'
   size?: 'small' | 'medium' | 'large' | 'extra-large'
 }
 
-const Spinner = ({ className, color = 'dark', size = 'medium', ...restProps }: IProps) => {
+export const Spinner = ({
+  className,
+  color = 'dark',
+  size = 'medium',
+  ...restProps
+}: SpinnerProps) => {
   return (
     <div
       className={classNames(
@@ -24,5 +29,3 @@ const Spinner = ({ className, color = 'dark', size = 'medium', ...restProps }: I
     </div>
   )
 }
-
-export default Spinner
