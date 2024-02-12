@@ -3,6 +3,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "docs": "turbo run docs",
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
