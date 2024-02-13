@@ -1,11 +1,16 @@
 {
-  "name": "@tiptop/ui",
+  "name": "@tiptopui/components",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
+  "homepage": "https://tiptopui.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenwaller/tiptopui.git"
+  },
   "author": {
     "name": "Steven Waller",
     "url": "https://stevenwaller.io"

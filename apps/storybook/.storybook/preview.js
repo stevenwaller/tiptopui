@@ -1,7 +1,7 @@
-import "@tiptop/ui/dist/index.css";
+import '@tiptopui/components/dist/index.css'
 
 const preview = {
   parameters: {},
-};
+}
 
-export default preview;
+export default preview
