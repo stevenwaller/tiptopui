@@ -57,6 +57,12 @@ importers:
       '@docusaurus/types':
         specifier: 3.1.1
         version: 3.1.1(react-dom@18.2.0)(react@18.2.0)
+      docusaurus-plugin-react-docgen-typescript:
+        specifier: ^1.1.0
+        version: 1.1.0(react-docgen-typescript@2.2.2)(react@18.2.0)
+      react-docgen-typescript:
+        specifier: ^2.2.2
+        version: 2.2.2(typescript@5.2.2)
       typescript:
         specifier: ~5.2.2
         version: 5.2.2
@@ -7361,6 +7367,17 @@ packages:
       esutils: 2.0.3
     dev: true
 
+  /docusaurus-plugin-react-docgen-typescript@1.1.0(react-docgen-typescript@2.2.2)(react@18.2.0):
+    resolution: {integrity: sha512-vdGSiTeqR3ww/83TjfQUMhjzKnk+L9Af1jtirrnMmjmSwX4o6WEL99goXSxhucW0qtOmF30+nEnmsjGsZIhbkw==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-docgen-typescript: ^2.0.0
+    dependencies:
+      glob: 8.1.0
+      react: 18.2.0
+      react-docgen-typescript: 2.2.2(typescript@5.2.2)
+    dev: true
+
   /dom-converter@0.2.0:
     resolution: {integrity: sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==}
     dependencies:
@@ -8699,6 +8716,17 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+
+  /glob@8.1.0:
+    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.1.6
+      once: 1.4.0
+    dev: true
 
   /global-dirs@3.0.1:
     resolution: {integrity: sha512-NBcGGFbBA9s1VzD41QXDG+3++t9Mn5t1FpLdhESY6oKY4gYTFpX4wO3sqGUa0Srjtbfj3szX0RnemmrVRUdULA==}
@@ -12262,6 +12290,14 @@ packages:
       - supports-color
       - vue-template-compiler
     dev: false
+
+  /react-docgen-typescript@2.2.2(typescript@5.2.2):
+    resolution: {integrity: sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==}
+    peerDependencies:
+      typescript: '>= 4.3.x'
+    dependencies:
+      typescript: 5.2.2
+    dev: true
 
   /react-docgen-typescript@2.2.2(typescript@5.3.3):
     resolution: {integrity: sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==}

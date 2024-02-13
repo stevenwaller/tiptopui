@@ -4,6 +4,7 @@ import './button.css'
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
+  foo?: 'bar' | 'baz'
 }
 
 export function Button({ className, children, ...restProps }: ButtonProps): JSX.Element {
