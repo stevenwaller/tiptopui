@@ -42,7 +42,7 @@ const config: Config = {
         theme: {
           customCss: [
             "./src/css/custom.css",
-            "../../packages/ui/dist/index.css",
+            "../../packages/components/dist/index.css",
           ],
         },
       } satisfies Preset.Options,
@@ -102,7 +102,7 @@ const config: Config = {
       /** @type {import('docusaurus-plugin-react-docgen-typescript').Options} */
       {
         // pass in a single string or an array of strings
-        src: ["../../packages/ui/src/**/*.tsx"],
+        src: ["../../packages/components/src/**/*.tsx"],
         parserOptions: {
           // pass parserOptions to react-docgen-typescript
           // here is a good starting point which filters out all
