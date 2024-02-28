@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
+import { Button } from "@tiptopui/components";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
@@ -17,11 +18,18 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
+          <Button>Test</Button>
           <Link
             className="button button--secondary button--lg"
             to="/docs/GetStarted/installation"
           >
-            Docusaurus Tutorial - 5min ⏱️
+            Get Started
+          </Link>
+          <Link
+            className="button button--primary button--lg"
+            to="/docs/Components/Inputs/Button"
+          >
+            Components
           </Link>
         </div>
       </div>

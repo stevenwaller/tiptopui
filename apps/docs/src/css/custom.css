@@ -28,3 +28,23 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.theme-doc-sidebar-planned {
+  pointer-events: none;
+
+  :hover {
+    background: none;
+  }
+}
+
+.theme-doc-sidebar-planned .menu__link::after {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 2px 0 0 8px;
+  content: 'Planned';
+  background-color: #9c9c9c;
+  border-radius: 99px;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #fff;
+}

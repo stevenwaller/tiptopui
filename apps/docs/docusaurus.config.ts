@@ -85,7 +85,7 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} Tip Top UI, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Tip Top UI, Inc.<br/>Made with ♥ by <a href="http://stevenwaller.io" target="_blank">Steven Waller</a>.`,
     },
     liveCodeBlock: {
       playgroundPosition: "top",
