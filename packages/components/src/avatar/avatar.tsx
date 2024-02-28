@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import cx from 'clsx'
 
 import './avatar.css'
 
@@ -8,7 +8,7 @@ export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 export function Avatar({ className, children, ...restProps }: AvatarProps): JSX.Element {
   return (
-    <button type='button' className={classNames('tiptopui-Avatar', className)} {...restProps}>
+    <button type='button' className={cx('tiptopui-Avatar', className)} {...restProps}>
       {children}
     </button>
   )

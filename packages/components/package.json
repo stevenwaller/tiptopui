@@ -50,7 +50,7 @@
     "access": "public"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
+    "clsx": "^2.0.0",
     "react": "^18.2.0"
   }
 }

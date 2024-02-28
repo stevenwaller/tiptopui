@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import cx from 'clsx'
 
 import './spinner.css'
 
@@ -17,7 +17,7 @@ export const Spinner = ({
 }: SpinnerProps) => {
   return (
     <div
-      className={classNames(
+      className={cx(
         'tiptopui-Spinner',
         `tiptopui-Spinner--${size}`,
         `tiptopui-Spinner--${color}`,
