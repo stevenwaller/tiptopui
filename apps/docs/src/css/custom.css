@@ -193,13 +193,13 @@ html {
 }
 
 /* Side Bar -------------------------------------- */
-.theme-doc-sidebar-planned {
+/* .theme-doc-sidebar-planned {
   pointer-events: none;
 
   :hover {
     background: none;
   }
-}
+} */
 
 .theme-doc-sidebar-planned .menu__link::after {
   display: inline-block;
