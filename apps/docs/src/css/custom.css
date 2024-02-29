@@ -6,7 +6,15 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
+  --tiptop-color-dark: #00293F;
+  --tiptop-color-dark-hover: #1b5879;
+  --tiptop-color-link-dark: #69caff;
+  --tiptop-color-light: #fdfdf7;
+  --tiptop-color-light-hover: var(--ifm-hover-overlay);
+  --tiptop-color-planned-desktop: rgba(0, 0, 0, 0.5);
+  --tiptop-color-planned-mobile: rgba(255, 255, 255, 0.5);
+
+  --ifm-color-primary: #0B71A8;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -14,21 +22,176 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Mobile menu / side bar */
+  --ifm-menu-color: var(--tiptop-color-light);
+  --ifm-menu-color-background-active: var(--tiptop-color-dark-hover);
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(255,255,255,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+
+  /* Header, Nav */
+  --ifm-navbar-link-color: var(--tiptop-color-link-dark);
+  --ifm-navbar-link-hover-color: var(--tiptop-color-light);
+  --ifm-navbar-background-color: var(--tiptop-color-dark);
+  --ifm-navbar-padding-horizontal: 1.25rem;
+
+  --tiptop-github-img: url('/static/img/github-link.svg');
+  --tiptop-github-img-hover: url('/static/img/github-hover.svg');
+  --tiptop-twitter-img: url('/static/img/twitter-link.svg');
+  --tiptop-twitter-img-hover: url('/static/img/twitter-hover.svg');
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+  --tiptop-color-dark: #f5f5ef;
+  --tiptop-color-dark-hover: #d5d5c2;
+  --tiptop-color-link-dark: #0a71a9;
+  --tiptop-color-light: #00293F;
+  --tiptop-color-light-hover: #1b5879;
+
+  --ifm-color-primary: #69caff;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+  --tiptop-color-planned-desktop: rgba(255, 255, 255, 0.5);
+  --tiptop-color-planned-mobile: rgba(0, 0, 0, 0.5);
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --tiptop-github-img: url('/static/img/github-dark-link.svg');
+  --tiptop-github-img-hover: url('/static/img/github-dark-hover.svg');
+  --tiptop-twitter-img: url('/static/img/twitter-dark-link.svg');
+  --tiptop-twitter-img-hover: url('/static/img/twitter-dark-hover.svg');
 }
 
+body {
+  background-color: var(--tiptop-color-light);
+}
+
+/* Header, Nav -------------------------------------- */
+@media (max-width: 996px) {
+  .navbar__items {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .navbar__brand {
+    margin-right: 1.3rem;
+  }
+}
+
+.navbar {
+  box-shadow: none;
+}
+
+/* Title */
+.navbar__brand {
+  margin-right: 1.4rem;
+}
+
+.navbar__logo {
+  margin-right: 0.7rem;
+  height: 1.5rem;
+}
+
+.navbar__title {
+  font-family: SchotisTextBlack;
+  color: var(--tiptop-color-light);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* Left links */
+.navbar__items:not(.navbar__items--right) {
+  .navbar__link {
+    position: relative;
+
+    &::after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      bottom: -13px;
+      left: var(--ifm-navbar-item-padding-horizontal);
+      right: var(--ifm-navbar-item-padding-horizontal);
+      height: 4px;
+      background-color: var(--tiptop-color-light);
+      transition: opacity var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+    }
+  }
+
+  .navbar__link:hover {
+    color: var(--tiptop-color-link-dark);
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  .navbar__link--active {
+    color: var(--tiptop-color-link-dark);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+/* Right links */
+.navbar__items--right {
+  .social-link {
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 1.375rem;
+    height: 1.375rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    svg {
+      display: none;
+    }
+  }
+
+  .github-link {
+    background-image: var(--tiptop-github-img);
+    margin-right: 1.4rem;
+  }
+
+  .github-link:hover {
+    background-image: var(--tiptop-github-img-hover);
+  }
+
+  .twitter-link {
+    background-image: var(--tiptop-twitter-img);
+    margin-right: 1rem;
+  }
+
+  .twitter-link:hover {
+    background-image: var(--tiptop-twitter-img-hover);
+  }
+}
+
+/* Color mode toggle */
+.navbar__toggle {
+  margin-right: 0;
+}
+
+.clean-btn {
+  color: var(--tiptop-color-light);
+}
+
+.clean-btn[class*="toggleButton"] {
+  color: var(--tiptop-color-link-dark);
+
+  &:hover {
+    background: none;
+    color: var(--tiptop-color-light);
+  }
+}
+
+/* Side Bar -------------------------------------- */
 .theme-doc-sidebar-planned {
   pointer-events: none;
 
@@ -42,9 +205,64 @@
   padding: 2px 6px;
   margin: 2px 0 0 8px;
   content: 'Planned';
-  background-color: #9c9c9c;
+  background-color: var(--tiptop-color-planned-desktop);
   border-radius: 99px;
   font-size: 9px;
   text-transform: uppercase;
   color: #fff;
+}
+
+/* Desktop side bar */
+.theme-doc-sidebar-container {
+  --ifm-menu-color: var(--tiptop-color-dark);
+  --ifm-menu-color-background-active: var(--tiptop-color-light-hover);
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+
+  .menu {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Mobile side bar */
+.navbar-sidebar {
+  --ifm-menu-color: var(--tiptop-color-link-dark);
+  --ifm-menu-color-active: var(--tiptop-color-light);
+  --ifm-menu-color-background-hover: rgba(255, 255, 255, 0.05);
+  --ifm-menu-color-background-active: rgba(255, 255, 255, 0.05);
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(255,255,255,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+
+  .theme-doc-sidebar-planned .menu__link::after {
+    color: var(--tiptop-color-dark);
+    background-color: var(--tiptop-color-planned-mobile);
+  }
+}
+
+/* Table of Contents --------------------------- */
+/* Desktop */
+.table-of-contents {
+  .table-of-contents__link {
+    color: var(--ifm-color-primary);
+
+    &:hover {
+      color: var(--tiptop-color-dark);
+    }
+  }
+}
+
+/* Mobile */
+[class*="tocCollapsible_"] .table-of-contents {
+  .table-of-contents__link {
+    color: var(--tiptop-color-link-dark);
+
+    &:hover {
+      color: var(--tiptop-color-light);
+    }
+  }
+}
+
+/* Footer -------------------------------------- */
+.footer {
+  --ifm-footer-background-color: var(--tiptop-color-dark);
+  --ifm-footer-color: var(--tiptop-color-light);
+  --ifm-link-color: var(--tiptop-color-link-dark);
 }

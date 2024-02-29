@@ -4,7 +4,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Tip Top UI",
-  tagline: "A React component library",
+  tagline:
+    "A highly customizable React component library with minimal dependencies",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -42,6 +43,7 @@ const config: Config = {
         theme: {
           customCss: [
             "./src/css/custom.css",
+            "./src/css/web-fonts.css",
             "../../packages/components/dist/index.css",
           ],
         },
@@ -56,7 +58,8 @@ const config: Config = {
       title: "Tip Top UI",
       logo: {
         alt: "My Site Logo",
-        src: "img/TipTopUI.png",
+        src: "img/TipTopUI-white.svg",
+        srcDark: "img/TipTopUI.svg",
       },
       items: [
         {
@@ -75,16 +78,17 @@ const config: Config = {
           href: "https://github.com/stevenwaller/tiptopui",
           label: "GitHub",
           position: "right",
+          className: "social-link github-link",
         },
         {
           href: "https://twitter.com/tiptopui",
           label: "Twitter",
           position: "right",
+          className: "social-link twitter-link",
         },
       ],
     },
     footer: {
-      style: "dark",
       copyright: `Copyright © ${new Date().getFullYear()} Tip Top UI, Inc.<br/>Made with ♥ by <a href="http://stevenwaller.io" target="_blank">Steven Waller</a>.`,
     },
     liveCodeBlock: {

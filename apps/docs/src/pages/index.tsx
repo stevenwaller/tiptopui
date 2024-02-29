@@ -3,51 +3,42 @@ import Link from "@docusaurus/Link";
 import { Button } from "@tiptopui/components";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
-import styles from "./index.module.css";
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Button>Test</Button>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/GetStarted/installation"
-          >
-            Get Started
-          </Link>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/Components/Inputs/Button"
-          >
-            Components
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import cssModule from "./index.module.css";
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`Tip Top UI`}
+      description="A highly customizable React component library with minimal dependencies."
     >
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <header className={cssModule.hero}>
+        <div className={cssModule.container}>
+          <h1 className={cssModule.heroTitle}>Tip Top UI</h1>
+          <h2 className={cssModule.heroTagline}>
+            A first-rate React component library
+          </h2>
+          <p className={cssModule.heroSubtext}>
+            Fully customizable with minimal dependencies
+          </p>
+          <div className={cssModule.buttons}>
+            <Link
+              className={clsx(cssModule.button, cssModule.buttonPrimary)}
+              to="/docs/GetStarted/installation"
+            >
+              Get Started
+            </Link>
+            <Link
+              className={clsx(cssModule.button, cssModule.buttonSecondary)}
+              to="/docs/Components/Inputs/Button"
+            >
+              View Components
+            </Link>
+          </div>
+        </div>
+      </header>
+      <main></main>
     </Layout>
   );
 }
