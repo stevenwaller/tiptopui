@@ -41,5 +41,30 @@
 }
 
 .button {
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.5rem;
+  background-color: var(--ifm-color-primary);
+  color: var(--tiptop-color-light);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
 
+  &:hover {
+    color: var(--tiptop-color-light);
+    background-color: var(--tiptop-color-dark);
+    text-decoration: none;
+  }
+}
+
+.buttonSecondary {
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  background: transparent;
+
+  &:hover {
+    color: var(--ifm-color-primary);
+    background: var(--tiptop-color-bg-contrast);
+  }
 }

@@ -15,7 +15,7 @@ export const PropsTable = ({ name }) => {
         <tr>
           <th>Name</th>
           <th>Type</th>
-          <th>Default Value</th>
+          <th>Default</th>
           <th>Required</th>
           <th>Description</th>
         </tr>

@@ -28,6 +28,8 @@
   --ifm-table-stripe-background: var(--tiptop-color-bg-contrast);
   --ifm-code-font-size: 95%;
 
+  --ifm-heading-font-family: SchotisTextBlack;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Mobile menu / side bar */

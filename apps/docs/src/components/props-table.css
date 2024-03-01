@@ -12,6 +12,7 @@
   th {
     background-color: var(--tiptop-color-bg-extra-contrast);
     border: none;
+    text-align: left;
   }
 
   td {
