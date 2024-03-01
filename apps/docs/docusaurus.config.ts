@@ -89,14 +89,26 @@ const config: Config = {
       ],
     },
     footer: {
-      copyright: `Copyright © ${new Date().getFullYear()} Tip Top UI, Inc.<br/>Made with ♥ by <a href="http://stevenwaller.io" target="_blank">Steven Waller</a>.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Tip Top UI.<br/>Made with ♥ by <a href="http://stevenwaller.io" target="_blank">Steven Waller</a>.`,
     },
     liveCodeBlock: {
       playgroundPosition: "top",
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: {
+        plain: {
+          ...prismThemes.jettwaveLight.plain,
+          backgroundColor: "#f0f0ea",
+        },
+        styles: [...prismThemes.jettwaveLight.styles],
+      },
+      darkTheme: {
+        plain: {
+          ...prismThemes.jettwaveDark.plain,
+          backgroundColor: "#193347",
+        },
+        styles: [...prismThemes.jettwaveDark.styles],
+      },
     },
   } satisfies Preset.ThemeConfig,
 

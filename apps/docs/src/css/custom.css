@@ -11,6 +11,9 @@
   --tiptop-color-link-dark: #69caff;
   --tiptop-color-light: #fdfdf7;
   --tiptop-color-light-hover: var(--ifm-hover-overlay);
+  --tiptop-color-bg-contrast: rgba(0, 0, 0, 0.05);
+  --tiptop-color-bg-extra-contrast: rgba(0, 0, 0, 0.1);
+  --tiptop-color-bg-extra-extra-contrast: rgba(0, 0, 0, 0.15);
   --tiptop-color-planned-desktop: rgba(0, 0, 0, 0.5);
   --tiptop-color-planned-mobile: rgba(255, 255, 255, 0.5);
 
@@ -21,6 +24,8 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
+  --ifm-pre-background: rgba(0, 0, 0, 0.05);
+  --ifm-table-stripe-background: var(--tiptop-color-bg-contrast);
   --ifm-code-font-size: 95%;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -40,6 +45,9 @@
   --tiptop-github-img-hover: url('/static/img/github-hover.svg');
   --tiptop-twitter-img: url('/static/img/twitter-link.svg');
   --tiptop-twitter-img-hover: url('/static/img/twitter-hover.svg');
+
+  /* Code blocks */
+  --prism-background-color: red;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -48,7 +56,11 @@
   --tiptop-color-dark-hover: #d5d5c2;
   --tiptop-color-link-dark: #0a71a9;
   --tiptop-color-light: #00293F;
-  --tiptop-color-light-hover: #1b5879;
+  --tiptop-color-bg-contrast: rgba(255, 255, 255, 0.05);
+  --tiptop-color-bg-extra-contrast: rgba(255, 255, 255, 0.1);
+  --tiptop-color-bg-extra-extra-contrast: rgba(255, 255, 255, 0.15);
+  --tiptop-color-planned-desktop: rgba(255, 255, 255, 0.5);
+  --tiptop-color-planned-mobile: rgba(0, 0, 0, 0.5);
 
   --ifm-color-primary: #69caff;
   --ifm-color-primary-dark: #21af90;
@@ -57,8 +69,7 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --tiptop-color-planned-desktop: rgba(255, 255, 255, 0.5);
-  --tiptop-color-planned-mobile: rgba(0, 0, 0, 0.5);
+  --ifm-pre-background: rgba(255, 255, 255, 0.05);
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
@@ -193,14 +204,6 @@ html {
 }
 
 /* Side Bar -------------------------------------- */
-/* .theme-doc-sidebar-planned {
-  pointer-events: none;
-
-  :hover {
-    background: none;
-  }
-} */
-
 .theme-doc-sidebar-planned .menu__link::after {
   display: inline-block;
   padding: 2px 6px;
@@ -220,6 +223,7 @@ html {
   --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
 
   .menu {
+    margin-top: 0.4rem;
     margin-right: 0.5rem;
   }
 }
@@ -260,6 +264,24 @@ html {
     }
   }
 }
+
+/* Code editor --------------------------------- */
+div[class*="playgroundContainer_"] {
+  div[class*="playgroundHeader_"] {
+    color: var(--ifm-color-content);
+    background-color: var(--tiptop-color-bg-extra-contrast);
+
+    &:first-of-type {
+      background-color: var(--tiptop-color-bg-extra-extra-contrast);
+    }
+  }
+
+  div[class*="playgroundEditor_"] .prism-code {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
 
 /* Footer -------------------------------------- */
 .footer {

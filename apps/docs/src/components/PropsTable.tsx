@@ -1,5 +1,7 @@
 import { useDynamicImport } from "docusaurus-plugin-react-docgen-typescript/dist/esm/hooks";
 
+import "./props-table.css";
+
 export const PropsTable = ({ name }) => {
   const props = useDynamicImport(name);
 
@@ -8,7 +10,7 @@ export const PropsTable = ({ name }) => {
   }
 
   return (
-    <table>
+    <table className="props-table">
       <thead>
         <tr>
           <th>Name</th>
@@ -22,15 +24,11 @@ export const PropsTable = ({ name }) => {
         {Object.keys(props).map((key) => {
           return (
             <tr key={key}>
-              <td>
-                <code>{key}</code>
-              </td>
-              <td>
-                <code>{props[key].type?.name}</code>
-              </td>
-              <td>
+              <td className="props-table-key">{key}</td>
+              <td className="props-table-type">{props[key].type?.name}</td>
+              <td className="props-table-value">
                 {props[key].defaultValue && (
-                  <code>{props[key].defaultValue.value}</code>
+                  <span>{props[key].defaultValue.value}</span>
                 )}
               </td>
               <td>{props[key].required ? "Yes" : "No"}</td>

@@ -1,0 +1,31 @@
+.props-table {
+  border: none;
+
+  tr {
+    border: none;
+  }
+
+  thead {
+    background: none;
+  }
+
+  th {
+    background-color: var(--tiptop-color-bg-extra-contrast);
+    border: none;
+  }
+
+  td {
+    border: none;
+  }
+}
+
+.props-table-key,
+.props-table-type,
+.props-table-value {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+}
+
+.props-table-key {
+  font-weight: bold;
+}
