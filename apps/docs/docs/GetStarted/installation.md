@@ -6,16 +6,23 @@ sidebar_position: 1
 
 Tip Top UI is available on [npmjs.org](https://www.npmjs.com/package/@tiptopui/components) and can be installed using a package manager like [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), or [pnpm](https://pnpm.io/)
 
-```sh
-# with npm
-npm install @tiptopui/components
-
-# with yarn
-yarn add @tiptopui/components
-
-# with pnpm
-pnpm add @tiptopui/components
-```
+<Tabs>
+  <TabItem value="npm" label="npm">
+    ```sh
+    npm install @tiptopui/components
+    ```
+  </TabItem>
+  <TabItem value="yarn" label="yarn">
+    ```sh
+    yarn add @tiptopui/components
+    ```
+  </TabItem>
+  <TabItem value="pnpm" label="pnpm">
+    ```sh
+    pnpm add @tiptopui/components
+    ```
+  </TabItem>
+</Tabs>
 
 # Usage
 

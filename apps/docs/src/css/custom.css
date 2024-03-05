@@ -50,6 +50,10 @@
 
   /* Code blocks */
   --prism-background-color: red;
+
+  /* Tabs */
+  --ifm-tabs-color-active: var(--ifm-color-primary);
+  --ifm-tabs-color: var(--ifm-color-primary)
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -123,16 +127,17 @@ html {
 .navbar__items:not(.navbar__items--right) {
   .navbar__link {
     position: relative;
+    font-weight: var(--ifm-font-weight-bold);
 
     &::after {
       opacity: 0;
       content: '';
       position: absolute;
       bottom: -13px;
-      left: var(--ifm-navbar-item-padding-horizontal);
-      right: var(--ifm-navbar-item-padding-horizontal);
+      left: 2px;
+      right: 2px;
       height: 4px;
-      background-color: var(--tiptop-color-light);
+      background-color: var(--tiptop-color-link-dark);
       transition: opacity var(--ifm-transition-fast) var(--ifm-transition-timing-default);
     }
   }
@@ -282,10 +287,28 @@ div[class*="playgroundContainer_"] {
   }
 }
 
+/* Tabs -------------------------------------- */
+.markdown .tabs {
+  .tabs__item {
+    margin-top: 0;
+    margin-right: 4px;
+
+    &:hover {
+      background: none;
+      border-bottom-color: var(--ifm-tabs-color-active-border);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      color: var(--ifm-tabs-color-active);
+    }
+  }
+}
+
 
 /* Footer -------------------------------------- */
 .footer {
   --ifm-footer-background-color: var(--tiptop-color-dark);
   --ifm-footer-color: var(--tiptop-color-light);
   --ifm-link-color: var(--tiptop-color-link-dark);
+  --ifm-link-hover-color: var(--tiptop-color-light);
+  --ifm-link-hover-decoration: none;
 }
