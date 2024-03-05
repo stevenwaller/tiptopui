@@ -2,6 +2,17 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+function customPostCssPlugin() {
+  return {
+    name: "custom-postcss",
+    configurePostCss(options) {
+      // Append new PostCSS plugins here.
+      options.plugins.push(require("postcss-preset-env")); // allow newest CSS syntax
+      return options;
+    },
+  };
+}
+
 const config: Config = {
   title: "Tip Top UI",
   tagline:
@@ -133,6 +144,7 @@ const config: Config = {
         },
       },
     ],
+    customPostCssPlugin,
   ],
 };
 
