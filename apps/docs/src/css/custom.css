@@ -53,7 +53,9 @@
 
   /* Tabs */
   --ifm-tabs-color-active: var(--ifm-color-primary);
-  --ifm-tabs-color: var(--ifm-color-primary)
+  --ifm-tabs-color: var(--ifm-color-primary);
+  --ifm-tabs-padding-vertical: var(--ifm-navbar-item-padding-vertical);
+  --ifm-tabs-padding-horizontal: var(--ifm-navbar-item-padding-horizontal);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
