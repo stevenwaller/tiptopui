@@ -154,37 +154,35 @@ html {
 }
 
 /* Right links */
-.navbar__items--right {
-  .social-link {
-    text-indent: -9999px;
-    overflow: hidden;
-    width: 1.375rem;
-    height: 1.375rem;
-    background-repeat: no-repeat;
-    background-size: contain;
+.social-link {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 1.375rem;
+  height: 1.375rem;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    svg {
-      display: none;
-    }
+  svg {
+    display: none;
   }
+}
 
-  .github-link {
-    background-image: var(--tiptop-github-img);
-    margin-right: 1.4rem;
-  }
+.github-link {
+  background-image: var(--tiptop-github-img);
+  margin-right: 1.4rem;
+}
 
-  .github-link:hover {
-    background-image: var(--tiptop-github-img-hover);
-  }
+.github-link:hover {
+  background-image: var(--tiptop-github-img-hover);
+}
 
-  .twitter-link {
-    background-image: var(--tiptop-twitter-img);
-    margin-right: 1rem;
-  }
+.twitter-link {
+  background-image: var(--tiptop-twitter-img);
+  margin-right: 1rem;
+}
 
-  .twitter-link:hover {
-    background-image: var(--tiptop-twitter-img-hover);
-  }
+.twitter-link:hover {
+  background-image: var(--tiptop-twitter-img-hover);
 }
 
 /* Color mode toggle */
