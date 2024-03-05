@@ -6,16 +6,16 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --tiptop-color-dark: #00293F;
-  --tiptop-color-dark-hover: #1b5879;
-  --tiptop-color-link-dark: #69caff;
-  --tiptop-color-light: #fdfdf7;
-  --tiptop-color-light-hover: var(--ifm-hover-overlay);
-  --tiptop-color-bg-contrast: rgba(0, 0, 0, 0.05);
-  --tiptop-color-bg-extra-contrast: rgba(0, 0, 0, 0.1);
-  --tiptop-color-bg-extra-extra-contrast: rgba(0, 0, 0, 0.15);
-  --tiptop-color-planned-desktop: rgba(0, 0, 0, 0.5);
-  --tiptop-color-planned-mobile: rgba(255, 255, 255, 0.5);
+  --tipTopDocs-color-dark: #00293F;
+  --tipTopDocs-color-dark-hover: #1b5879;
+  --tipTopDocs-color-link-dark: #69caff;
+  --tipTopDocs-color-light: #fdfdf7;
+  --tipTopDocs-color-light-hover: var(--ifm-hover-overlay);
+  --tipTopDocs-color-bg-contrast: rgba(0, 0, 0, 0.05);
+  --tipTopDocs-color-bg-extra-contrast: rgba(0, 0, 0, 0.1);
+  --tipTopDocs-color-bg-extra-extra-contrast: rgba(0, 0, 0, 0.15);
+  --tipTopDocs-color-planned-desktop: rgba(0, 0, 0, 0.5);
+  --tipTopDocs-color-planned-mobile: rgba(255, 255, 255, 0.5);
 
   --ifm-color-primary: #0B71A8;
   --ifm-color-primary-dark: #29784c;
@@ -25,7 +25,7 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-pre-background: rgba(0, 0, 0, 0.05);
-  --ifm-table-stripe-background: var(--tiptop-color-bg-contrast);
+  --ifm-table-stripe-background: var(--tipTopDocs-color-bg-contrast);
   --ifm-code-font-size: 95%;
 
   --ifm-heading-font-family: SchotisTextBlack;
@@ -33,20 +33,20 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Mobile menu / side bar */
-  --ifm-menu-color: var(--tiptop-color-light);
-  --ifm-menu-color-background-active: var(--tiptop-color-dark-hover);
+  --ifm-menu-color: var(--tipTopDocs-color-light);
+  --ifm-menu-color-background-active: var(--tipTopDocs-color-dark-hover);
   --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(255,255,255,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
 
   /* Header, Nav */
-  --ifm-navbar-link-color: var(--tiptop-color-link-dark);
-  --ifm-navbar-link-hover-color: var(--tiptop-color-light);
-  --ifm-navbar-background-color: var(--tiptop-color-dark);
+  --ifm-navbar-link-color: var(--tipTopDocs-color-link-dark);
+  --ifm-navbar-link-hover-color: var(--tipTopDocs-color-light);
+  --ifm-navbar-background-color: var(--tipTopDocs-color-dark);
   --ifm-navbar-padding-horizontal: 1.25rem;
 
-  --tiptop-github-img: url('/static/img/github-link.svg');
-  --tiptop-github-img-hover: url('/static/img/github-hover.svg');
-  --tiptop-twitter-img: url('/static/img/twitter-link.svg');
-  --tiptop-twitter-img-hover: url('/static/img/twitter-hover.svg');
+  --tipTopDocs-github-img: url('/static/img/github-link.svg');
+  --tipTopDocs-github-img-hover: url('/static/img/github-hover.svg');
+  --tipTopDocs-twitter-img: url('/static/img/twitter-link.svg');
+  --tipTopDocs-twitter-img-hover: url('/static/img/twitter-hover.svg');
 
   /* Code blocks */
   --prism-background-color: red;
@@ -58,15 +58,15 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --tiptop-color-dark: #f5f5ef;
-  --tiptop-color-dark-hover: #d5d5c2;
-  --tiptop-color-link-dark: #0a71a9;
-  --tiptop-color-light: #00293F;
-  --tiptop-color-bg-contrast: rgba(255, 255, 255, 0.05);
-  --tiptop-color-bg-extra-contrast: rgba(255, 255, 255, 0.1);
-  --tiptop-color-bg-extra-extra-contrast: rgba(255, 255, 255, 0.15);
-  --tiptop-color-planned-desktop: rgba(255, 255, 255, 0.5);
-  --tiptop-color-planned-mobile: rgba(0, 0, 0, 0.5);
+  --tipTopDocs-color-dark: #f5f5ef;
+  --tipTopDocs-color-dark-hover: #d5d5c2;
+  --tipTopDocs-color-link-dark: #0a71a9;
+  --tipTopDocs-color-light: #00293F;
+  --tipTopDocs-color-bg-contrast: rgba(255, 255, 255, 0.05);
+  --tipTopDocs-color-bg-extra-contrast: rgba(255, 255, 255, 0.1);
+  --tipTopDocs-color-bg-extra-extra-contrast: rgba(255, 255, 255, 0.15);
+  --tipTopDocs-color-planned-desktop: rgba(255, 255, 255, 0.5);
+  --tipTopDocs-color-planned-mobile: rgba(0, 0, 0, 0.5);
 
   --ifm-color-primary: #69caff;
   --ifm-color-primary-dark: #21af90;
@@ -79,15 +79,15 @@
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  --tiptop-github-img: url('/static/img/github-dark-link.svg');
-  --tiptop-github-img-hover: url('/static/img/github-dark-hover.svg');
-  --tiptop-twitter-img: url('/static/img/twitter-dark-link.svg');
-  --tiptop-twitter-img-hover: url('/static/img/twitter-dark-hover.svg');
+  --tipTopDocs-github-img: url('/static/img/github-dark-link.svg');
+  --tipTopDocs-github-img-hover: url('/static/img/github-dark-hover.svg');
+  --tipTopDocs-twitter-img: url('/static/img/twitter-dark-link.svg');
+  --tipTopDocs-twitter-img-hover: url('/static/img/twitter-dark-hover.svg');
 }
 
 html {
   height: 100%;
-  background-color: var(--tiptop-color-light);
+  background-color: var(--tipTopDocs-color-light);
 }
 
 /* Header, Nav -------------------------------------- */
@@ -108,16 +108,22 @@ html {
 /* Title */
 .navbar__brand {
   margin-right: 1.4rem;
+
+  &:hover .navbar__logo {
+    transform: rotate(0);
+  }
 }
 
 .navbar__logo {
   margin-right: 0.7rem;
   height: 1.5rem;
+  transition: transform 0.15s ease-out;
+  transform: rotate(-18deg);
 }
 
 .navbar__title {
   font-family: SchotisTextBlack;
-  color: var(--tiptop-color-light);
+  color: var(--tipTopDocs-color-light);
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -137,20 +143,20 @@ html {
       left: 2px;
       right: 2px;
       height: 4px;
-      background-color: var(--tiptop-color-link-dark);
+      background-color: var(--tipTopDocs-color-link-dark);
       transition: opacity var(--ifm-transition-fast) var(--ifm-transition-timing-default);
     }
   }
 
   .navbar__link:hover {
-    color: var(--tiptop-color-link-dark);
+    color: var(--tipTopDocs-color-link-dark);
     &::after {
       opacity: 1;
     }
   }
 
   .navbar__link--active {
-    color: var(--tiptop-color-link-dark);
+    color: var(--tipTopDocs-color-link-dark);
 
     &::after {
       opacity: 1;
@@ -173,21 +179,21 @@ html {
 }
 
 .github-link {
-  background-image: var(--tiptop-github-img);
+  background-image: var(--tipTopDocs-github-img);
   margin-right: 1.4rem;
 }
 
 .github-link:hover {
-  background-image: var(--tiptop-github-img-hover);
+  background-image: var(--tipTopDocs-github-img-hover);
 }
 
 .twitter-link {
-  background-image: var(--tiptop-twitter-img);
+  background-image: var(--tipTopDocs-twitter-img);
   margin-right: 1rem;
 }
 
 .twitter-link:hover {
-  background-image: var(--tiptop-twitter-img-hover);
+  background-image: var(--tipTopDocs-twitter-img-hover);
 }
 
 /* Color mode toggle */
@@ -196,15 +202,15 @@ html {
 }
 
 .clean-btn {
-  color: var(--tiptop-color-light);
+  color: var(--tipTopDocs-color-light);
 }
 
 .clean-btn[class*="toggleButton"] {
-  color: var(--tiptop-color-link-dark);
+  color: var(--tipTopDocs-color-link-dark);
 
   &:hover {
     background: none;
-    color: var(--tiptop-color-light);
+    color: var(--tipTopDocs-color-light);
   }
 }
 
@@ -214,7 +220,7 @@ html {
   padding: 2px 6px;
   margin: 2px 0 0 8px;
   content: 'Planned';
-  background-color: var(--tiptop-color-planned-desktop);
+  background-color: var(--tipTopDocs-color-planned-desktop);
   border-radius: 99px;
   font-size: 9px;
   text-transform: uppercase;
@@ -223,8 +229,8 @@ html {
 
 /* Desktop side bar */
 .theme-doc-sidebar-container {
-  --ifm-menu-color: var(--tiptop-color-dark);
-  --ifm-menu-color-background-active: var(--tiptop-color-light-hover);
+  --ifm-menu-color: var(--tipTopDocs-color-dark);
+  --ifm-menu-color-background-active: var(--tipTopDocs-color-light-hover);
   --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
 
   .menu {
@@ -235,15 +241,15 @@ html {
 
 /* Mobile side bar */
 .navbar-sidebar {
-  --ifm-menu-color: var(--tiptop-color-link-dark);
-  --ifm-menu-color-active: var(--tiptop-color-light);
+  --ifm-menu-color: var(--tipTopDocs-color-link-dark);
+  --ifm-menu-color-active: var(--tipTopDocs-color-light);
   --ifm-menu-color-background-hover: rgba(255, 255, 255, 0.05);
   --ifm-menu-color-background-active: rgba(255, 255, 255, 0.05);
   --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(255,255,255,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
 
   .theme-doc-sidebar-planned .menu__link::after {
-    color: var(--tiptop-color-dark);
-    background-color: var(--tiptop-color-planned-mobile);
+    color: var(--tipTopDocs-color-dark);
+    background-color: var(--tipTopDocs-color-planned-mobile);
   }
 }
 
@@ -254,7 +260,7 @@ html {
     color: var(--ifm-color-primary);
 
     &:hover {
-      color: var(--tiptop-color-dark);
+      color: var(--tipTopDocs-color-dark);
     }
   }
 }
@@ -262,10 +268,10 @@ html {
 /* Mobile */
 [class*="tocCollapsible_"] .table-of-contents {
   .table-of-contents__link {
-    color: var(--tiptop-color-link-dark);
+    color: var(--tipTopDocs-color-link-dark);
 
     &:hover {
-      color: var(--tiptop-color-light);
+      color: var(--tipTopDocs-color-light);
     }
   }
 }
@@ -274,10 +280,10 @@ html {
 div[class*="playgroundContainer_"] {
   div[class*="playgroundHeader_"] {
     color: var(--ifm-color-content);
-    background-color: var(--tiptop-color-bg-extra-contrast);
+    background-color: var(--tipTopDocs-color-bg-extra-contrast);
 
     &:first-of-type {
-      background-color: var(--tiptop-color-bg-extra-extra-contrast);
+      background-color: var(--tipTopDocs-color-bg-extra-extra-contrast);
     }
   }
 
@@ -306,9 +312,9 @@ div[class*="playgroundContainer_"] {
 
 /* Footer -------------------------------------- */
 .footer {
-  --ifm-footer-background-color: var(--tiptop-color-dark);
-  --ifm-footer-color: var(--tiptop-color-light);
-  --ifm-link-color: var(--tiptop-color-link-dark);
-  --ifm-link-hover-color: var(--tiptop-color-light);
+  --ifm-footer-background-color: var(--tipTopDocs-color-dark);
+  --ifm-footer-color: var(--tipTopDocs-color-light);
+  --ifm-link-color: var(--tipTopDocs-color-link-dark);
+  --ifm-link-hover-color: var(--tipTopDocs-color-light);
   --ifm-link-hover-decoration: none;
 }
