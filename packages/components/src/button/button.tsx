@@ -1,11 +1,19 @@
 import { forwardRef, CSSProperties } from 'react'
 import cx from 'clsx'
 
+import { Loader } from '../loader/loader'
+
 import './button.css'
 
-export type ButtonParts = 'root' | 'children' | 'slotStart' | 'slotEnd'
+export type ButtonParts =
+  | 'root'
+  | 'children'
+  | 'slot'
+  | 'slotStart'
+  | 'slotEnd'
+  | 'loader'
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
   slotStart?: React.ReactNode | string
   slotEnd?: React.ReactNode | string
@@ -20,6 +28,17 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
       [key: string]: string
     }
   }
+  loading?: boolean
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'neutral'
+    | 'danger'
+    | 'warning'
+    | 'success'
+    | 'light'
+    | 'dark'
+  appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
 }
 /**
  * TODO
@@ -35,9 +54,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  * - shape: pill, round, circle, square
  * - size: xs, sm, md, lg, xl
  * - full width
- * - loading state
- *   - spinner
- *   - text
  * - disabled state
  * - focus state
  * - hover state
@@ -50,22 +66,90 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  * - ellipsizeText
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, props, classNames, styles, slotStart, slotEnd, children, ...restProps }, ref) => {
+  (
+    {
+      className,
+      props,
+      classNames,
+      styles,
+      slotStart,
+      slotEnd,
+      children,
+      loading,
+      variant = 'primary',
+      appearance = 'solid',
+      ...restProps
+    },
+    ref,
+  ) => {
+    const renderSlotStart = () => {
+      if (slotStart) {
+        return (
+          <span
+            className={cx(
+              'tipTop-Button-slot',
+              'tipTop-Button-slotStart',
+              classNames?.slot,
+              classNames?.slotStart,
+            )}
+            style={styles?.slotStart}
+            {...props?.slotStart}
+          >
+            {slotStart}
+          </span>
+        )
+      }
+    }
+
+    const renderSlotEnd = () => {
+      if (slotEnd) {
+        return (
+          <span
+            className={cx(
+              'tipTop-Button-slot',
+              'tipTop-Button-slotEnd',
+              classNames?.slot,
+              classNames?.slotEnd,
+            )}
+            style={styles?.slotEnd}
+            {...props?.slotEnd}
+          >
+            {slotEnd}
+          </span>
+        )
+      }
+    }
+
+    const renderLoader = () => {
+      if (loading) {
+        return (
+          <Loader
+            className={cx('tipTop-Button-loader', classNames?.loader)}
+            size='small'
+            color='light'
+            style={styles?.loader}
+            props={props?.loader}
+          />
+        )
+      }
+    }
+
     return (
       <button
-        className={cx('tipTop-Button-root', className, classNames?.root)}
+        className={cx(
+          'tipTop-Button-root',
+          `tipTop-Button-root--${appearance}`,
+          `tipTop-Button-root--${variant}`,
+          loading && 'tipTop-Button-root--loading',
+          className,
+          classNames?.root,
+        )}
         ref={ref}
         style={styles?.root}
         {...restProps}
         {...props?.root}
       >
-        <span
-          className={cx('tipTop-Button-slot', 'tipTop-Button-slotStart', classNames?.slotStart)}
-          style={styles?.slotStart}
-          {...props?.slotStart}
-        >
-          {slotStart}
-        </span>
+        {renderSlotStart()}
         <span
           className={cx('tipTop-Button-children', classNames?.children)}
           style={styles?.children}
@@ -73,13 +157,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         >
           {children}
         </span>
-        <span
-          className={cx('tipTop-Button-slot', 'tipTop-Button-slotEnd', classNames?.slotEnd)}
-          style={styles?.slotEnd}
-          {...props?.slotEnd}
-        >
-          {slotEnd}
-        </span>
+        {renderSlotEnd()}
+        {renderLoader()}
       </button>
     )
   },

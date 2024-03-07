@@ -1,5 +1,37 @@
 ```jsx live
-<Button slotLeft="Foo">Button?</Button>
+<Button>Button</Button>
+```
+
+## Variants
+
+```jsx live noInline
+const appearances = ['solid', 'faded', 'outline', 'ghost', 'text'];
+const variants = ['primary', 'secondary', 'neutral', 'danger', 'warning', 'success', 'dark', 'light'];
+
+render(
+  <div>
+    {appearances.map(appearance => (
+      <>
+      <h4>{appearance}</h4>
+      <div key={appearance} style={{display: 'flex', marginBottom: '10px'}}>
+        {variants.map(variant => (
+          <Button key={variant} appearance={appearance} variant={variant} style={{marginRight: '10px'}}>
+            {variant}
+          </Button>
+        ))}
+      </div>
+      </>
+    ))}
+  </div>
+);
+```
+
+## Loading
+
+When the `loading` prop is set, the Button `button` will be disabled and show a Loader in the middle of the button.
+
+```jsx live
+<Button loading>Button</Button>
 ```
 
 ## Props
