@@ -125,6 +125,24 @@ function TailwindModuleDemo() {
 }
 ```
 
+## Margin Props
+
+Adding margins around components can vary depending on the context. To make this easier each component includes margin props to quickly add margin.
+
+| Prop | Description                    |
+| ---- | ------------------------------ |
+| `mt` | Sets CSS `margin-block-start`  |
+| `mb` | Sets CSS `margin-block-end`    |
+| `ms` | Sets CSS `margin-inline-start` |
+| `me` | Sets CSS `margin-inline-end`   |
+
+```jsx live
+<div>
+  <Button me="10px">Primary</Button>
+  <Button>Secondary</Button>
+</div>
+```
+
 ## Styles Prop
 
 The `styles` prop allows you to add inline styles to the parts of a component.

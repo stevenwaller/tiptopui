@@ -6,12 +6,17 @@ import './loader.css'
 export type LoaderParts = 'root' | 'shape'
 
 export interface LoaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string
   color?: 'light' | 'dark'
   size?: 'small' | 'medium' | 'large' | 'extra-large'
+  className?: string
   classNames?: {
     [key in LoaderParts]?: string
   }
+  mt?: string
+  mb?: string
+  ms?: string
+  me?: string
+  style?: CSSProperties
   styles?: {
     [key in LoaderParts]?: CSSProperties
   }
@@ -29,6 +34,11 @@ export const Loader = forwardRef<HTMLDivElement, LoaderProps>(
       color = 'dark',
       size = 'medium',
       classNames,
+      mt,
+      mb,
+      ms,
+      me,
+      style,
       styles,
       props,
       ...restProps
@@ -45,7 +55,14 @@ export const Loader = forwardRef<HTMLDivElement, LoaderProps>(
           className,
         )}
         ref={ref}
-        style={styles?.root}
+        style={{
+          ...(mt && { marginBlockStart: mt }),
+          ...(mb && { marginBlockEnd: mb }),
+          ...(ms && { marginInlineStart: ms }),
+          ...(me && { marginInlineEnd: me }),
+          ...style,
+          ...styles?.root,
+        }}
         {...restProps}
         {...props?.root}
       >

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button, ButtonProps } from '@tiptopui/components'
+import { IconArrowRight } from '@tabler/icons-react'
 
 const appearances: ButtonProps['appearance'][] = [
   'solid',
@@ -48,6 +49,7 @@ export const Primary: Story = {
                 appearance={appearance}
                 variant={variant}
                 style={{ marginRight: '10px' }}
+                slotEnd={<IconArrowRight />}
               >
                 {variant}
               </Button>
@@ -57,4 +59,8 @@ export const Primary: Story = {
       ))}
     </div>
   ),
+}
+
+export const withIcons: Story = {
+  render: () => <Button slotEnd={<IconArrowRight />}>With icon</Button>,
 }

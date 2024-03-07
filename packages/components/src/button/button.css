@@ -5,7 +5,7 @@
 
 .tipTop-Button-root {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding-block-start: var(--tipTop-Button-root__paddingBlockStart);
   padding-block-end: var(--tipTop-Button-root__paddingBlockEnd);

@@ -148,14 +148,25 @@
   --topTop-Button-root--faded__color-colorMix-blendColor: #000;
 
   /* Button-slot */
-  --tipTop-Button-slot__paddingBlockStart: var(--tipTop__space--2-5);
-  --tipTop-Button-slot__paddingBlockEnd: var(--tipTop__space--2-5);
-  --tipTop-Button-slot__paddingInlineStart: var(--tipTop__space--2-5);
-  --tipTop-Button-slot__paddingInlineEnd: var(--tipTop__space--2-5);
+  /* Enable as needed */
+  /* --tipTop-Button-slot__paddingBlockStart: 0; */
+  /* --tipTop-Button-slot__paddingBlockEnd: 0; */
+  /* --tipTop-Button-slot__paddingInlineStart: 0; */
+  /* --tipTop-Button-slot__paddingInlineEnd: 0; */
 
   /* Button-slotStart */
+  /* Enable as needed */
+  /* --tipTop-Button-slotStart__paddingBlockStart: 0; */
+  /* --tipTop-Button-slotStart__paddingBlockEnd: 0; */
+  /* --tipTop-Button-slotStart__paddingInlineStart: 0; */
+  --tipTop-Button-slotStart__paddingInlineEnd: var(--tipTop__space--2);
 
   /* Button-slotEnd */
+  /* Enable as needed */
+  /* --tipTop-Button-slotEnd__paddingBlockStart: 0; */
+  /* --tipTop-Button-slotEnd__paddingBlockEnd: 0; */
+  --tipTop-Button-slotEnd__paddingInlineStart: var(--tipTop__space--2);
+  /* --tipTop-Button-slotEnd__paddingInlineEnd: 0; */
 
   /* Size */
   /* xs */

@@ -14,20 +14,8 @@ export type ButtonParts =
   | 'loader'
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode
   slotStart?: React.ReactNode | string
   slotEnd?: React.ReactNode | string
-  classNames?: {
-    [key in ButtonParts]?: string
-  }
-  styles?: {
-    [key in ButtonParts]?: CSSProperties
-  }
-  props?: {
-    [key in ButtonParts]?: {
-      [key: string]: string
-    }
-  }
   loading?: boolean
   variant?:
     | 'primary'
@@ -40,6 +28,23 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
   size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'xl'
+  children: React.ReactNode
+  classNames?: {
+    [key in ButtonParts]?: string
+  }
+  mt?: string
+  mb?: string
+  ms?: string
+  me?: string
+  style?: CSSProperties
+  styles?: {
+    [key in ButtonParts]?: CSSProperties
+  }
+  props?: {
+    [key in ButtonParts]?: {
+      [key: string]: string
+    }
+  }
 }
 /**
  * TODO
@@ -58,17 +63,22 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      className,
-      props,
-      classNames,
-      styles,
-      slotStart,
-      slotEnd,
-      children,
       loading,
       variant = 'primary',
       appearance = 'solid',
       size = 'normal',
+      slotStart,
+      slotEnd,
+      className,
+      props,
+      classNames,
+      mt,
+      mb,
+      ms,
+      me,
+      style,
+      styles,
+      children,
       ...restProps
     },
     ref,
@@ -137,7 +147,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           classNames?.root,
         )}
         ref={ref}
-        style={styles?.root}
+        style={{
+          ...(mt && { marginBlockStart: mt }),
+          ...(mb && { marginBlockEnd: mb }),
+          ...(ms && { marginInlineStart: ms }),
+          ...(me && { marginInlineEnd: me }),
+          ...style,
+          ...styles?.root,
+        }}
         {...restProps}
         {...props?.root}
       >

@@ -10,7 +10,7 @@ const appearances = ['solid', 'faded', 'outline', 'ghost', 'text'];
 render(
   <div style={{display: 'flex', alignItems: 'center'}}>
     {appearances.map(appearance => (
-      <Button key={appearance} appearance={appearance} style={{marginRight: '10px'}}>
+      <Button key={appearance} appearance={appearance} me="10px">
         {appearance}
       </Button>
     ))}
@@ -26,7 +26,7 @@ const variants = ['primary', 'secondary', 'neutral', 'danger', 'warning', 'succe
 render(
   <div style={{display: 'flex'}}>
     {variants.map(variant => (
-      <Button key={variant} variant={variant} style={{marginRight: '10px'}}>
+      <Button key={variant} variant={variant} me="10px">
         {variant}
       </Button>
     ))}
@@ -42,12 +42,25 @@ const sizes = ['xs', 'sm', 'normal', 'md', 'lg', 'xl'];
 render(
   <div style={{display: 'flex', alignItems: 'center'}}>
     {sizes.map(size => (
-      <Button key={size} size={size} style={{marginRight: '10px'}}>
+      <Button key={size} size={size} me="10px">
         {size}
       </Button>
     ))}
   </div>
 );
+```
+
+## Slots
+
+Content can be added to the start and end of the button using the `slotStart` and `slotEnd` props.
+
+```jsx live
+// Icons from https://tabler.io/docs/icons/react
+<div style={{display: 'flex'}}>
+  <Button slotEnd={<IconArrowRight size={20}/>} me="10px">With icon</Button>
+  <Button slotStart="😀" me="10px">With Emoji</Button>
+  <Button slotStart="Foo -">With Text</Button>
+</div>
 ```
 
 ## Loading
