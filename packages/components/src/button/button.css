@@ -12,7 +12,6 @@
   padding-inline-start: var(--tipTop-Button-root__paddingInlineStart);
   padding-inline-end: var(--tipTop-Button-root__paddingInlineEnd);
   border: var(--tipTop-Button-root__border);
-  border-radius: var(--tipTop-Button-root__borderRadius, var(--tipTop__borderRadius--normal));
   font-weight: var(--tipTop-Button-root__fontWeight);
   transition: var(--tipTop-Button-root__transition);
 
@@ -221,3 +220,23 @@
   padding-inline-start: var(--tipTop-Button-root__paddingInlineStart--xl);
   padding-inline-end: var(--tipTop-Button-root__paddingInlineEnd--xl);
 }
+
+/* Shape ------------------------------------------------------------------ */
+.tipTop-Button-root--rounded {
+  border-radius: var(--tipTop-Button-root__borderRadius, var(--tipTop__borderRadius--normal));
+}
+
+.tipTop-Button-root--pill {
+  border-radius: var(--tipTop__borderRadius--full);
+}
+
+.tipTop-Button-root--circle {
+  border-radius: 50%;
+}
+
+.tipTop-Button-root--square {
+  border-radius: 0;
+}
+
+
+

@@ -28,6 +28,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
   size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'xl'
+  shape?: 'round' | 'pill' | 'circle' | 'square'
   children: React.ReactNode
   classNames?: {
     [key in ButtonParts]?: string
@@ -53,7 +54,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
  * - full width
  * - focus state
  * - active state
- * - icons
  * - dropdown
  * - justify: start, center, space-between, end
  * - button group
@@ -67,6 +67,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = 'primary',
       appearance = 'solid',
       size = 'normal',
+      shape = 'rounded',
       slotStart,
       slotEnd,
       className,
@@ -142,6 +143,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           `tipTop-Button-root--${appearance}`,
           `tipTop-Button-root--${variant}`,
           `tipTop-Button-root--${size}`,
+          `tipTop-Button-root--${shape}`,
           loading && 'tipTop-Button-root--loading',
           className,
           classNames?.root,

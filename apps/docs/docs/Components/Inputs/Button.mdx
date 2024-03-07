@@ -8,9 +8,9 @@
 const appearances = ['solid', 'faded', 'outline', 'ghost', 'text'];
 
 render(
-  <div style={{display: 'flex', alignItems: 'center'}}>
+  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
     {appearances.map(appearance => (
-      <Button key={appearance} appearance={appearance} me="10px">
+      <Button key={appearance} appearance={appearance}>
         {appearance}
       </Button>
     ))}
@@ -24,9 +24,9 @@ render(
 const variants = ['primary', 'secondary', 'neutral', 'danger', 'warning', 'success', 'dark', 'light'];
 
 render(
-  <div style={{display: 'flex'}}>
+  <div style={{display: 'flex', gap: '10px'}}>
     {variants.map(variant => (
-      <Button key={variant} variant={variant} me="10px">
+      <Button key={variant} variant={variant}>
         {variant}
       </Button>
     ))}
@@ -40,10 +40,26 @@ render(
 const sizes = ['xs', 'sm', 'normal', 'md', 'lg', 'xl'];
 
 render(
-  <div style={{display: 'flex', alignItems: 'center'}}>
+  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
     {sizes.map(size => (
-      <Button key={size} size={size} me="10px">
+      <Button key={size} size={size}>
         {size}
+      </Button>
+    ))}
+  </div>
+);
+```
+
+## Shape
+
+```jsx live noInline
+const shapes = ['rounded', 'pill', 'circle', 'square'];
+
+render(
+  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+    {shapes.map(shape => (
+      <Button key={shape} shape={shape}>
+        {shape}
       </Button>
     ))}
   </div>
@@ -56,9 +72,9 @@ Content can be added to the start and end of the button using the `slotStart` an
 
 ```jsx live
 // Icons from https://tabler.io/docs/icons/react
-<div style={{display: 'flex'}}>
-  <Button slotEnd={<IconArrowRight size={20}/>} me="10px">With icon</Button>
-  <Button slotStart="😀" me="10px">With Emoji</Button>
+<div style={{display: 'flex', gap: '10px'}}>
+  <Button slotEnd={<IconArrowRight size={20}/>}>With icon</Button>
+  <Button slotStart="😀">With Emoji</Button>
   <Button slotStart="Foo -">With Text</Button>
 </div>
 ```
