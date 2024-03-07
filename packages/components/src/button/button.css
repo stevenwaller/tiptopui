@@ -12,11 +12,19 @@
   padding-inline-end: var(--tipTop-Button-root__paddingInlineEnd);
   border: var(--tipTop-Button-root__border);
   border-radius: var(--tipTop-Button-root__borderRadius, var(--tipTop__borderRadius--normal));
-  cursor: pointer;
   font-size: var(--tipTop-Button-root__fontSize);
   font-weight: var(--tipTop-Button-root__fontWeight);
   transition: var(--tipTop-Button-root__transition);
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    opacity: var(--tipTop-Button-root-isDisabled__opacity);
+  }
 }
+
 
 /* Slots ------------------------------------------------------------------ */
 .tipTop-Button-slot {
@@ -96,7 +104,7 @@
   background-color: var(--tipTop-Button-root__backgroundColor);
   color: var(--tipTop-Button-root__color);
 
-  &:hover {
+  &:not([disabled]):hover {
     background-color: color-mix(in var(--topTop-Button-root--solid-isHover__colorMix-colorSpace), var(--tipTop-Button-root__backgroundColor) var(--topTop-Button-root--solid-isHover__colorMix-percent), var(--topTop-Button-root--solid-isHover__colorMix-blendColor));
   }
 }
@@ -106,7 +114,7 @@
   color: color-mix(in var(--topTop-Button-root--faded__color-colorMix-colorSpace), var(--tipTop-Button-root__backgroundColor) var(--topTop-Button-root--faded__color-colorMix-percent), var(--topTop-Button-root--faded__color-colorMix-blendColor));
 
 
-  &:hover {
+  &:not([disabled]):hover {
     background-color: color-mix(in var(--topTop-Button-root--faded-isHover__colorMix-colorSpace), var(--tipTop-Button-root__backgroundColor) var(--topTop-Button-root--faded-isHover__colorMix-percent), var(--topTop-Button-root--faded-isHover__colorMix-blendColor));
   }
 }
@@ -118,7 +126,7 @@
   border-color: var(--tipTop-Button-root__backgroundColor);
   color: var(--tipTop-Button-root__backgroundColor);
 
-  &:hover {
+  &:not([disabled]):hover {
     background-color: color-mix(in var(--topTop-Button-root--faded__colorMix-colorSpace), var(--tipTop-Button-root__backgroundColor) var(--topTop-Button-root--faded__colorMix-percent), var(--topTop-Button-root--faded__colorMix-blendColor));
     color: color-mix(in var(--topTop-Button-root--faded__color-colorMix-colorSpace), var(--tipTop-Button-root__backgroundColor) var(--topTop-Button-root--faded__color-colorMix-percent), var(--topTop-Button-root--faded__color-colorMix-blendColor));
   }
@@ -128,7 +136,7 @@
   background-color: transparent;
   color: var(--tipTop-Button-root__backgroundColor);
 
-  &:hover {
+  &:not([disabled]):hover {
     background-color: color-mix(in var(--topTop-Button-root--faded__colorMix-colorSpace), var(--tipTop-Button-root__backgroundColor) var(--topTop-Button-root--faded__colorMix-percent), var(--topTop-Button-root--faded__colorMix-blendColor));
     color: color-mix(in var(--topTop-Button-root--faded__color-colorMix-colorSpace), var(--tipTop-Button-root__backgroundColor) var(--topTop-Button-root--faded__color-colorMix-percent), var(--topTop-Button-root--faded__color-colorMix-blendColor));
   }
@@ -139,7 +147,7 @@
   color: var(--tipTop-Button-root__backgroundColor);
   padding: 0;
 
-  &:hover {
+  &:not([disabled]):hover {
     color: color-mix(in var(--topTop-Button-root--faded__color-colorMix-colorSpace), var(--tipTop-Button-root__backgroundColor) var(--topTop-Button-root--faded__color-colorMix-percent), var(--topTop-Button-root--faded__color-colorMix-blendColor));
   }
 }

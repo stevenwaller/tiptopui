@@ -2,25 +2,33 @@
 <Button>Button</Button>
 ```
 
-## Variants
+## Appearance
 
 ```jsx live noInline
 const appearances = ['solid', 'faded', 'outline', 'ghost', 'text'];
+
+render(
+  <div style={{display: 'flex', alignItems: 'center'}}>
+    {appearances.map(appearance => (
+      <Button key={appearance} appearance={appearance} style={{marginRight: '10px'}}>
+        {appearance}
+      </Button>
+    ))}
+  </div>
+);
+```
+
+## Variants
+
+```jsx live noInline
 const variants = ['primary', 'secondary', 'neutral', 'danger', 'warning', 'success', 'dark', 'light'];
 
 render(
-  <div>
-    {appearances.map(appearance => (
-      <>
-      <h4>{appearance}</h4>
-      <div key={appearance} style={{display: 'flex', marginBottom: '10px'}}>
-        {variants.map(variant => (
-          <Button key={variant} appearance={appearance} variant={variant} style={{marginRight: '10px'}}>
-            {variant}
-          </Button>
-        ))}
-      </div>
-      </>
+  <div style={{display: 'flex'}}>
+    {variants.map(variant => (
+      <Button key={variant} variant={variant} style={{marginRight: '10px'}}>
+        {variant}
+      </Button>
     ))}
   </div>
 );
@@ -32,6 +40,14 @@ When the `loading` prop is set, the Button `button` will be disabled and show a 
 
 ```jsx live
 <Button loading>Button</Button>
+```
+
+## Disabled
+
+When the `disabled` prop is set, the Button `button` will be disabled.
+
+```jsx live
+<Button disabled onClick={() => console.log('on click')}>Button</Button>
 ```
 
 ## Props

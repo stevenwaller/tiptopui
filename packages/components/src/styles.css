@@ -122,12 +122,13 @@
   --topTop-Button-root__borderWidth: 1px;
   --tipTop-Button-root__paddingBlockStart: var(--tipTop__space--2-5);
   --tipTop-Button-root__paddingBlockEnd: var(--tipTop__space--2-5);
-  --tipTop-Button-root__paddingInlineStart: var(--tipTop__space--2-5);
-  --tipTop-Button-root__paddingInlineEnd: var(--tipTop__space--2-5);
+  --tipTop-Button-root__paddingInlineStart: var(--tipTop__space--3-5);
+  --tipTop-Button-root__paddingInlineEnd: var(--tipTop__space--3-5);
   --tipTop-Button-root__borderRadius: var(--tipTop__borderRadius--normal);
   --tipTop-Button-root__fontSize: var(--tipTop__fontSize--normal);
   --tipTop-Button-root__fontWeight: var(--tipTop__fontWeight--medium);
   --tipTop-Button-root__transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  --tipTop-Button-root-isDisabled__opacity: 0.5;
 
   /* Appearance */
   /* Change the solid background color on hover */
