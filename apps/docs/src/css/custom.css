@@ -293,10 +293,16 @@ div[class*="playgroundContainer_"] {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
-}
 
-div[class*="playgroundPreview_"] {
-  overflow-x: auto;
+  div[class*="playgroundPreview_"] {
+    overflow-x: auto;
+  }
+
+  div[class*="playgroundHeader_"] {
+    --ifm-code-font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.07rem;
+  }
 }
 
 /* Tabs -------------------------------------- */
@@ -314,7 +320,6 @@ div[class*="playgroundPreview_"] {
     }
   }
 }
-
 
 /* Footer -------------------------------------- */
 .footer {
