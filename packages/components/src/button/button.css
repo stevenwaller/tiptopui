@@ -7,6 +7,7 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding-block-start: var(--tipTop-Button-root__paddingBlockStart);
   padding-block-end: var(--tipTop-Button-root__paddingBlockEnd);
   padding-inline-start: var(--tipTop-Button-root__paddingInlineStart);
@@ -29,31 +30,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block-start: var(--tipTop-Button-slot__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button-slot__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button-slot__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button-slot__paddingInlineEnd);
+  margin-block-start: var(--tipTop-Button-slot__marginBlockStart);
+  margin-block-end: var(--tipTop-Button-slot__marginBlockEnd);
+  margin-inline-start: var(--tipTop-Button-slot__marginInlineStart);
+  margin-inline-end: var(--tipTop-Button-slot__marginInlineEnd);
 }
 
 .tipTop-Button-slotStart {
-  padding-block-start: var(--tipTop-Button-slotStart__paddingBlockStart, var(--tipTop-Button-slot__paddingBlockStart));
-  padding-block-end: var(--tipTop-Button-slotStart__paddingBlockEnd, var(--tipTop-Button-slot__paddingBlockEnd));
-  padding-inline-start: var(--tipTop-Button-slotStart__paddingInlineStart, var(--tipTop-Button-slot__paddingInlineStart));
-  padding-inline-end: var(--tipTop-Button-slotStart__paddingInlineEnd, var(--tipTop-Button-slot__paddingInlineEnd));
+  margin-block-start: var(--tipTop-Button-slotStart__marginBlockStart);
+  margin-block-end: var(--tipTop-Button-slotStart__marginBlockEnd);
+  margin-inline-start: var(--tipTop-Button-slotStart__marginInlineStart);
+  margin-inline-end: var(--tipTop-Button-slotStart__marginInlineEnd);
 }
 
 .tipTop-Button-slotEnd {
-  padding-block-start: var(--tipTop-Button-slotEnd__paddingBlockStart, var(--tipTop-Button-slot__paddingBlockStart));
-  padding-block-end: var(--tipTop-Button-slotEnd__paddingBlockEnd, var(--tipTop-Button-slot__paddingBlockEnd));
-  padding-inline-start: var(--tipTop-Button-slotEnd__paddingInlineStart, var(--tipTop-Button-slot__paddingInlineStart));
-  padding-inline-end: var(--tipTop-Button-slotEnd__paddingInlineEnd, var(--tipTop-Button-slot__paddingInlineEnd));
+  margin-block-start: var(--tipTop-Button-slotEnd__marginBlockStart);
+  margin-block-end: var(--tipTop-Button-slotEnd__marginBlockEnd);
+  margin-inline-start: var(--tipTop-Button-slotEnd__marginInlineStart);
+  margin-inline-end: var(--tipTop-Button-slotEnd__marginInlineEnd);
 }
 
 .tipTop-Button-children {
-  padding-block-start: var(--tipTop-Button-children__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button-children__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button-children__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button-children__paddingInlineEnd);
+  margin-block-start: var(--tipTop-Button-children__marginBlockStart);
+  margin-block-end: var(--tipTop-Button-children__marginBlockEnd);
+  margin-inline-start: var(--tipTop-Button-children__marginInlineStart);
+  margin-inline-end: var(--tipTop-Button-children__marginInlineEnd);
 }
 
 /* Variant ---------------------------------------------------------------- */
@@ -237,6 +238,12 @@
 .tipTop-Button-root--square {
   border-radius: 0;
 }
+
+/* Full Width ------------------------------------------------------------- */
+.tipTop-Button-root--fullWidth {
+  width: 100%;
+}
+
 
 
 

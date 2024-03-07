@@ -149,24 +149,31 @@
 
   /* Button-slot */
   /* Enable as needed */
-  /* --tipTop-Button-slot__paddingBlockStart: 0; */
-  /* --tipTop-Button-slot__paddingBlockEnd: 0; */
-  /* --tipTop-Button-slot__paddingInlineStart: 0; */
-  /* --tipTop-Button-slot__paddingInlineEnd: 0; */
+  /* --tipTop-Button-slot__marginBlockStart: 0; */
+  /* --tipTop-Button-slot__marginBlockEnd: 0; */
+  /* --tipTop-Button-slot__marginInlineStart: 0; */
+  /* --tipTop-Button-slot__marginInlineEnd: 0; */
 
   /* Button-slotStart */
   /* Enable as needed */
-  /* --tipTop-Button-slotStart__paddingBlockStart: 0; */
-  /* --tipTop-Button-slotStart__paddingBlockEnd: 0; */
-  /* --tipTop-Button-slotStart__paddingInlineStart: 0; */
-  --tipTop-Button-slotStart__paddingInlineEnd: var(--tipTop__space--2);
+  /* --tipTop-Button-slotStart__marginBlockStart: 0; */
+  /* --tipTop-Button-slotStart__marginBlockEnd: 0; */
+  --tipTop-Button-slotStart__marginInlineStart: calc(var(--tipTop__space--0-5) * -1);
+  --tipTop-Button-slotStart__marginInlineEnd: var(--tipTop__space--2);
 
   /* Button-slotEnd */
   /* Enable as needed */
-  /* --tipTop-Button-slotEnd__paddingBlockStart: 0; */
-  /* --tipTop-Button-slotEnd__paddingBlockEnd: 0; */
-  --tipTop-Button-slotEnd__paddingInlineStart: var(--tipTop__space--2);
-  /* --tipTop-Button-slotEnd__paddingInlineEnd: 0; */
+  /* --tipTop-Button-slotEnd__marginBlockStart: 0; */
+  /* --tipTop-Button-slotEnd__marginBlockEnd: 0; */
+  --tipTop-Button-slotEnd__marginInlineStart: var(--tipTop__space--2);
+  --tipTop-Button-slotEnd__marginInlineEnd: calc(var(--tipTop__space--0-5) * -1);
+
+  /* children */
+  /* Enable as needed */
+  /* --tipTop-Button-children__marginBlockStart: 0; */
+  /* --tipTop-Button-children__marginBlockEnd: 0; */
+  /* --tipTop-Button-children__marginInlineStart: 0; */
+  /* --tipTop-Button-children__marginInlineEnd: 0; */
 
   /* Size */
   /* xs */
