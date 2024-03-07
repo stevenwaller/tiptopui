@@ -31,6 +31,7 @@ The following is a simple example of using a default button component.
 ```jsx
 // import the component from Tip Top UI
 import { Button } from "@tiptopui/components";
+
 // import the styles for Tip Top UI
 import "@tiptopui/components/dist/index.css";
 

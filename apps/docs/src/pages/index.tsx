@@ -1,6 +1,5 @@
-import clsx from "clsx";
+import cx from "clsx";
 import Link from "@docusaurus/Link";
-import { Button } from "@tiptopui/components";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
@@ -24,13 +23,13 @@ export default function Home(): JSX.Element {
           </p>
           <div className={cssModule.buttons}>
             <Link
-              className={clsx(cssModule.button, cssModule.buttonPrimary)}
+              className={cx(cssModule.button, cssModule.buttonPrimary)}
               to="/docs/GetStarted/installation"
             >
               Get Started
             </Link>
             <Link
-              className={clsx(cssModule.button, cssModule.buttonSecondary)}
+              className={cx(cssModule.button, cssModule.buttonSecondary)}
               to="/docs/Components/Inputs/Button"
             >
               View Components

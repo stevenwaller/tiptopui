@@ -295,6 +295,10 @@ div[class*="playgroundContainer_"] {
   }
 }
 
+div[class*="playgroundPreview_"] {
+  overflow-x: auto;
+}
+
 /* Tabs -------------------------------------- */
 .markdown .tabs {
   .tabs__item {
