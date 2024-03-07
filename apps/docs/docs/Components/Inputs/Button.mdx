@@ -18,7 +18,7 @@ render(
 );
 ```
 
-## Variants
+## Variant
 
 ```jsx live noInline
 const variants = ['primary', 'secondary', 'neutral', 'danger', 'warning', 'success', 'dark', 'light'];
@@ -28,6 +28,22 @@ render(
     {variants.map(variant => (
       <Button key={variant} variant={variant} style={{marginRight: '10px'}}>
         {variant}
+      </Button>
+    ))}
+  </div>
+);
+```
+
+## Size
+
+```jsx live noInline
+const sizes = ['xs', 'sm', 'normal', 'md', 'lg', 'xl'];
+
+render(
+  <div style={{display: 'flex', alignItems: 'center'}}>
+    {sizes.map(size => (
+      <Button key={size} size={size} style={{marginRight: '10px'}}>
+        {size}
       </Button>
     ))}
   </div>

@@ -39,24 +39,14 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     | 'light'
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
+  size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'xl'
 }
 /**
  * TODO
- * - solidity/variant/appearance/style/fill:
- *   - solid
- *   - flat/soft/faded
- *   - outline/bordered
- *   - ghost/light/plain/clear (background on hover)
- *   - transparent (no background on hover)
- *   - text/link (no background no padding)
- * - variant/color/status: primary, secondary, tertiary, danger, warning, success, info, light, dark, link
  * - inverted
  * - shape: pill, round, circle, square
- * - size: xs, sm, md, lg, xl
  * - full width
- * - disabled state
  * - focus state
- * - hover state
  * - active state
  * - icons
  * - dropdown
@@ -78,6 +68,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       loading,
       variant = 'primary',
       appearance = 'solid',
+      size = 'normal',
       ...restProps
     },
     ref,
@@ -140,6 +131,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           'tipTop-Button-root',
           `tipTop-Button-root--${appearance}`,
           `tipTop-Button-root--${variant}`,
+          `tipTop-Button-root--${size}`,
           loading && 'tipTop-Button-root--loading',
           className,
           classNames?.root,
