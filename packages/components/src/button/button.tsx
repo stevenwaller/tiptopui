@@ -30,6 +30,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'xl'
   shape?: 'round' | 'pill' | 'circle' | 'square'
   fullWidth?: boolean
+  justify?: 'start' | 'center' | 'end' | 'space-between' | 'space-around'
   children: React.ReactNode
   classNames?: {
     [key in ButtonParts]?: string
@@ -54,7 +55,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
  * - focus state
  * - active state
  * - dropdown
- * - justify: start, center, space-between, end
  * - button group
  *   - attached or not
  * - ellipsizeText
@@ -68,6 +68,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size = 'normal',
       shape = 'rounded',
       fullWidth = false,
+      justify = 'center',
       slotStart,
       slotEnd,
       className,
@@ -144,6 +145,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           `tipTop-Button-root--${variant}`,
           `tipTop-Button-root--${size}`,
           `tipTop-Button-root--${shape}`,
+          justify && `tipTop-Button-root--justify-${justify}`,
           loading && 'tipTop-Button-root--loading',
           fullWidth && 'tipTop-Button-root--fullWidth',
           className,

@@ -85,6 +85,21 @@ Content can be added to the start and end of the button using the `slotStart` an
 </div>
 ```
 
+## Justify
+
+The `justify` prop can be used to align the content of the button.
+
+```jsx live
+<div>
+  <Button fullWidth mb="10px" justify="start">start</Button>
+  <Button fullWidth mb="10px" justify="center">center</Button>
+  <Button fullWidth mb="10px" justify="end">end</Button>
+  <Button fullWidth mb="10px" justify="space-between" slotStart="😀" slotEnd="😠">space-between</Button>
+  <Button fullWidth mb="10px" justify="space-around" slotStart="😀" slotEnd="😠">space-around</Button>
+</div>
+
+```
+
 ## Loading
 
 When the `loading` prop is set, the Button `button` will be disabled and show a Loader in the middle of the button.

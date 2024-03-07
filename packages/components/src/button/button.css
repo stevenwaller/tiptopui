@@ -244,6 +244,28 @@
   width: 100%;
 }
 
+/* Justify ---------------------------------------------------------------- */
+.tipTop-Button-root--justify-start {
+  justify-content: flex-start;
+}
+
+.tipTop-Button-root--justify-end {
+  justify-content: flex-end;
+}
+
+.tipTop-Button-root--justify-center {
+  justify-content: center;
+}
+
+.tipTop-Button-root--justify-space-between {
+  justify-content: space-between;
+}
+
+.tipTop-Button-root--justify-space-around {
+  justify-content: space-around;
+}
+
+
 
 
 
