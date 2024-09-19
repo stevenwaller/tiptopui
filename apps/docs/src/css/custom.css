@@ -28,7 +28,8 @@
   --ifm-table-stripe-background: var(--tipTopDocs-color-bg-contrast);
   --ifm-code-font-size: 95%;
 
-  --ifm-heading-font-family: SchotisTextBlack;
+  --ifm-heading-font-family: Literata;
+  --ifm-heading-font-weight: 700;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
@@ -124,7 +125,7 @@ html {
 }
 
 .navbar__title {
-  font-family: SchotisTextBlack;
+  font-family: Literata;
   color: var(--tipTopDocs-color-light);
   font-size: 1.3rem;
   text-transform: uppercase;

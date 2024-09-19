@@ -122,80 +122,15 @@
   src: url('/static/webFonts/HellschreiberSerifBoldItalic/font.woff2') format('woff2'), url('/static/webFonts/HellschreiberSerifBoldItalic/font.woff') format('woff');
 }
 
-/* SCHOTIS ----------------- */
+/* Literata ----------------- */
+/* @font-face {
+  font-family: "Literata";
+  src: url('/static/webFonts/Literata/Literata_24pt-Black.ttf') format('truetype');
+} */
 
-/* Light */
 @font-face {
-  font-family: "SchotisTextLight";
-  src: url('/static/webFonts/SchotisTextLight/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextLight/font.woff') format('woff');
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 200 900;
+  src: url(/static/webFonts/Literata/Literata-VariableFont_opsz,wght.ttf) format('truetype');
 }
-@font-face {
-  font-family: "SchotisTextLightItalic";
-  src: url('/static/webFonts/SchotisTextLightItalic/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextLightItalic/font.woff') format('woff');
-}
-
-/* Book */
-@font-face {
-  font-family: "SchotisTextBook";
-  src: url('/static/webFonts/SchotisTextBook/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextBook/font.woff') format('woff');
-}
-@font-face {
-  font-family: "SchotisTextBookitalic";
-  src: url('/static/webFonts/SchotisTextBookitalic/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextBookitalic/font.woff') format('woff');
-}
-
-/* Regular */
-@font-face {
-  font-family: "SchotisTextRegular";
-  src: url('/static/webFonts/SchotisTextRegular/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextRegular/font.woff') format('woff');
-}
-@font-face {
-  font-family: "SchotisTextItalic";
-  src: url('/static/webFonts/SchotisTextItalic/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextItalic/font.woff') format('woff');
-}
-
-/* Semi Bold */
-@font-face {
-  font-family: "SchotisTextSemiBold";
-  src: url('/static/webFonts/SchotisTextSemiBold/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextSemiBold/font.woff') format('woff');
-}
-@font-face {
-  font-family: "SchotisTextSemiBoldItalic";
-  src: url('/static/webFonts/SchotisTextSemiBoldItalic/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextSemiBoldItalic/font.woff') format('woff');
-}
-
-/* Bold */
-@font-face {
-  font-family: "SchotisTextBold";
-  src: url('/static/webFonts/SchotisTextBold/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextBold/font.woff') format('woff');
-}
-@font-face {
-  font-family: "SchotisTextBoldItalic";
-  src: url('/static/webFonts/SchotisTextBoldItalic/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextBoldItalic/font.woff') format('woff');
-}
-
-/* Black */
-@font-face {
-  font-family: "SchotisTextBlack";
-  src: url('/static/webFonts/SchotisTextBlack/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextBlack/font.woff') format('woff');
-}
-@font-face {
-  font-family: "SchotisTextBlackItalic";
-  src: url('/static/webFonts/SchotisTextBlackItalic/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextBlackItalic/font.woff') format('woff');
-}
-
-/* Heavy */
-@font-face {
-  font-family: "SchotisTextHeavy";
-  src: url('/static/webFonts/SchotisTextHeavy/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextHeavy/font.woff') format('woff');
-}
-@font-face {
-  font-family: "SchotisTextHeavyItalic";
-  src: url('/static/webFonts/SchotisTextHeavyItalic/font.woff2') format('woff2'), url('/static/webFonts/SchotisTextHeavyItalic/font.woff') format('woff');
-}
-
-
-
-
-
-
