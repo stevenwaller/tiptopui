@@ -1,3 +1,106 @@
+:root {
+    /* root */
+  --topTop-Button-root__borderWidth: 1px;
+  --tipTop-Button-root__borderRadius: var(--tipTop__borderRadius--normal);
+  --tipTop-Button-root__fontSize: var(--tipTop__fontSize--normal);
+  --tipTop-Button-root__fontWeight: var(--tipTop__fontWeight--medium);
+  --tipTop-Button-root__transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  --tipTop-Button-root-isDisabled__opacity: 0.5;
+
+  /* Appearance */
+  /* Change the solid background color on hover */
+  --topTop-Button-root--solid-isHover__colorMix-colorSpace: srgb;
+  --topTop-Button-root--solid-isHover__colorMix-percent: 70%;
+  --topTop-Button-root--solid-isHover__colorMix-blendColor: #fff;
+
+  /* `faded` variant - change the background color */
+  --topTop-Button-root--faded__colorMix-colorSpace: srgb;
+  --topTop-Button-root--faded__colorMix-percent: 20%;
+  --topTop-Button-root--faded__colorMix-blendColor: #fff;
+
+  /* `faded` variant - change the background color on hover */
+  --topTop-Button-root--faded-isHover__colorMix-colorSpace: srgb;
+  --topTop-Button-root--faded-isHover__colorMix-percent: 30%;
+  --topTop-Button-root--faded-isHover__colorMix-blendColor: #fff;
+
+  /* Darken the text color over a faded/hovered background */
+  --topTop-Button-root--faded__color-colorMix-colorSpace: srgb;
+  --topTop-Button-root--faded__color-colorMix-percent: 65%;
+  --topTop-Button-root--faded__color-colorMix-blendColor: #000;
+
+  /* Button-slot */
+  /* Enable as needed */
+  /* --tipTop-Button-slot__marginBlockStart: 0; */
+  /* --tipTop-Button-slot__marginBlockEnd: 0; */
+  /* --tipTop-Button-slot__marginInlineStart: 0; */
+  /* --tipTop-Button-slot__marginInlineEnd: 0; */
+
+  /* Button-slotStart */
+  /* Enable as needed */
+  /* --tipTop-Button-slotStart__marginBlockStart: 0; */
+  /* --tipTop-Button-slotStart__marginBlockEnd: 0; */
+  --tipTop-Button-slotStart__marginInlineStart: calc(var(--tipTop__space--0-5) * -1);
+  --tipTop-Button-slotStart__marginInlineEnd: var(--tipTop__space--2);
+
+  /* Button-slotEnd */
+  /* Enable as needed */
+  /* --tipTop-Button-slotEnd__marginBlockStart: 0; */
+  /* --tipTop-Button-slotEnd__marginBlockEnd: 0; */
+  --tipTop-Button-slotEnd__marginInlineStart: var(--tipTop__space--2);
+  --tipTop-Button-slotEnd__marginInlineEnd: calc(var(--tipTop__space--0-5) * -1);
+
+  /* children */
+  /* Enable as needed */
+  /* --tipTop-Button-children__marginBlockStart: 0; */
+  /* --tipTop-Button-children__marginBlockEnd: 0; */
+  /* --tipTop-Button-children__marginInlineStart: 0; */
+  /* --tipTop-Button-children__marginInlineEnd: 0; */
+
+  /* Size */
+  /* xs */
+  --tipTop-Button-root--xs__fontSize: var(--tipTop__fontSize--xs);
+  --tipTop-Button-root__paddingBlockStart--xs: var(--tipTop__space--0-5);
+  --tipTop-Button-root__paddingBlockEnd--xs: var(--tipTop__space--0-5);
+  --tipTop-Button-root__paddingInlineStart--xs: var(--tipTop__space--1);
+  --tipTop-Button-root__paddingInlineEnd--xs: var(--tipTop__space--1);
+
+  /* sm */
+  --tipTop-Button-root--sm__fontSize: var(--tipTop__fontSize--sm);
+  --tipTop-Button-root__paddingBlockStart--sm: var(--tipTop__space--1-5);
+  --tipTop-Button-root__paddingBlockEnd--sm: var(--tipTop__space--1-5);
+  --tipTop-Button-root__paddingInlineStart--sm: var(--tipTop__space--2);
+  --tipTop-Button-root__paddingInlineEnd--sm: var(--tipTop__space--2);
+
+  /* normal */
+  --tipTop-Button-root--normal__fontSize: var(--tipTop__fontSize--normal);
+  --tipTop-Button-root__paddingBlockStart--normal: var(--tipTop__space--2-5);
+  --tipTop-Button-root__paddingBlockEnd--normal: var(--tipTop__space--2-5);
+  --tipTop-Button-root__paddingInlineStart--normal: var(--tipTop__space--3-5);
+  --tipTop-Button-root__paddingInlineEnd--normal: var(--tipTop__space--3-5);
+
+  /* medium */
+  --tipTop-Button-root--md__fontSize: var(--tipTop__fontSize--md);
+  --tipTop-Button-root__paddingBlockStart--md: var(--tipTop__space--3-5);
+  --tipTop-Button-root__paddingBlockEnd--md: var(--tipTop__space--3-5);
+  --tipTop-Button-root__paddingInlineStart--md: var(--tipTop__space--4);
+  --tipTop-Button-root__paddingInlineEnd--md: var(--tipTop__space--4);
+
+  /* large */
+  --tipTop-Button-root--lg__fontSize: var(--tipTop__fontSize--xl);
+  --tipTop-Button-root__paddingBlockStart--lg: var(--tipTop__space--4);
+  --tipTop-Button-root__paddingBlockEnd--lg: var(--tipTop__space--4);
+  --tipTop-Button-root__paddingInlineStart--lg: var(--tipTop__space--5);
+  --tipTop-Button-root__paddingInlineEnd--lg: var(--tipTop__space--5);
+
+  /* extra large */
+  --tipTop-Button-root--xl__fontSize: var(--tipTop__fontSize--3xl);
+  --tipTop-Button-root__paddingBlockStart--xl: var(--tipTop__space--4);
+  --tipTop-Button-root__paddingBlockEnd--xl: var(--tipTop__space--4);
+  --tipTop-Button-root__paddingInlineStart--xl: var(--tipTop__space--6);
+  --tipTop-Button-root__paddingInlineEnd--xl: var(--tipTop__space--6);
+}
+
+
 .tipTop-Button-root,
 .tipTop-Button-root * {
   box-sizing: border-box;

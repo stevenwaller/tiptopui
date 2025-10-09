@@ -1,3 +1,12 @@
+:root {
+  --tipTop-Loader-root__color--light: #fff;
+  --tipTop-Loader-root__color--dark: #333;
+  --tipTop-Loader-shape__borderWidth--sm: 1px;
+  --tipTop-Loader-shape__borderWidth--normal: 2px;
+  --tipTop-Loader-shape__borderWidth--lg: 4px;
+  --tipTop-Loader-shape__borderWidth--xl: 6px;
+}
+
 .tipTop-Loader-root,
 .tipTop-Loader-root * {
   position: relative;
