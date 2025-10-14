@@ -1,0 +1,600 @@
+:root {
+  /* root */
+  --tipTop-Badge-root__borderWidth: 1px;
+  --tipTop-Badge-root__borderRadius: var(--tipTop__borderRadius--normal);
+  --tipTop-Badge-root__fontSize: var(--tipTop__fontSize--sm);
+  --tipTop-Badge-root__fontWeight: var(--tipTop__fontWeight--medium);
+  --tipTop-Badge-root__lineHeight: 1;
+  --tipTop-Badge-root__minHeight: 1.25rem;
+  --tipTop-Badge-root__minWidth: 1.25rem;
+  --tipTop-Badge-root__paddingBlock: var(--tipTop__space--1);
+  --tipTop-Badge-root__paddingInline: var(--tipTop__space--2);
+  --tipTop-Badge-root__display: inline-flex;
+  --tipTop-Badge-root__alignItems: center;
+  --tipTop-Badge-root__justifyContent: center;
+  --tipTop-Badge-root__gap: var(--tipTop__space--1);
+  --tipTop-Badge-root__transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  --tipTop-Badge-root__textAlign: center;
+  --tipTop-Badge-root__whiteSpace: nowrap;
+
+  /* showOutline */
+  --tipTop-Badge-root--showOutline__boxShadow: 0 0 0 2px #fff;
+
+  /* position - absolute positioning */
+  --tipTop-Badge-root--position__position: absolute;
+  --tipTop-Badge-root--position__zIndex: 10;
+  --tipTop-Badge-root--position__transform: translate(50%, -50%);
+
+  /* Appearance */
+  /* Change the solid background color on hover */
+  --tipTop-Badge-root--solid-isHover__colorMix-colorSpace: srgb;
+  --tipTop-Badge-root--solid-isHover__colorMix-percent: 70%;
+  --tipTop-Badge-root--solid-isHover__colorMix-blendColor: #fff;
+
+  /* `faded` variant - change the background color */
+  --tipTop-Badge-root--faded__colorMix-colorSpace: srgb;
+  --tipTop-Badge-root--faded__colorMix-percent: 20%;
+  --tipTop-Badge-root--faded__colorMix-blendColor: #fff;
+
+  /* `faded` variant - change the background color on hover */
+  --tipTop-Badge-root--faded-isHover__colorMix-colorSpace: srgb;
+  --tipTop-Badge-root--faded-isHover__colorMix-percent: 30%;
+  --tipTop-Badge-root--faded-isHover__colorMix-blendColor: #fff;
+
+  /* Darken the text color over a faded/hovered background */
+  --tipTop-Badge-root--faded__color-colorMix-colorSpace: srgb;
+  --tipTop-Badge-root--faded__color-colorMix-percent: 65%;
+  --tipTop-Badge-root--faded__color-colorMix-blendColor: #000;
+
+  /* Badge-slot */
+  --tipTop-Badge-slot__display: inline-flex;
+  --tipTop-Badge-slot__alignItems: center;
+  --tipTop-Badge-slot__justifyContent: center;
+
+  /* Badge-slotStart */
+  --tipTop-Badge-slotStart__marginInlineEnd: var(--tipTop__space--1);
+
+  /* Badge-slotEnd */
+  --tipTop-Badge-slotEnd__marginInlineStart: var(--tipTop__space--1);
+
+  /* Badge-children */
+  --tipTop-Badge-children__display: inline-flex;
+  --tipTop-Badge-children__alignItems: center;
+  --tipTop-Badge-children__justifyContent: center;
+}
+
+/* Base Badge Root Styles */
+.tipTop-Badge-root {
+  border-width: var(--tipTop-Badge-root__borderWidth);
+  border-style: solid;
+  border-radius: var(--tipTop-Badge-root__borderRadius);
+  font-size: var(--tipTop-Badge-root__fontSize);
+  font-weight: var(--tipTop-Badge-root__fontWeight);
+  line-height: var(--tipTop-Badge-root__lineHeight);
+  min-height: var(--tipTop-Badge-root__minHeight);
+  min-width: var(--tipTop-Badge-root__minWidth);
+  padding-block: var(--tipTop-Badge-root__paddingBlock);
+  padding-inline: var(--tipTop-Badge-root__paddingInline);
+  display: var(--tipTop-Badge-root__display);
+  align-items: var(--tipTop-Badge-root__alignItems);
+  justify-content: var(--tipTop-Badge-root__justifyContent);
+  gap: var(--tipTop-Badge-root__gap);
+  transition: var(--tipTop-Badge-root__transition);
+  text-align: var(--tipTop-Badge-root__textAlign);
+  white-space: var(--tipTop-Badge-root__whiteSpace);
+}
+
+/* Show Outline */
+.tipTop-Badge-root--showOutline {
+  box-shadow: var(--tipTop-Badge-root--showOutline__boxShadow);
+}
+
+/* Position Styles */
+.tipTop-Badge-root--position-top,
+.tipTop-Badge-root--position-top-right,
+.tipTop-Badge-root--position-right,
+.tipTop-Badge-root--position-bottom-right,
+.tipTop-Badge-root--position-bottom,
+.tipTop-Badge-root--position-bottom-left,
+.tipTop-Badge-root--position-left,
+.tipTop-Badge-root--position-top-left {
+  position: var(--tipTop-Badge-root--position__position);
+  z-index: var(--tipTop-Badge-root--position__zIndex);
+}
+
+.tipTop-Badge-root--position-top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tipTop-Badge-root--position-top-right {
+  top: 0;
+  right: 0;
+  transform: var(--tipTop-Badge-root--position__transform);
+}
+
+.tipTop-Badge-root--position-right {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.tipTop-Badge-root--position-bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+
+.tipTop-Badge-root--position-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.tipTop-Badge-root--position-bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+}
+
+.tipTop-Badge-root--position-left {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.tipTop-Badge-root--position-top-left {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* Size Styles */
+.tipTop-Badge-root--xs {
+  font-size: var(--tipTop__fontSize--xs);
+  padding-block: var(--tipTop__space--0-5);
+  padding-inline: var(--tipTop__space--1);
+  min-height: 0.875rem;
+  min-width: 0.875rem;
+  gap: var(--tipTop__space--0-5);
+}
+
+.tipTop-Badge-root--sm {
+  font-size: var(--tipTop__fontSize--sm);
+  padding-block: var(--tipTop__space--0-5);
+  padding-inline: var(--tipTop__space--1-5);
+  min-height: 1rem;
+  min-width: 1rem;
+  gap: var(--tipTop__space--0-5);
+}
+
+/* .tipTop-Badge-root--normal uses default variables defined in :root */
+
+.tipTop-Badge-root--md {
+  font-size: var(--tipTop__fontSize--base);
+  padding-block: var(--tipTop__space--1-5);
+  padding-inline: var(--tipTop__space--2-5);
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  gap: var(--tipTop__space--1-5);
+}
+
+.tipTop-Badge-root--lg {
+  font-size: var(--tipTop__fontSize--lg);
+  padding-block: var(--tipTop__space--2);
+  padding-inline: var(--tipTop__space--3);
+  min-height: 1.75rem;
+  min-width: 1.75rem;
+  gap: var(--tipTop__space--2);
+}
+
+.tipTop-Badge-root--xl {
+  font-size: var(--tipTop__fontSize--xl);
+  padding-block: var(--tipTop__space--2-5);
+  padding-inline: var(--tipTop__space--3-5);
+  min-height: 2rem;
+  min-width: 2rem;
+  gap: var(--tipTop__space--2);
+}
+
+/* Shape Styles */
+.tipTop-Badge-root--circle {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding-inline: var(--tipTop-Badge-root__paddingBlock);
+}
+
+.tipTop-Badge-root--pill {
+  border-radius: 9999px;
+}
+
+/* Empty Badge (no content) */
+.tipTop-Badge-root--empty {
+  padding: 0;
+  width: var(--tipTop-Badge-root__minWidth);
+  height: var(--tipTop-Badge-root__minHeight);
+}
+
+.tipTop-Badge-root--empty.tipTop-Badge-root--xs {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.tipTop-Badge-root--empty.tipTop-Badge-root--sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tipTop-Badge-root--empty.tipTop-Badge-root--md {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.tipTop-Badge-root--empty.tipTop-Badge-root--lg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.tipTop-Badge-root--empty.tipTop-Badge-root--xl {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Variant: Primary */
+.tipTop-Badge-root--solid.tipTop-Badge-root--primary {
+  background-color: var(--tipTop__color--primary);
+  border-color: var(--tipTop__color--primary);
+  color: #fff;
+}
+
+.tipTop-Badge-root--faded.tipTop-Badge-root--primary {
+  background-color: color-mix(
+    in var(--tipTop-Badge-root--faded__colorMix-colorSpace),
+    var(--tipTop__color--primary) var(--tipTop-Badge-root--faded__colorMix-percent),
+    var(--tipTop-Badge-root--faded__colorMix-blendColor)
+  );
+  border-color: transparent;
+  color: color-mix(
+    in var(--tipTop-Badge-root--faded__color-colorMix-colorSpace),
+    var(--tipTop__color--primary) var(--tipTop-Badge-root--faded__color-colorMix-percent),
+    var(--tipTop-Badge-root--faded__color-colorMix-blendColor)
+  );
+}
+
+.tipTop-Badge-root--outline.tipTop-Badge-root--primary {
+  background-color: transparent;
+  border-color: var(--tipTop__color--primary);
+  color: var(--tipTop__color--primary);
+}
+
+.tipTop-Badge-root--ghost.tipTop-Badge-root--primary {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--primary);
+}
+
+.tipTop-Badge-root--text.tipTop-Badge-root--primary {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--primary);
+  padding: 0;
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Variant: Secondary */
+.tipTop-Badge-root--solid.tipTop-Badge-root--secondary {
+  background-color: var(--tipTop__color--secondary);
+  border-color: var(--tipTop__color--secondary);
+  color: #fff;
+}
+
+.tipTop-Badge-root--faded.tipTop-Badge-root--secondary {
+  background-color: color-mix(
+    in var(--tipTop-Badge-root--faded__colorMix-colorSpace),
+    var(--tipTop__color--secondary) var(--tipTop-Badge-root--faded__colorMix-percent),
+    var(--tipTop-Badge-root--faded__colorMix-blendColor)
+  );
+  border-color: transparent;
+  color: color-mix(
+    in var(--tipTop-Badge-root--faded__color-colorMix-colorSpace),
+    var(--tipTop__color--secondary) var(--tipTop-Badge-root--faded__color-colorMix-percent),
+    var(--tipTop-Badge-root--faded__color-colorMix-blendColor)
+  );
+}
+
+.tipTop-Badge-root--outline.tipTop-Badge-root--secondary {
+  background-color: transparent;
+  border-color: var(--tipTop__color--secondary);
+  color: var(--tipTop__color--secondary);
+}
+
+.tipTop-Badge-root--ghost.tipTop-Badge-root--secondary {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--secondary);
+}
+
+.tipTop-Badge-root--text.tipTop-Badge-root--secondary {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--secondary);
+  padding: 0;
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Variant: Neutral */
+.tipTop-Badge-root--solid.tipTop-Badge-root--neutral {
+  background-color: var(--tipTop__color--neutral);
+  border-color: var(--tipTop__color--neutral);
+  color: #fff;
+}
+
+.tipTop-Badge-root--faded.tipTop-Badge-root--neutral {
+  background-color: color-mix(
+    in var(--tipTop-Badge-root--faded__colorMix-colorSpace),
+    var(--tipTop__color--neutral) var(--tipTop-Badge-root--faded__colorMix-percent),
+    var(--tipTop-Badge-root--faded__colorMix-blendColor)
+  );
+  border-color: transparent;
+  color: color-mix(
+    in var(--tipTop-Badge-root--faded__color-colorMix-colorSpace),
+    var(--tipTop__color--neutral) var(--tipTop-Badge-root--faded__color-colorMix-percent),
+    var(--tipTop-Badge-root--faded__color-colorMix-blendColor)
+  );
+}
+
+.tipTop-Badge-root--outline.tipTop-Badge-root--neutral {
+  background-color: transparent;
+  border-color: var(--tipTop__color--neutral);
+  color: var(--tipTop__color--neutral);
+}
+
+.tipTop-Badge-root--ghost.tipTop-Badge-root--neutral {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--neutral);
+}
+
+.tipTop-Badge-root--text.tipTop-Badge-root--neutral {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--neutral);
+  padding: 0;
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Variant: Danger */
+.tipTop-Badge-root--solid.tipTop-Badge-root--danger {
+  background-color: var(--tipTop__color--danger);
+  border-color: var(--tipTop__color--danger);
+  color: #fff;
+}
+
+.tipTop-Badge-root--faded.tipTop-Badge-root--danger {
+  background-color: color-mix(
+    in var(--tipTop-Badge-root--faded__colorMix-colorSpace),
+    var(--tipTop__color--danger) var(--tipTop-Badge-root--faded__colorMix-percent),
+    var(--tipTop-Badge-root--faded__colorMix-blendColor)
+  );
+  border-color: transparent;
+  color: color-mix(
+    in var(--tipTop-Badge-root--faded__color-colorMix-colorSpace),
+    var(--tipTop__color--danger) var(--tipTop-Badge-root--faded__color-colorMix-percent),
+    var(--tipTop-Badge-root--faded__color-colorMix-blendColor)
+  );
+}
+
+.tipTop-Badge-root--outline.tipTop-Badge-root--danger {
+  background-color: transparent;
+  border-color: var(--tipTop__color--danger);
+  color: var(--tipTop__color--danger);
+}
+
+.tipTop-Badge-root--ghost.tipTop-Badge-root--danger {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--danger);
+}
+
+.tipTop-Badge-root--text.tipTop-Badge-root--danger {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--danger);
+  padding: 0;
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Variant: Warning */
+.tipTop-Badge-root--solid.tipTop-Badge-root--warning {
+  background-color: var(--tipTop__color--warning);
+  border-color: var(--tipTop__color--warning);
+  color: #000;
+}
+
+.tipTop-Badge-root--faded.tipTop-Badge-root--warning {
+  background-color: color-mix(
+    in var(--tipTop-Badge-root--faded__colorMix-colorSpace),
+    var(--tipTop__color--warning) var(--tipTop-Badge-root--faded__colorMix-percent),
+    var(--tipTop-Badge-root--faded__colorMix-blendColor)
+  );
+  border-color: transparent;
+  color: color-mix(
+    in var(--tipTop-Badge-root--faded__color-colorMix-colorSpace),
+    var(--tipTop__color--warning) var(--tipTop-Badge-root--faded__color-colorMix-percent),
+    var(--tipTop-Badge-root--faded__color-colorMix-blendColor)
+  );
+}
+
+.tipTop-Badge-root--outline.tipTop-Badge-root--warning {
+  background-color: transparent;
+  border-color: var(--tipTop__color--warning);
+  color: var(--tipTop__color--warning);
+}
+
+.tipTop-Badge-root--ghost.tipTop-Badge-root--warning {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--warning);
+}
+
+.tipTop-Badge-root--text.tipTop-Badge-root--warning {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--warning);
+  padding: 0;
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Variant: Success */
+.tipTop-Badge-root--solid.tipTop-Badge-root--success {
+  background-color: var(--tipTop__color--success);
+  border-color: var(--tipTop__color--success);
+  color: #fff;
+}
+
+.tipTop-Badge-root--faded.tipTop-Badge-root--success {
+  background-color: color-mix(
+    in var(--tipTop-Badge-root--faded__colorMix-colorSpace),
+    var(--tipTop__color--success) var(--tipTop-Badge-root--faded__colorMix-percent),
+    var(--tipTop-Badge-root--faded__colorMix-blendColor)
+  );
+  border-color: transparent;
+  color: color-mix(
+    in var(--tipTop-Badge-root--faded__color-colorMix-colorSpace),
+    var(--tipTop__color--success) var(--tipTop-Badge-root--faded__color-colorMix-percent),
+    var(--tipTop-Badge-root--faded__color-colorMix-blendColor)
+  );
+}
+
+.tipTop-Badge-root--outline.tipTop-Badge-root--success {
+  background-color: transparent;
+  border-color: var(--tipTop__color--success);
+  color: var(--tipTop__color--success);
+}
+
+.tipTop-Badge-root--ghost.tipTop-Badge-root--success {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--success);
+}
+
+.tipTop-Badge-root--text.tipTop-Badge-root--success {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--success);
+  padding: 0;
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Variant: Dark */
+.tipTop-Badge-root--solid.tipTop-Badge-root--dark {
+  background-color: var(--tipTop__color--dark);
+  border-color: var(--tipTop__color--dark);
+  color: #fff;
+}
+
+.tipTop-Badge-root--faded.tipTop-Badge-root--dark {
+  background-color: color-mix(
+    in var(--tipTop-Badge-root--faded__colorMix-colorSpace),
+    var(--tipTop__color--dark) var(--tipTop-Badge-root--faded__colorMix-percent),
+    var(--tipTop-Badge-root--faded__colorMix-blendColor)
+  );
+  border-color: transparent;
+  color: color-mix(
+    in var(--tipTop-Badge-root--faded__color-colorMix-colorSpace),
+    var(--tipTop__color--dark) var(--tipTop-Badge-root--faded__color-colorMix-percent),
+    var(--tipTop-Badge-root--faded__color-colorMix-blendColor)
+  );
+}
+
+.tipTop-Badge-root--outline.tipTop-Badge-root--dark {
+  background-color: transparent;
+  border-color: var(--tipTop__color--dark);
+  color: var(--tipTop__color--dark);
+}
+
+.tipTop-Badge-root--ghost.tipTop-Badge-root--dark {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--dark);
+}
+
+.tipTop-Badge-root--text.tipTop-Badge-root--dark {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--dark);
+  padding: 0;
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Variant: Light */
+.tipTop-Badge-root--solid.tipTop-Badge-root--light {
+  background-color: var(--tipTop__color--light);
+  border-color: var(--tipTop__color--light);
+  color: var(--tipTop__color--dark);
+}
+
+.tipTop-Badge-root--faded.tipTop-Badge-root--light {
+  background-color: color-mix(
+    in var(--tipTop-Badge-root--faded__colorMix-colorSpace),
+    var(--tipTop__color--light) var(--tipTop-Badge-root--faded__colorMix-percent),
+    var(--tipTop-Badge-root--faded__colorMix-blendColor)
+  );
+  border-color: transparent;
+  color: color-mix(
+    in var(--tipTop-Badge-root--faded__color-colorMix-colorSpace),
+    var(--tipTop__color--light) var(--tipTop-Badge-root--faded__color-colorMix-percent),
+    var(--tipTop-Badge-root--faded__color-colorMix-blendColor)
+  );
+}
+
+.tipTop-Badge-root--outline.tipTop-Badge-root--light {
+  background-color: transparent;
+  border-color: var(--tipTop__color--light);
+  color: var(--tipTop__color--light);
+}
+
+.tipTop-Badge-root--ghost.tipTop-Badge-root--light {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--light);
+}
+
+.tipTop-Badge-root--text.tipTop-Badge-root--light {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tipTop__color--light);
+  padding: 0;
+  min-height: auto;
+  min-width: auto;
+}
+
+/* Slot Styles */
+.tipTop-Badge-slot {
+  display: var(--tipTop-Badge-slot__display);
+  align-items: var(--tipTop-Badge-slot__alignItems);
+  justify-content: var(--tipTop-Badge-slot__justifyContent);
+}
+
+.tipTop-Badge-slotStart {
+  margin-inline-end: var(--tipTop-Badge-slotStart__marginInlineEnd);
+}
+
+.tipTop-Badge-slotEnd {
+  margin-inline-start: var(--tipTop-Badge-slotEnd__marginInlineStart);
+}
+
+/* Children Styles */
+.tipTop-Badge-children {
+  display: var(--tipTop-Badge-children__display);
+  align-items: var(--tipTop-Badge-children__alignItems);
+  justify-content: var(--tipTop-Badge-children__justifyContent);
+}

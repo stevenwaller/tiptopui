@@ -34,7 +34,6 @@ Read the [Styling](../../../../apps/docs/docs/GetStarted/Customization/styling.m
 - shape: circle or pill
 - size: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'xl'
 - showOutline: enables the white outline to help offset the badge from what it overlays
-- onClick: when provided the root div should work as an accessible button
 - slotStart
 - slotEnd
 - children

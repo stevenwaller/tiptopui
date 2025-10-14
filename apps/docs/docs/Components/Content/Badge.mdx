@@ -1,0 +1,228 @@
+```jsx live
+<Badge>Badge</Badge>
+```
+
+## Appearance
+
+```jsx live noInline
+const appearances = ['solid', 'faded', 'outline', 'ghost', 'text'];
+
+render(
+  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+    {appearances.map(appearance => (
+      <Badge key={appearance} appearance={appearance}>
+        {appearance}
+      </Badge>
+    ))}
+  </div>
+);
+```
+
+## Variant
+
+```jsx live noInline
+const variants = ['primary', 'secondary', 'neutral', 'danger', 'warning', 'success', 'dark', 'light'];
+
+render(
+  <div style={{display: 'flex', gap: '10px', flexWrap: 'wrap'}}>
+    {variants.map(variant => (
+      <Badge key={variant} variant={variant}>
+        {variant}
+      </Badge>
+    ))}
+  </div>
+);
+```
+
+## Size
+
+```jsx live noInline
+const sizes = ['xs', 'sm', 'normal', 'md', 'lg', 'xl'];
+
+render(
+  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+    {sizes.map(size => (
+      <Badge key={size} size={size}>
+        {size}
+      </Badge>
+    ))}
+  </div>
+);
+```
+
+## Shape
+
+```jsx live noInline
+const shapes = ['pill', 'circle'];
+
+render(
+  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+    {shapes.map(shape => (
+      <Badge key={shape} shape={shape}>
+        {shape}
+      </Badge>
+    ))}
+  </div>
+);
+```
+
+## Empty Badge
+
+When no content is provided, the badge renders as just a shape with color.
+
+```jsx live
+<div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+  <Badge />
+  <Badge variant="danger" />
+  <Badge variant="success" shape="circle" />
+  <Badge variant="warning" size="lg" />
+</div>
+```
+
+## Slots
+
+Content can be added to the start and end of the badge using the `slotStart` and `slotEnd` props.
+
+```jsx live
+// Icons from https://tabler.io/docs/icons/react
+<div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
+  <Badge slotStart={<IconStar size={16}/>}>Starred</Badge>
+  <Badge slotEnd={<IconX size={14}/>}>Close</Badge>
+  <Badge slotStart="🔥">Hot</Badge>
+  <Badge slotStart="99+" slotEnd={<IconX size={12}/>} variant="danger" />
+</div>
+```
+
+## With Icons
+
+```jsx live
+<div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
+  <Badge><IconBell size={16}/></Badge>
+  <Badge variant="success"><IconCheck size={16}/></Badge>
+  <Badge variant="danger"><IconAlertTriangle size={16}/></Badge>
+  <Badge variant="warning"><IconClock size={16}/></Badge>
+</div>
+```
+
+## Numbers and Counters
+
+```jsx live
+<div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
+  <Badge>5</Badge>
+  <Badge variant="danger">99+</Badge>
+  <Badge variant="success" size="sm">12</Badge>
+  <Badge variant="warning" shape="circle">3</Badge>
+</div>
+```
+
+## Show Outline
+
+The `showOutline` prop adds a white outline to help the badge stand out over backgrounds.
+
+```jsx live
+<div style={{background: 'linear-gradient(45deg, #ff6b6b, #4ecdc4)', padding: '20px', borderRadius: '8px'}}>
+  <div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
+    <Badge>No Outline</Badge>
+    <Badge showOutline>With Outline</Badge>
+    <Badge variant="danger" showOutline>99+</Badge>
+    <Badge variant="success" showOutline shape="circle">✓</Badge>
+  </div>
+</div>
+```
+
+## Positioning
+
+Badges can be absolutely positioned relative to their parent container using the `position` prop.
+
+```jsx live
+<div style={{display: 'flex', gap: '30px', alignItems: 'center'}}>
+  <div style={{position: 'relative', width: '60px', height: '60px', background: '#f0f0f0', borderRadius: '8px'}}>
+    <Badge position="top-right" variant="danger">5</Badge>
+  </div>
+
+  <div style={{position: 'relative', width: '60px', height: '60px', background: '#f0f0f0', borderRadius: '8px'}}>
+    <Badge position="top-left" variant="success" shape="circle" />
+  </div>
+
+  <div style={{position: 'relative', width: '60px', height: '60px', background: '#f0f0f0', borderRadius: '8px'}}>
+    <Badge position="bottom-right" variant="warning">New</Badge>
+  </div>
+
+  <div style={{position: 'relative', width: '60px', height: '60px', background: '#f0f0f0', borderRadius: '8px'}}>
+    <Badge position="bottom" variant="neutral">Info</Badge>
+  </div>
+</div>
+```
+
+## Real-world Examples
+
+### Notification Badge on Avatar
+
+```jsx live
+<div style={{position: 'relative', display: 'inline-block'}}>
+  <Avatar size="lg" />
+  <Badge position="top-right" variant="danger" showOutline>3</Badge>
+</div>
+```
+
+### Status Indicators
+
+```jsx live
+<div style={{display: 'flex', gap: '15px', alignItems: 'center'}}>
+  <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+    <Badge variant="success" size="sm" />
+    <span>Online</span>
+  </div>
+
+  <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+    <Badge variant="warning" size="sm" />
+    <span>Away</span>
+  </div>
+
+  <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+    <Badge variant="neutral" size="sm" />
+    <span>Offline</span>
+  </div>
+</div>
+```
+
+### Category Tags
+
+```jsx live
+<div style={{display: 'flex', gap: '8px', flexWrap: 'wrap'}}>
+  <Badge appearance="faded" variant="primary">React</Badge>
+  <Badge appearance="faded" variant="secondary">TypeScript</Badge>
+  <Badge appearance="faded" variant="success">CSS</Badge>
+  <Badge appearance="faded" variant="warning">JavaScript</Badge>
+  <Badge appearance="outline" variant="neutral">Documentation</Badge>
+</div>
+```
+
+### Interactive Badges with Close
+
+```jsx live
+<div style={{display: 'flex', gap: '8px', flexWrap: 'wrap'}}>
+  <Badge
+    slotEnd={<IconX size={14} style={{cursor: 'pointer'}} onClick={() => alert('Remove tag')} />}
+    variant="primary"
+  >
+    Tag 1
+  </Badge>
+  <Badge
+    slotEnd={<IconX size={14} style={{cursor: 'pointer'}} onClick={() => alert('Remove tag')} />}
+    variant="secondary"
+  >
+    Tag 2
+  </Badge>
+  <Badge
+    slotEnd={<IconX size={14} style={{cursor: 'pointer'}} onClick={() => alert('Remove tag')} />}
+    variant="success"
+  >
+    Tag 3
+  </Badge>
+</div>
+```
+
+## Props
+
+<PropsTable name="Badge" />
