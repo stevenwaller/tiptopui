@@ -76,8 +76,8 @@ When no content is provided, the badge renders as just a shape with color.
 <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
   <Badge />
   <Badge variant="danger" />
-  <Badge variant="success" shape="circle" />
-  <Badge variant="warning" size="lg" />
+  <Badge variant="success" />
+  <Badge variant="warning" />
 </div>
 ```
 
@@ -88,10 +88,10 @@ Content can be added to the start and end of the badge using the `slotStart` and
 ```jsx live
 // Icons from https://tabler.io/docs/icons/react
 <div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
-  <Badge slotStart={<IconStar size={16}/>}>Starred</Badge>
+  <Badge slotStart={<IconStar size={14}/>}>Starred</Badge>
   <Badge slotEnd={<IconX size={14}/>}>Close</Badge>
   <Badge slotStart="🔥">Hot</Badge>
-  <Badge slotStart="99+" slotEnd={<IconX size={12}/>} variant="danger" />
+  <Badge slotStart="99+" slotEnd={<IconX size={14}/>} variant="danger" />
 </div>
 ```
 
@@ -99,10 +99,10 @@ Content can be added to the start and end of the badge using the `slotStart` and
 
 ```jsx live
 <div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
-  <Badge><IconBell size={16}/></Badge>
-  <Badge variant="success"><IconCheck size={16}/></Badge>
-  <Badge variant="danger"><IconAlertTriangle size={16}/></Badge>
-  <Badge variant="warning"><IconClock size={16}/></Badge>
+  <Badge shape="circle"><IconBell size={14}/></Badge>
+  <Badge shape="circle" variant="success"><IconCheck size={14}/></Badge>
+  <Badge shape="circle" variant="danger"><IconAlertTriangle size={14}/></Badge>
+  <Badge shape="circle" variant="warning"><IconClock size={14}/></Badge>
 </div>
 ```
 
