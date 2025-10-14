@@ -3,7 +3,7 @@ import cx from 'clsx'
 import './avatar.css'
 
 export interface AvatarProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode
 }
 
@@ -13,13 +13,12 @@ export function Avatar({
   ...restProps
 }: AvatarProps): JSX.Element {
   return (
-    <button
-      type='button'
+    <div
       className={cx('tiptopui-Avatar', className)}
       {...restProps}
     >
       {children}
-    </button>
+    </div>
   )
 }
 
