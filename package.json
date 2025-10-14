@@ -9,7 +9,8 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
+    "release": "turbo run build --filter=docs^... && changeset publish",
+    "gen-css-vars": "rm -rf ./apps/docs/docs/_partials/* && node ./scripts/gen-root-css-var-docs.mjs && node ./scripts/gen-css-var-docs.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

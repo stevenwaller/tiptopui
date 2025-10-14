@@ -2,6 +2,8 @@
 sidebar_position: 2
 ---
 
+import CSSVars from '../../_partials/_cssVars.mdx';
+
 # CSS Variables
 
 Tip Top UI uses CSS variables (custom properties) to define colors, sizes, paddings and other properties. You can customize the CSS variables by defining them in your own stylesheets.
@@ -12,8 +14,6 @@ Tip Top UI uses CSS variables (custom properties) to define colors, sizes, paddi
   --tipTop-fontFamily-text: "Comic Sans";
 }
 ```
-
-The documentation for each component includes the unique CSS variables they use.
 
 ## Variable naming conventions
 
@@ -55,18 +55,11 @@ The documentation for each component includes the unique CSS variables they use.
 
 Only the `tipTop` prefix and the `property` are required. All other parts are optional and should only be included if they make sense for the specific CSS variable.
 
-### Examples
+## Root CSS Variables
 
-Global CSS variable that applies to all components.
+:::note
 
-```css
-/* --tipTop__<propertyName>: <value>; */
---tipTop__color: "#fff";
-```
+Check the documentation for each component to see the component specific CSS variables that are available.
+:::
 
-CSS variable that applies to a specific component.
-
-```css
-/* --tipTop-<ComponentName>__<propertyName>: <value>; */
---tipTop-Button__color: "#209f47";
-```
+<CSSVars />

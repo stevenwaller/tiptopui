@@ -1,5 +1,5 @@
 :root {
-  /* root */
+  /* ### Root */
   --tipTop-Badge__borderWidth: 1px;
   --tipTop-Badge__borderRadius: var(--tipTop__borderRadius--normal);
   --tipTop-Badge__fontSize: var(--tipTop__fontSize--sm);
@@ -17,17 +17,18 @@
   --tipTop-Badge__textAlign: center;
   --tipTop-Badge__whiteSpace: nowrap;
 
-  /* showOutline */
+  /* ### Show Outline */
   --tipTop-Badge--showOutline__boxShadow: 0 0 0 2px #fff;
 
-  /* position - absolute positioning */
+  /* ### Position */
   --tipTop-Badge--position__position: absolute;
   --tipTop-Badge--position__zIndex: 10;
   --tipTop-Badge--position__transform: translate(50%, -50%);
 
-  /* Appearance */
+  /* ### Variants */
 
-  /* `faded` variant - change the background color */
+  /* #### `faded` */
+  /* change the background color */
   --tipTop-Badge--faded__bgColorMix-colorSpace: srgb;
   --tipTop-Badge--faded__bgColorMix-percent: 20%;
   --tipTop-Badge--faded__bgColorMix-blendColor: #fff;
@@ -37,18 +38,18 @@
   --tipTop-Badge--faded__textColorMix-percent: 65%;
   --tipTop-Badge--faded__textColorMix-blendColor: #000;
 
-  /* Badge-slot */
+  /* ### Slot */
   --tipTop-Badge-slot__display: inline-flex;
   --tipTop-Badge-slot__alignItems: center;
   --tipTop-Badge-slot__justifyContent: center;
 
-  /* Badge-slotStart */
+  /* #### Slot Start */
   --tipTop-Badge-slotStart__marginInlineEnd: var(--tipTop__space--1);
 
-  /* Badge-slotEnd */
+  /* #### Slot End */
   --tipTop-Badge-slotEnd__marginInlineStart: var(--tipTop__space--1);
 
-  /* Badge-children */
+  /* ### Children */
   --tipTop-Badge-children__display: inline-flex;
   --tipTop-Badge-children__alignItems: center;
   --tipTop-Badge-children__justifyContent: center;

@@ -1,5 +1,5 @@
 :root {
-    /* root */
+  /* ### root */
   --tipTop-Button__borderWidth: 1px;
   --tipTop-Button__borderRadius: var(--tipTop__borderRadius--normal);
   --tipTop-Button__fontSize: var(--tipTop__fontSize--normal);
@@ -7,18 +7,20 @@
   --tipTop-Button__transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
   --tipTop-Button--disabled__opacity: 0.5;
 
-  /* Appearance */
+  /* ### Variants */
+  /* #### `solid` */
   /* Change the solid background color on hover */
   --tipTop-Button--solid-hovered__bgColorMix-colorSpace: srgb;
   --tipTop-Button--solid-hovered__bgColorMix-percent: 70%;
   --tipTop-Button--solid-hovered__bgColorMix-blendColor: #fff;
 
-  /* `faded` variant - change the background color */
+  /* #### `faded` */
+  /* Change the background color */
   --tipTop-Button--faded__bgColorMix-colorSpace: srgb;
   --tipTop-Button--faded__bgColorMix-percent: 20%;
   --tipTop-Button--faded__bgColorMix-blendColor: #fff;
 
-  /* `faded` variant - change the background color on hover */
+  /* Change the background color on hover */
   --tipTop-Button--faded-hovered__bgColorMix-colorSpace: srgb;
   --tipTop-Button--faded-hovered__bgColorMix-percent: 30%;
   --tipTop-Button--faded-hovered__bgColorMix-blendColor: #fff;
@@ -28,71 +30,67 @@
   --tipTop-Button--faded__textColorMix-percent: 65%;
   --tipTop-Button--faded__textColorMix-blendColor: #000;
 
-  /* Button-slot */
-  /* Enable as needed */
-  /* --tipTop-Button-slot__marginBlockStart: 0; */
-  /* --tipTop-Button-slot__marginBlockEnd: 0; */
-  /* --tipTop-Button-slot__marginInlineStart: 0; */
-  /* --tipTop-Button-slot__marginInlineEnd: 0; */
+  /* ### Slots */
+  --tipTop-Button-slot__marginBlockStart: 0;
+  --tipTop-Button-slot__marginBlockEnd: 0;
+  --tipTop-Button-slot__marginInlineStart: 0;
+  --tipTop-Button-slot__marginInlineEnd: 0;
 
-  /* Button-slotStart */
-  /* Enable as needed */
-  /* --tipTop-Button-slotStart__marginBlockStart: 0; */
-  /* --tipTop-Button-slotStart__marginBlockEnd: 0; */
+  /* #### Slot Start */
+  --tipTop-Button-slotStart__marginBlockStart: 0;
+  --tipTop-Button-slotStart__marginBlockEnd: 0;
   --tipTop-Button-slotStart__marginInlineStart: calc(var(--tipTop__space--0-5) * -1);
   --tipTop-Button-slotStart__marginInlineEnd: var(--tipTop__space--2);
 
-  /* Button-slotEnd */
-  /* Enable as needed */
-  /* --tipTop-Button-slotEnd__marginBlockStart: 0; */
-  /* --tipTop-Button-slotEnd__marginBlockEnd: 0; */
+  /* #### Slot End */
+  --tipTop-Button-slotEnd__marginBlockStart: 0;
+  --tipTop-Button-slotEnd__marginBlockEnd: 0;
   --tipTop-Button-slotEnd__marginInlineStart: var(--tipTop__space--2);
   --tipTop-Button-slotEnd__marginInlineEnd: calc(var(--tipTop__space--0-5) * -1);
 
-  /* children */
-  /* Enable as needed */
-  /* --tipTop-Button-children__marginBlockStart: 0; */
-  /* --tipTop-Button-children__marginBlockEnd: 0; */
-  /* --tipTop-Button-children__marginInlineStart: 0; */
-  /* --tipTop-Button-children__marginInlineEnd: 0; */
+  /* ### Children */
+  --tipTop-Button-children__marginBlockStart: 0;
+  --tipTop-Button-children__marginBlockEnd: 0;
+  --tipTop-Button-children__marginInlineStart: 0;
+  --tipTop-Button-children__marginInlineEnd: 0;
 
-  /* Size */
-  /* xs */
+  /* ### Size */
+  /* #### xs */
   --tipTop-Button--xs__fontSize: var(--tipTop__fontSize--xs);
   --tipTop-Button__paddingBlockStart--xs: var(--tipTop__space--0-5);
   --tipTop-Button__paddingBlockEnd--xs: var(--tipTop__space--0-5);
   --tipTop-Button__paddingInlineStart--xs: var(--tipTop__space--1);
   --tipTop-Button__paddingInlineEnd--xs: var(--tipTop__space--1);
 
-  /* sm */
+  /* #### sm */
   --tipTop-Button--sm__fontSize: var(--tipTop__fontSize--sm);
   --tipTop-Button__paddingBlockStart--sm: var(--tipTop__space--1-5);
   --tipTop-Button__paddingBlockEnd--sm: var(--tipTop__space--1-5);
   --tipTop-Button__paddingInlineStart--sm: var(--tipTop__space--2);
   --tipTop-Button__paddingInlineEnd--sm: var(--tipTop__space--2);
 
-  /* normal */
+  /* #### normal */
   --tipTop-Button--normal__fontSize: var(--tipTop__fontSize--normal);
   --tipTop-Button__paddingBlockStart--normal: var(--tipTop__space--2-5);
   --tipTop-Button__paddingBlockEnd--normal: var(--tipTop__space--2-5);
   --tipTop-Button__paddingInlineStart--normal: var(--tipTop__space--3-5);
   --tipTop-Button__paddingInlineEnd--normal: var(--tipTop__space--3-5);
 
-  /* medium */
+  /* #### medium */
   --tipTop-Button--md__fontSize: var(--tipTop__fontSize--md);
   --tipTop-Button__paddingBlockStart--md: var(--tipTop__space--3-5);
   --tipTop-Button__paddingBlockEnd--md: var(--tipTop__space--3-5);
   --tipTop-Button__paddingInlineStart--md: var(--tipTop__space--4);
   --tipTop-Button__paddingInlineEnd--md: var(--tipTop__space--4);
 
-  /* large */
+  /* #### large */
   --tipTop-Button--lg__fontSize: var(--tipTop__fontSize--xl);
   --tipTop-Button__paddingBlockStart--lg: var(--tipTop__space--4);
   --tipTop-Button__paddingBlockEnd--lg: var(--tipTop__space--4);
   --tipTop-Button__paddingInlineStart--lg: var(--tipTop__space--5);
   --tipTop-Button__paddingInlineEnd--lg: var(--tipTop__space--5);
 
-  /* extra large */
+  /* #### extra large */
   --tipTop-Button--xl__fontSize: var(--tipTop__fontSize--3xl);
   --tipTop-Button__paddingBlockStart--xl: var(--tipTop__space--4);
   --tipTop-Button__paddingBlockEnd--xl: var(--tipTop__space--4);

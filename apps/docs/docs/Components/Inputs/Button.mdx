@@ -2,6 +2,8 @@
 <Button>Button</Button>
 ```
 
+import CSSVars from '../../_partials/_buttonCssVars.mdx';
+
 ## Appearance
 
 ```jsx live noInline
@@ -91,11 +93,11 @@ The `justify` prop can be used to align the content of the button.
 
 ```jsx live
 <div>
-  <Button fullWidth mb="10px" justify="start">start</Button>
-  <Button fullWidth mb="10px" justify="center">center</Button>
-  <Button fullWidth mb="10px" justify="end">end</Button>
-  <Button fullWidth mb="10px" justify="space-between" slotStart="😀" slotEnd="😠">space-between</Button>
-  <Button fullWidth mb="10px" justify="space-around" slotStart="😀" slotEnd="😠">space-around</Button>
+  <Button fullWidth mb="3" justify="start">start</Button>
+  <Button fullWidth mb="3" justify="center">center</Button>
+  <Button fullWidth mb="3" justify="end">end</Button>
+  <Button fullWidth mb="3" justify="space-between" slotStart="😀" slotEnd="😠">space-between</Button>
+  <Button fullWidth mb="3" justify="space-around" slotStart="😀" slotEnd="😠">space-around</Button>
 </div>
 
 ```
@@ -119,3 +121,7 @@ When the `disabled` prop is set, the Button `button` will be disabled.
 ## Props
 
 <PropsTable name="Button" />
+
+## CSS Variables
+
+<CSSVars />
