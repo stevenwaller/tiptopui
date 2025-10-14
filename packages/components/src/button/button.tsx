@@ -1,6 +1,7 @@
 import { forwardRef, CSSProperties } from 'react'
 import cx from 'clsx'
 
+import { MarginProps } from '../types'
 import { Loader } from '../loader/loader'
 
 import './button.css'
@@ -13,7 +14,7 @@ export type ButtonParts =
   | 'slotEnd'
   | 'loader'
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>, MarginProps {
   slotStart?: React.ReactNode | string
   slotEnd?: React.ReactNode | string
   loading?: boolean
@@ -35,10 +36,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   classNames?: {
     [key in ButtonParts]?: string
   }
-  mt?: string
-  mb?: string
-  ms?: string
-  me?: string
   style?: CSSProperties
   styles?: {
     [key in ButtonParts]?: CSSProperties
@@ -140,23 +137,23 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cx(
-          'tipTop-Button-root',
-          `tipTop-Button-root--${appearance}`,
-          `tipTop-Button-root--${variant}`,
-          `tipTop-Button-root--${size}`,
-          `tipTop-Button-root--${shape}`,
-          justify && `tipTop-Button-root--justify-${justify}`,
-          loading && 'tipTop-Button-root--loading',
-          fullWidth && 'tipTop-Button-root--fullWidth',
+          'tipTop-Button',
+          `tipTop-Button--${appearance}`,
+          `tipTop-Button--${variant}`,
+          `tipTop-Button--${size}`,
+          `tipTop-Button--${shape}`,
+          justify && `tipTop-Button--justify-${justify}`,
+          loading && 'tipTop-Button--loading',
+          fullWidth && 'tipTop-Button--fullWidth',
           className,
           classNames?.root,
         )}
         ref={ref}
         style={{
-          ...(mt && { marginBlockStart: mt }),
-          ...(mb && { marginBlockEnd: mb }),
-          ...(ms && { marginInlineStart: ms }),
-          ...(me && { marginInlineEnd: me }),
+          ...(mt && { marginBlockStart: `var(--tipTop__space--${mt})` }),
+          ...(mb && { marginBlockEnd: `var(--tipTop__space--${mb})` }),
+          ...(ms && { marginInlineStart: `var(--tipTop__space--${ms})` }),
+          ...(me && { marginInlineEnd: `var(--tipTop__space--${me})` }),
           ...style,
           ...styles?.root,
         }}

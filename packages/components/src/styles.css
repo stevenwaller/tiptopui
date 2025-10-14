@@ -1,5 +1,5 @@
 :root {
-  /* Colors --------------------------------------------------------------- */
+  /* ## Colors --------------------------------------------------------------- */
   --tipTop__color--primary: #0577b4;
   --tipTop__color--secondary: rgb(143, 69, 188);
   --tipTop__color--neutral: #7e7e7e;
@@ -11,8 +11,8 @@
   --tipTop__color--text: #3d3d3d;
   --tipTop__color--heading: #20299f;
 
-  /* Spacing -------------------------------------------------------------- */
-  --tipTop__space--px:  1px;
+  /* ## Spacing -------------------------------------------------------------- */
+  --tipTop__space--px:  1px;      /* 1px */
   --tipTop__space--0:   0;        /* 0px */
   --tipTop__space--0-5: 0.125rem; /* 2px */
   --tipTop__space--1:   0.25rem;  /* 4px */
@@ -48,8 +48,8 @@
   --tipTop__space--80:  20rem;    /* 320px */
   --tipTop__space--96:  24rem;    /* 384px */
 
-  /* Border --------------------------------------------------------------- */
-  /* Radius */
+  /* ## Border --------------------------------------------------------------- */
+  /* ### Radius */
   --tipTop__borderRadius--sm:     0.125rem;
   --tipTop__borderRadius--normal: 0.25rem;
   --tipTop__borderRadius--md:     0.375rem;
@@ -59,19 +59,19 @@
   --tipTop__borderRadius--3xl:    1.5rem;
   --tipTop__borderRadius--full:   9999px;
 
-  /* Width */
+  /* ### Width */
   --tipTop__borderWidth--normal: 1px
   --tipTop__borderWidth--md: 2px
   --tipTop__borderWidth--lg: 4px
   --tipTop__borderWidth--xl: 8px
 
-  /* Typography ----------------------------------------------------------- */
-  /* Font Family */
-  --tipTop__fontFamily-heading: ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
-  --tipTop__fontFamily-text: system-ui, Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --tipTop__fontFamily-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  /* ## Typography ----------------------------------------------------------- */
+  /* ### Font Family */
+  --tipTop__fontFamily--heading: ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --tipTop__fontFamily--text: system-ui, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --tipTop__fontFamily--mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 
-  /* Font Size */
+  /* ## Font Size */
   --tipTop__fontSize--2xs:    0.625rem; /* 10px */
   --tipTop__fontSize--xs:     0.75rem;  /* 12px */
   --tipTop__fontSize--sm:     0.875rem; /* 14px */
@@ -87,7 +87,7 @@
   --tipTop__fontSize--7xl:    6rem;     /* 96px */
   --tipTop__fontSize--8xl:    8rem;     /* 128px */
 
-  /* Line Height */
+  /* ## Line Height */
   --tipTop__lineHeight--3xs:    .75rem;
   --tipTop__lineHeight--2xs:    1rem;
   --tipTop__lineHeight--xs:     1.25rem;
@@ -98,7 +98,7 @@
   --tipTop__lineHeight--xl:     2.25rem;
   --tipTop__lineHeight--2xl:    2.5rem;
 
-  /* Font Weight */
+  /* ## Font Weight */
   --tipTop__fontWeight--thin:       100;
   --tipTop__fontWeight--extraLight: 200;
   --tipTop__fontWeight--light:      300;
@@ -109,7 +109,7 @@
   --tipTop__fontWeight--extrabold:  800;
   --tipTop__fontWeight--black:      900;
 
-  /* Letter Spacing */
+  /* ## Letter Spacing */
   --tipTop__letterSpacing--tighter: -0.05em;
   --tipTop__letterSpacing--tight:   -0.025em;
   --tipTop__letterSpacing--normal:  0em;

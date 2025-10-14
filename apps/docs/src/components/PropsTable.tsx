@@ -9,6 +9,13 @@ export const PropsTable = ({ name }) => {
     return null;
   }
 
+  // delete unwanted props
+  delete props['mt'];
+  delete props['mb'];
+  delete props['ms'];
+  delete props['me'];
+  delete props['style'];
+
   return (
     <table className="props-table">
       <thead>

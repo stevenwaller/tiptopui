@@ -1,6 +1,8 @@
 import { forwardRef, CSSProperties } from 'react'
 import cx from 'clsx'
 
+import { MarginProps } from '../types'
+
 import './badge.css'
 
 export type BadgeParts =
@@ -10,7 +12,7 @@ export type BadgeParts =
   | 'slotStart'
   | 'slotEnd'
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement>, MarginProps {
   slotStart?: React.ReactNode | string
   slotEnd?: React.ReactNode | string
   variant?:
@@ -39,10 +41,6 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   classNames?: {
     [key in BadgeParts]?: string
   }
-  mt?: string
-  mb?: string
-  ms?: string
-  me?: string
   style?: CSSProperties
   styles?: {
     [key in BadgeParts]?: CSSProperties
@@ -138,23 +136,23 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
     return (
       <span
         className={cx(
-          'tipTop-Badge-root',
-          `tipTop-Badge-root--${appearance}`,
-          `tipTop-Badge-root--${variant}`,
-          `tipTop-Badge-root--${size}`,
-          `tipTop-Badge-root--${shape}`,
-          position && `tipTop-Badge-root--position-${position}`,
-          showOutline && 'tipTop-Badge-root--showOutline',
-          !children && !slotStart && !slotEnd && 'tipTop-Badge-root--empty',
+          'tipTop-Badge',
+          `tipTop-Badge--${appearance}`,
+          `tipTop-Badge--${variant}`,
+          `tipTop-Badge--${size}`,
+          `tipTop-Badge--${shape}`,
+          position && `tipTop-Badge--position-${position}`,
+          showOutline && 'tipTop-Badge--showOutline',
+          !children && !slotStart && !slotEnd && 'tipTop-Badge--empty',
           className,
           classNames?.root,
         )}
         ref={ref}
         style={{
-          ...(mt && { marginBlockStart: mt }),
-          ...(mb && { marginBlockEnd: mb }),
-          ...(ms && { marginInlineStart: ms }),
-          ...(me && { marginInlineEnd: me }),
+          ...(mt && { marginBlockStart: `var(--tipTop__space--${mt})` }),
+          ...(mb && { marginBlockEnd: `var(--tipTop__space--${mb})` }),
+          ...(ms && { marginInlineStart: `var(--tipTop__space--${ms})` }),
+          ...(me && { marginInlineEnd: `var(--tipTop__space--${me})` }),
           ...style,
           ...styles?.root,
         }}
