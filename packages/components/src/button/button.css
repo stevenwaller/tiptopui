@@ -57,45 +57,45 @@
   /* ### Size */
   /* #### xs */
   --tipTop-Button--xs__fontSize: var(--tipTop__fontSize--xs);
-  --tipTop-Button__paddingBlockStart--xs: var(--tipTop__space--0-5);
-  --tipTop-Button__paddingBlockEnd--xs: var(--tipTop__space--0-5);
-  --tipTop-Button__paddingInlineStart--xs: var(--tipTop__space--1);
-  --tipTop-Button__paddingInlineEnd--xs: var(--tipTop__space--1);
+  --tipTop-Button--xs__paddingBlockStart: var(--tipTop__space--0-5);
+  --tipTop-Button--xs__paddingBlockEnd: var(--tipTop__space--0-5);
+  --tipTop-Button--xs__paddingInlineStart: var(--tipTop__space--1);
+  --tipTop-Button--xs__paddingInlineEnd: var(--tipTop__space--1);
 
   /* #### sm */
   --tipTop-Button--sm__fontSize: var(--tipTop__fontSize--sm);
-  --tipTop-Button__paddingBlockStart--sm: var(--tipTop__space--1-5);
-  --tipTop-Button__paddingBlockEnd--sm: var(--tipTop__space--1-5);
-  --tipTop-Button__paddingInlineStart--sm: var(--tipTop__space--2);
-  --tipTop-Button__paddingInlineEnd--sm: var(--tipTop__space--2);
+  --tipTop-Button--sm__paddingBlockStart: var(--tipTop__space--1-5);
+  --tipTop-Button--sm__paddingBlockEnd: var(--tipTop__space--1-5);
+  --tipTop-Button--sm__paddingInlineStart: var(--tipTop__space--2);
+  --tipTop-Button--sm__paddingInlineEnd: var(--tipTop__space--2);
 
   /* #### normal */
   --tipTop-Button--normal__fontSize: var(--tipTop__fontSize--normal);
-  --tipTop-Button__paddingBlockStart--normal: var(--tipTop__space--2-5);
-  --tipTop-Button__paddingBlockEnd--normal: var(--tipTop__space--2-5);
-  --tipTop-Button__paddingInlineStart--normal: var(--tipTop__space--3-5);
-  --tipTop-Button__paddingInlineEnd--normal: var(--tipTop__space--3-5);
+  --tipTop-Button--normal__paddingBlockStart: var(--tipTop__space--2-5);
+  --tipTop-Button--normal__paddingBlockEnd: var(--tipTop__space--2-5);
+  --tipTop-Button--normal__paddingInlineStart: var(--tipTop__space--3-5);
+  --tipTop-Button--normal__paddingInlineEnd: var(--tipTop__space--3-5);
 
   /* #### medium */
   --tipTop-Button--md__fontSize: var(--tipTop__fontSize--md);
-  --tipTop-Button__paddingBlockStart--md: var(--tipTop__space--3-5);
-  --tipTop-Button__paddingBlockEnd--md: var(--tipTop__space--3-5);
-  --tipTop-Button__paddingInlineStart--md: var(--tipTop__space--4);
-  --tipTop-Button__paddingInlineEnd--md: var(--tipTop__space--4);
+  --tipTop-Button--md__paddingBlockStart: var(--tipTop__space--3-5);
+  --tipTop-Button--md__paddingBlockEnd: var(--tipTop__space--3-5);
+  --tipTop-Button--md__paddingInlineStart: var(--tipTop__space--4);
+  --tipTop-Button--md__paddingInlineEnd: var(--tipTop__space--4);
 
   /* #### large */
   --tipTop-Button--lg__fontSize: var(--tipTop__fontSize--xl);
-  --tipTop-Button__paddingBlockStart--lg: var(--tipTop__space--4);
-  --tipTop-Button__paddingBlockEnd--lg: var(--tipTop__space--4);
-  --tipTop-Button__paddingInlineStart--lg: var(--tipTop__space--5);
-  --tipTop-Button__paddingInlineEnd--lg: var(--tipTop__space--5);
+  --tipTop-Button--lg__paddingBlockStart: var(--tipTop__space--4);
+  --tipTop-Button--lg__paddingBlockEnd: var(--tipTop__space--4);
+  --tipTop-Button--lg__paddingInlineStart: var(--tipTop__space--5);
+  --tipTop-Button--lg__paddingInlineEnd: var(--tipTop__space--5);
 
   /* #### extra large */
   --tipTop-Button--xl__fontSize: var(--tipTop__fontSize--3xl);
-  --tipTop-Button__paddingBlockStart--xl: var(--tipTop__space--4);
-  --tipTop-Button__paddingBlockEnd--xl: var(--tipTop__space--4);
-  --tipTop-Button__paddingInlineStart--xl: var(--tipTop__space--6);
-  --tipTop-Button__paddingInlineEnd--xl: var(--tipTop__space--6);
+  --tipTop-Button--xl__paddingBlockStart: var(--tipTop__space--4);
+  --tipTop-Button--xl__paddingBlockEnd: var(--tipTop__space--4);
+  --tipTop-Button--xl__paddingInlineStart: var(--tipTop__space--6);
+  --tipTop-Button--xl__paddingInlineEnd: var(--tipTop__space--6);
 }
 
 
@@ -277,50 +277,50 @@
 /* Size ------------------------------------------------------------------- */
 .tipTop-Button--xs {
   font-size: var(--tipTop-Button--xs__fontSize);
-  padding-block-start: var(--tipTop-Button__paddingBlockStart--xs);
-  padding-block-end: var(--tipTop-Button__paddingBlockEnd--xs);
-  padding-inline-start: var(--tipTop-Button__paddingInlineStart--xs);
-  padding-inline-end: var(--tipTop-Button__paddingInlineEnd--xs);
+  padding-block-start: var(--tipTop-Button--xs__paddingBlockStart);
+  padding-block-end: var(--tipTop-Button--xs__paddingBlockEnd);
+  padding-inline-start: var(--tipTop-Button--xs__paddingInlineStart);
+  padding-inline-end: var(--tipTop-Button--xs__paddingInlineEnd);
 }
 
 .tipTop-Button--sm {
   font-size: var(--tipTop-Button--sm__fontSize);
-  padding-block-start: var(--tipTop-Button__paddingBlockStart--sm);
-  padding-block-end: var(--tipTop-Button__paddingBlockEnd--sm);
-  padding-inline-start: var(--tipTop-Button__paddingInlineStart--sm);
-  padding-inline-end: var(--tipTop-Button__paddingInlineEnd--sm);
+  padding-block-start: var(--tipTop-Button--sm__paddingBlockStart);
+  padding-block-end: var(--tipTop-Button--sm__paddingBlockEnd);
+  padding-inline-start: var(--tipTop-Button--sm__paddingInlineStart);
+  padding-inline-end: var(--tipTop-Button--sm__paddingInlineEnd);
 }
 
 .tipTop-Button--normal {
   font-size: var(--tipTop-Button--normal__fontSize);
-  padding-block-start: var(--tipTop-Button__paddingBlockStart--normal);
-  padding-block-end: var(--tipTop-Button__paddingBlockEnd--normal);
-  padding-inline-start: var(--tipTop-Button__paddingInlineStart--normal);
-  padding-inline-end: var(--tipTop-Button__paddingInlineEnd--normal);
+  padding-block-start: var(--tipTop-Button--normal__paddingBlockStart);
+  padding-block-end: var(--tipTop-Button--normal__paddingBlockEnd);
+  padding-inline-start: var(--tipTop-Button--normal__paddingInlineStart);
+  padding-inline-end: var(--tipTop-Button--normal__paddingInlineEnd);
 }
 
 .tipTop-Button--md {
   font-size: var(--tipTop-Button--md__fontSize);
-  padding-block-start: var(--tipTop-Button__paddingBlockStart--md);
-  padding-block-end: var(--tipTop-Button__paddingBlockEnd--md);
-  padding-inline-start: var(--tipTop-Button__paddingInlineStart--md);
-  padding-inline-end: var(--tipTop-Button__paddingInlineEnd--md);
+  padding-block-start: var(--tipTop-Button--md__paddingBlockStart);
+  padding-block-end: var(--tipTop-Button--md__paddingBlockEnd);
+  padding-inline-start: var(--tipTop-Button--md__paddingInlineStart);
+  padding-inline-end: var(--tipTop-Button--md__paddingInlineEnd);
 }
 
 .tipTop-Button--lg {
   font-size: var(--tipTop-Button--lg__fontSize);
-  padding-block-start: var(--tipTop-Button__paddingBlockStart--lg);
-  padding-block-end: var(--tipTop-Button__paddingBlockEnd--lg);
-  padding-inline-start: var(--tipTop-Button__paddingInlineStart--lg);
-  padding-inline-end: var(--tipTop-Button__paddingInlineEnd--lg);
+  padding-block-start: var(--tipTop-Button--lg__paddingBlockStart);
+  padding-block-end: var(--tipTop-Button--lg__paddingBlockEnd);
+  padding-inline-start: var(--tipTop-Button--lg__paddingInlineStart);
+  padding-inline-end: var(--tipTop-Button--lg__paddingInlineEnd);
 }
 
 .tipTop-Button--xl {
   font-size: var(--tipTop-Button--xl__fontSize);
-  padding-block-start: var(--tipTop-Button__paddingBlockStart--xl);
-  padding-block-end: var(--tipTop-Button__paddingBlockEnd--xl);
-  padding-inline-start: var(--tipTop-Button__paddingInlineStart--xl);
-  padding-inline-end: var(--tipTop-Button__paddingInlineEnd--xl);
+  padding-block-start: var(--tipTop-Button--xl__paddingBlockStart);
+  padding-block-end: var(--tipTop-Button--xl__paddingBlockEnd);
+  padding-inline-start: var(--tipTop-Button--xl__paddingInlineStart);
+  padding-inline-end: var(--tipTop-Button--xl__paddingInlineEnd);
 }
 
 /* Shape ------------------------------------------------------------------ */
