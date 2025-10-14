@@ -30,3 +30,9 @@
 .props-table-key {
   font-weight: bold;
 }
+
+.props-table-object-type {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
