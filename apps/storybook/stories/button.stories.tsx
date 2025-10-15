@@ -1,13 +1,32 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button, ButtonProps } from '@tiptopui/components'
-import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react'
-import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/solid'
+import {
+  IconArrowRight,
+  IconArrowLeft,
+  IconCircleChevronRight,
+  IconCircleChevronLeft,
+} from '@tabler/icons-react'
+import {
+  ArrowRightIcon,
+  ArrowLeftIcon,
+  ArrowLeftCircleIcon,
+  ArrowRightCircleIcon,
+} from '@heroicons/react/24/solid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { ArrowRight, ArrowLeft } from 'lucide-react'
+import {
+  faArrowLeft,
+  faArrowRight,
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  ArrowRight,
+  ArrowLeft,
+  CircleArrowRight,
+  CircleArrowLeft,
+} from 'lucide-react'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
-import { HiArrowRight, HiArrowLeft } from 'react-icons/hi'
 
 const appearances: ButtonProps['appearance'][] = [
   'solid',
@@ -27,20 +46,36 @@ const variants: ButtonProps['variant'][] = [
   'light',
 ]
 
-const sizes: ButtonProps['size'][] = ['xs', 'sm', 'normal', 'md', 'lg', 'xl']
+const sizes: ButtonProps['size'][] = [
+  '2xs',
+  'xs',
+  'sm',
+  'md',
+  'lg',
+  'xl',
+  '2xl',
+]
 
 const icons = [
   {
     name: 'Tabler Icons',
-    sets: [{ leftIcon: <IconArrowLeft />, rightIcon: <IconArrowRight /> }],
+    sets: [
+      { leftIcon: <IconArrowLeft />, rightIcon: <IconArrowRight /> },
+      {
+        leftIcon: <IconCircleChevronLeft />,
+        rightIcon: <IconCircleChevronRight />,
+      },
+    ],
   },
   {
     name: 'Hero Icons',
-    sets: [{ leftIcon: <ArrowLeftIcon />, rightIcon: <ArrowRightIcon /> }],
-  },
-  {
-    name: 'Hero Icons (React Icons)',
-    sets: [{ leftIcon: <HiArrowLeft />, rightIcon: <HiArrowRight /> }],
+    sets: [
+      { leftIcon: <ArrowLeftIcon />, rightIcon: <ArrowRightIcon /> },
+      {
+        leftIcon: <ArrowLeftCircleIcon />,
+        rightIcon: <ArrowRightCircleIcon />,
+      },
+    ],
   },
   {
     name: 'Font Awesome React',
@@ -49,11 +84,18 @@ const icons = [
         leftIcon: <FontAwesomeIcon icon={faArrowLeft} />,
         rightIcon: <FontAwesomeIcon icon={faArrowRight} />,
       },
+      {
+        leftIcon: <FontAwesomeIcon icon={faCircleArrowLeft} />,
+        rightIcon: <FontAwesomeIcon icon={faCircleArrowRight} />,
+      },
     ],
   },
   {
     name: 'Lucide Icons',
-    sets: [{ leftIcon: <ArrowLeft />, rightIcon: <ArrowRight /> }],
+    sets: [
+      { leftIcon: <ArrowLeft />, rightIcon: <ArrowRight /> },
+      { leftIcon: <CircleArrowLeft />, rightIcon: <CircleArrowRight /> },
+    ],
   },
   {
     name: 'Ant Design (React Icons)',
@@ -137,6 +179,7 @@ export const Sizes: Story = {
               size={size}
               slotStart={<i className='fa fa-arrow-left'></i>}
               slotEnd={<i className='fa fa-arrow-right'></i>}
+              title='Font Awesome Web Font'
             >
               Button
             </Button>
@@ -149,7 +192,6 @@ export const Sizes: Story = {
                   viewBox='0 0 24 24'
                   strokeWidth={1.5}
                   stroke='currentColor'
-                  style={{ width: '1.5rem', height: '1.5rem' }}
                 >
                   <path
                     strokeLinecap='round'
@@ -165,7 +207,6 @@ export const Sizes: Story = {
                   viewBox='0 0 24 24'
                   strokeWidth='1.5'
                   stroke='currentColor'
-                  style={{ width: '1.5rem', height: '1.5rem' }}
                 >
                   <path
                     strokeLinecap='round'
@@ -174,6 +215,7 @@ export const Sizes: Story = {
                   />
                 </svg>
               }
+              title='SVG'
             >
               Button
             </Button>

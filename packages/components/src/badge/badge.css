@@ -1,8 +1,8 @@
 :root {
   /* ### Root */
   --tipTop-Badge__borderWidth: 1px;
-  --tipTop-Badge__borderRadius: var(--tipTop__borderRadius--normal);
-  --tipTop-Badge__fontSize: var(--tipTop__fontSize--sm);
+  --tipTop-Badge__borderRadius: var(--tipTop__borderRadius--md);
+  --tipTop-Badge__fontSize: var(--tipTop__fontSize--md);
   --tipTop-Badge__fontWeight: var(--tipTop__fontWeight--medium);
   --tipTop-Badge__lineHeight: 1;
   --tipTop-Badge__minHeight: 1.25rem;
@@ -57,10 +57,9 @@
 
 /* Base Badge Root Styles */
 .tipTop-Badge {
-  /* border-width: var(--tipTop-Badge__borderWidth); */
-  /* border-style: solid; */
-  /* border-radius: var(--tipTop-Badge__borderRadius); */
-  /* border: 1px solid red !important;
+  border-width: var(--tipTop-Badge__borderWidth);
+  border-style: solid;
+  border-radius: var(--tipTop-Badge__borderRadius);
   font-size: var(--tipTop-Badge__fontSize);
   font-weight: var(--tipTop-Badge__fontWeight);
   line-height: var(--tipTop-Badge__lineHeight);
@@ -74,7 +73,7 @@
   gap: var(--tipTop-Badge__gap);
   transition: var(--tipTop-Badge__transition);
   text-align: var(--tipTop-Badge__textAlign);
-  white-space: var(--tipTop-Badge__whiteSpace); */
+  white-space: var(--tipTop-Badge__whiteSpace);
 }
 
 /* Show Outline */
@@ -144,6 +143,15 @@
 }
 
 /* Size Styles */
+.tipTop-Badge--2xs {
+  font-size: var(--tipTop__fontSize--2xs);
+  padding-block: var(--tipTop__space--0-5);
+  padding-inline: var(--tipTop__space--1);
+  min-height: 0.875rem;
+  min-width: 0.875rem;
+  gap: var(--tipTop__space--0-5);
+}
+
 .tipTop-Badge--xs {
   font-size: var(--tipTop__fontSize--xs);
   padding-block: var(--tipTop__space--0-5);
@@ -162,10 +170,17 @@
   gap: var(--tipTop__space--0-5);
 }
 
-/* .tipTop-Badge--normal uses default variables defined in :root */
-
 .tipTop-Badge--md {
-  font-size: var(--tipTop__fontSize--base);
+  font-size: var(--tipTop__fontSize--md);
+  padding-block: var(--tipTop__space--0-5);
+  padding-inline: var(--tipTop__space--1-5);
+  min-height: 1rem;
+  min-width: 1rem;
+  gap: var(--tipTop__space--0-5);
+}
+
+.tipTop-Badge--lg {
+  font-size: var(--tipTop__fontSize--lg);
   padding-block: var(--tipTop__space--1-5);
   padding-inline: var(--tipTop__space--2-5);
   min-height: 1.5rem;
@@ -173,8 +188,8 @@
   gap: var(--tipTop__space--1-5);
 }
 
-.tipTop-Badge--lg {
-  font-size: var(--tipTop__fontSize--lg);
+.tipTop-Badge--xl {
+  font-size: var(--tipTop__fontSize--xl);
   padding-block: var(--tipTop__space--2);
   padding-inline: var(--tipTop__space--3);
   min-height: 1.75rem;
@@ -182,8 +197,8 @@
   gap: var(--tipTop__space--2);
 }
 
-.tipTop-Badge--xl {
-  font-size: var(--tipTop__fontSize--xl);
+.tipTop-Badge--2xl {
+  font-size: var(--tipTop__fontSize--2xl);
   padding-block: var(--tipTop__space--2-5);
   padding-inline: var(--tipTop__space--3-5);
   min-height: 2rem;

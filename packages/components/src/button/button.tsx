@@ -14,7 +14,9 @@ export type ButtonParts =
   | 'slotEnd'
   | 'loader'
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>, MarginProps {
+export interface ButtonProps
+  extends React.HTMLAttributes<HTMLButtonElement>,
+    MarginProps {
   slotStart?: React.ReactNode | string
   slotEnd?: React.ReactNode | string
   loading?: boolean
@@ -28,7 +30,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>, Ma
     | 'light'
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
-  size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'xl'
+  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
   shape?: 'round' | 'pill' | 'circle' | 'square'
   fullWidth?: boolean
   justify?: 'start' | 'center' | 'end' | 'space-between' | 'space-around'
@@ -62,7 +64,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       loading,
       variant = 'primary',
       appearance = 'solid',
-      size = 'normal',
+      size = 'md',
       shape = 'rounded',
       fullWidth = false,
       justify = 'center',

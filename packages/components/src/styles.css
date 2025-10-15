@@ -22,14 +22,15 @@
   --tipTop__space--3:   0.75rem;  /* 12px */
   --tipTop__space--3-5: 0.875rem; /* 14px */
   --tipTop__space--4:   1rem;     /* 16px */
-  --tipTop__space--5:   1.25rem;  /* 20px */
-  --tipTop__space--6:   1.5rem;   /* 24px */
-  --tipTop__space--7:   1.75rem;  /* 28px */
-  --tipTop__space--8:   2rem;     /* 32px */
-  --tipTop__space--9:   2.25rem;  /* 36px */
-  --tipTop__space--10:  2.5rem;   /* 40px */
-  --tipTop__space--11:  2.75rem;  /* 44px */
-  --tipTop__space--12:  3rem;     /* 48px */
+  --tipTop__space--5:   1.125rem; /* 18px */
+  --tipTop__space--6:   1.25rem;  /* 20px */
+  --tipTop__space--7:   1.5rem;   /* 24px */
+  --tipTop__space--8:   1.75rem;  /* 28px */
+  --tipTop__space--9:   2rem;     /* 32px */
+  --tipTop__space--10:   2.25rem;  /* 36px */
+  --tipTop__space--11:  2.5rem;   /* 40px */
+  --tipTop__space--12:  2.75rem;  /* 44px */
+  --tipTop__space--13:  3rem;     /* 48px */
   --tipTop__space--14:  3.5rem;   /* 56px */
   --tipTop__space--16:  4rem;     /* 64px */
   --tipTop__space--20:  5rem;     /* 80px */
@@ -50,20 +51,21 @@
 
   /* ### Border --------------------------------------------------------------- */
   /* #### Radius */
-  --tipTop__borderRadius--sm:     0.125rem;
-  --tipTop__borderRadius--normal: 0.25rem;
-  --tipTop__borderRadius--md:     0.375rem;
-  --tipTop__borderRadius--lg:     0.5rem;
-  --tipTop__borderRadius--xl:     0.75rem;
-  --tipTop__borderRadius--2xl:    1rem;
-  --tipTop__borderRadius--3xl:    1.5rem;
-  --tipTop__borderRadius--full:   9999px;
+  --tipTop__borderRadius--sm:   0.125rem;
+  --tipTop__borderRadius--md:   0.25rem;
+  --tipTop__borderRadius--lg:   0.375rem;
+  --tipTop__borderRadius--xl:   0.5rem;
+  --tipTop__borderRadius--2xl:  0.75rem;
+  --tipTop__borderRadius--3xl:  1rem;
+  --tipTop__borderRadius--4xl:  1.5rem;
+  --tipTop__borderRadius--full: 9999px;
 
   /* #### Width */
-  --tipTop__borderWidth--normal: 1px
-  --tipTop__borderWidth--md: 2px
-  --tipTop__borderWidth--lg: 4px
-  --tipTop__borderWidth--xl: 8px
+  --tipTop__borderWidth--sm: 0.5px;
+  --tipTop__borderWidth--md: 1px;
+  --tipTop__borderWidth--lg: 2px;
+  --tipTop__borderWidth--xl: 4px;
+  --tipTop__borderWidth--2xl: 8px;
 
   /* ### Typography ----------------------------------------------------------- */
   /* #### Font Family */
@@ -72,31 +74,31 @@
   --tipTop__fontFamily--mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 
   /* ### Font Size */
-  --tipTop__fontSize--2xs:    0.625rem; /* 10px */
-  --tipTop__fontSize--xs:     0.75rem;  /* 12px */
-  --tipTop__fontSize--sm:     0.875rem; /* 14px */
-  --tipTop__fontSize--normal: 1rem;     /* 16px */
-  --tipTop__fontSize--md:     1.125rem; /* 18px */
-  --tipTop__fontSize--lg:     1.25rem;  /* 20px */
-  --tipTop__fontSize--xl:     1.5rem;   /* 24px */
-  --tipTop__fontSize--2xl:    1.875rem; /* 30px */
-  --tipTop__fontSize--3xl:    2.25rem;  /* 36px */
-  --tipTop__fontSize--4xl:    3rem;     /* 48px */
-  --tipTop__fontSize--5xl:    3.75rem;  /* 60px */
-  --tipTop__fontSize--6xl:    4.5rem;   /* 72px */
-  --tipTop__fontSize--7xl:    6rem;     /* 96px */
-  --tipTop__fontSize--8xl:    8rem;     /* 128px */
+  --tipTop__fontSize--2xs: 0.625rem; /* 10px */
+  --tipTop__fontSize--xs:  0.75rem;  /* 12px */
+  --tipTop__fontSize--sm:  0.875rem; /* 14px */
+  --tipTop__fontSize--md:  1rem;     /* 16px */
+  --tipTop__fontSize--lg:  1.125rem; /* 18px */
+  --tipTop__fontSize--xl:  1.25rem;  /* 20px */
+  --tipTop__fontSize--2xl: 1.5rem;   /* 24px */
+  --tipTop__fontSize--3xl: 1.875rem; /* 30px */
+  --tipTop__fontSize--4xl: 2.25rem;  /* 36px */
+  --tipTop__fontSize--5xl: 3rem;     /* 48px */
+  --tipTop__fontSize--6xl: 3.75rem;  /* 60px */
+  --tipTop__fontSize--7xl: 4.5rem;   /* 72px */
+  --tipTop__fontSize--8xl: 6rem;     /* 96px */
+  --tipTop__fontSize--9xl: 8rem;     /* 128px */
 
   /* ### Line Height */
-  --tipTop__lineHeight--3xs:    .75rem;
-  --tipTop__lineHeight--2xs:    1rem;
-  --tipTop__lineHeight--xs:     1.25rem;
-  --tipTop__lineHeight--sm:     1.375rem;
-  --tipTop__lineHeight--normal: 1.5rem;
-  --tipTop__lineHeight--md:     1.625rem;
-  --tipTop__lineHeight--lg:     1.75rem;
-  --tipTop__lineHeight--xl:     2.25rem;
-  --tipTop__lineHeight--2xl:    2.5rem;
+  --tipTop__lineHeight--3xs: 0.75rem;
+  --tipTop__lineHeight--2xs: 1rem;
+  --tipTop__lineHeight--xs:  1.25rem;
+  --tipTop__lineHeight--sm:  1.375rem;
+  --tipTop__lineHeight--md:  1.5rem;
+  --tipTop__lineHeight--lg:  1.625rem;
+  --tipTop__lineHeight--xl:  1.75rem;
+  --tipTop__lineHeight--2xl: 2.25rem;
+  --tipTop__lineHeight--3xl: 2.5rem;
 
   /* ### Font Weight */
   --tipTop__fontWeight--thin:       100;
@@ -104,16 +106,16 @@
   --tipTop__fontWeight--light:      300;
   --tipTop__fontWeight--normal:     400;
   --tipTop__fontWeight--medium:     500;
-  --tipTop__fontWeight--semibold:   600;
+  --tipTop__fontWeight--semiBold:   600;
   --tipTop__fontWeight--bold:       700;
-  --tipTop__fontWeight--extrabold:  800;
+  --tipTop__fontWeight--extraBold:  800;
   --tipTop__fontWeight--black:      900;
 
   /* ### Letter Spacing */
-  --tipTop__letterSpacing--tighter: -0.05em;
-  --tipTop__letterSpacing--tight:   -0.025em;
-  --tipTop__letterSpacing--normal:  0em;
-  --tipTop__letterSpacing--wide:    0.025em;
-  --tipTop__letterSpacing--wider:   0.05em;
-  --tipTop__letterSpacing--widest:  0.1em;
+  --tipTop__letterSpacing--xs:  -0.05em;
+  --tipTop__letterSpacing--sm:  -0.025em;
+  --tipTop__letterSpacing--md:  0em;
+  --tipTop__letterSpacing--lg:  0.025em;
+  --tipTop__letterSpacing--xl:  0.05em;
+  --tipTop__letterSpacing--2xl: 0.1em;
 }

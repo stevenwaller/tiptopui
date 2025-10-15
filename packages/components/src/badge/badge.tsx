@@ -12,7 +12,9 @@ export type BadgeParts =
   | 'slotStart'
   | 'slotEnd'
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement>, MarginProps {
+export interface BadgeProps
+  extends React.HTMLAttributes<HTMLSpanElement>,
+    MarginProps {
   slotStart?: React.ReactNode | string
   slotEnd?: React.ReactNode | string
   variant?:
@@ -25,7 +27,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement>, Margi
     | 'light'
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
-  size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'xl'
+  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
   shape?: 'circle' | 'pill'
   showOutline?: boolean
   position?:
@@ -61,7 +63,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
     {
       variant = 'primary',
       appearance = 'solid',
-      size = 'normal',
+      size = 'md',
       shape = 'pill',
       showOutline = false,
       position,

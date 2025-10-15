@@ -2,16 +2,16 @@
 <Button>Button</Button>
 ```
 
-import CSSVars from '../../_partials/_buttonCssVars.mdx';
+import CSSVars from "../../_partials/_buttonCssVars.mdx";
 
 ## Appearance
 
 ```jsx live noInline
-const appearances = ['solid', 'faded', 'outline', 'ghost', 'text'];
+const appearances = ["solid", "faded", "outline", "ghost", "text"];
 
 render(
-  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-    {appearances.map(appearance => (
+  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    {appearances.map((appearance) => (
       <Button key={appearance} appearance={appearance}>
         {appearance}
       </Button>
@@ -23,11 +23,20 @@ render(
 ## Variant
 
 ```jsx live noInline
-const variants = ['primary', 'secondary', 'neutral', 'danger', 'warning', 'success', 'dark', 'light'];
+const variants = [
+  "primary",
+  "secondary",
+  "neutral",
+  "danger",
+  "warning",
+  "success",
+  "dark",
+  "light",
+];
 
 render(
-  <div style={{display: 'flex', gap: '10px'}}>
-    {variants.map(variant => (
+  <div style={{ display: "flex", gap: "10px" }}>
+    {variants.map((variant) => (
       <Button key={variant} variant={variant}>
         {variant}
       </Button>
@@ -39,11 +48,11 @@ render(
 ## Size
 
 ```jsx live noInline
-const sizes = ['xs', 'sm', 'normal', 'md', 'lg', 'xl'];
+const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
 
 render(
-  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-    {sizes.map(size => (
+  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    {sizes.map((size) => (
       <Button key={size} size={size}>
         {size}
       </Button>
@@ -61,11 +70,11 @@ render(
 ## Shape
 
 ```jsx live noInline
-const shapes = ['rounded', 'pill', 'circle', 'square'];
+const shapes = ["rounded", "pill", "circle", "square"];
 
 render(
-  <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-    {shapes.map(shape => (
+  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    {shapes.map((shape) => (
       <Button key={shape} shape={shape}>
         {shape}
       </Button>
@@ -80,8 +89,8 @@ Content can be added to the start and end of the button using the `slotStart` an
 
 ```jsx live
 // Icons from https://tabler.io/docs/icons/react
-<div style={{display: 'flex', gap: '10px'}}>
-  <Button slotEnd={<IconArrowRight size={20}/>}>With icon</Button>
+<div style={{ display: "flex", gap: "10px" }}>
+  <Button slotEnd={<IconArrowRight size={20} />}>With icon</Button>
   <Button slotStart="😀">With Emoji</Button>
   <Button slotStart="Foo -">With Text</Button>
 </div>
@@ -93,13 +102,22 @@ The `justify` prop can be used to align the content of the button.
 
 ```jsx live
 <div>
-  <Button fullWidth mb="3" justify="start">start</Button>
-  <Button fullWidth mb="3" justify="center">center</Button>
-  <Button fullWidth mb="3" justify="end">end</Button>
-  <Button fullWidth mb="3" justify="space-between" slotStart="😀" slotEnd="😠">space-between</Button>
-  <Button fullWidth mb="3" justify="space-around" slotStart="😀" slotEnd="😠">space-around</Button>
+  <Button fullWidth mb="3" justify="start">
+    start
+  </Button>
+  <Button fullWidth mb="3" justify="center">
+    center
+  </Button>
+  <Button fullWidth mb="3" justify="end">
+    end
+  </Button>
+  <Button fullWidth mb="3" justify="space-between" slotStart="😀" slotEnd="😠">
+    space-between
+  </Button>
+  <Button fullWidth mb="3" justify="space-around" slotStart="😀" slotEnd="😠">
+    space-around
+  </Button>
 </div>
-
 ```
 
 ## Loading
@@ -115,7 +133,9 @@ When the `loading` prop is set, the Button `button` will be disabled and show a 
 When the `disabled` prop is set, the Button `button` will be disabled.
 
 ```jsx live
-<Button disabled onClick={() => console.log('on click')}>Button</Button>
+<Button disabled onClick={() => console.log("on click")}>
+  Button
+</Button>
 ```
 
 ## Props
