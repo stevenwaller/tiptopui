@@ -4,4 +4,97 @@ sidebar_position: 3
 
 # Icons
 
-Coming soon
+The following icon libraries are have been tested and are known to work well with our components:
+
+- [Tabler Icons](https://tabler-icons.io/)
+- [Heroicons](https://heroicons.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Font Awesome](https://fontawesome.com/)
+
+## Heroicons
+
+```jsx
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
+
+render(
+  <Button slotStart={<ArrowLeftIcon />} slotEnd={<ArrowRightIcon />}>
+    Button
+  </Button>
+);
+```
+
+## Font Awesome React
+
+```jsx
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
+render(
+  <Button
+    slotStart={<FontAwesomeIcon icon={faArrowLeft} />}
+    slotEnd={<FontAwesomeIcon icon={faArrowRight} />}
+  >
+    Button
+  </Button>
+);
+```
+
+## Font Awesome Web Font
+
+```jsx
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+render(
+  <Button
+    slotStart={<i className="fa fa-arrow-left"></i>}
+    slotEnd={<i className="fa fa-arrow-right"></i>}
+  >
+    Button
+  </Button>
+);
+```
+
+## SVG Icons
+
+You can also use any SVG icon by pasting the SVG code directly into the `slotStart` or `slotEnd` props of a component.
+
+```jsx
+<Button
+  slotStart={
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+      />
+    </svg>
+  }
+  slotEnd={
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+      />
+    </svg>
+  }
+>
+  Button
+</Button>
+```

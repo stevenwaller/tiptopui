@@ -6,6 +6,8 @@
   --tipTop-Button__fontWeight: var(--tipTop__fontWeight--medium);
   --tipTop-Button__transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
   --tipTop-Button--disabled__opacity: 0.5;
+  --tipTop-Button__svg-width: 1em;
+  --tipTop-Button__svg-height: 1em;
 
   /* ### Variants */
   /* #### `solid` */
@@ -124,6 +126,19 @@
   &[disabled] {
     opacity: var(--tipTop-Button--disabled__opacity);
   }
+}
+
+/* Icons ------------------------------------------------------------------ */
+.tipTop-Button {
+  border: 1px red solid !important;
+}
+
+.tipTop-Button svg {
+  width: var(--tipTop-Button__svg-width);
+  height: var(--tipTop-Button__svg-height);
+  display: block;
+  fill: currentColor;
+  stroke: currentColor;
 }
 
 /* Slots ------------------------------------------------------------------ */

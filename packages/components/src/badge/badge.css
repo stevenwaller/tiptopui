@@ -57,9 +57,10 @@
 
 /* Base Badge Root Styles */
 .tipTop-Badge {
-  border-width: var(--tipTop-Badge__borderWidth);
-  border-style: solid;
-  border-radius: var(--tipTop-Badge__borderRadius);
+  /* border-width: var(--tipTop-Badge__borderWidth); */
+  /* border-style: solid; */
+  /* border-radius: var(--tipTop-Badge__borderRadius); */
+  /* border: 1px solid red !important;
   font-size: var(--tipTop-Badge__fontSize);
   font-weight: var(--tipTop-Badge__fontWeight);
   line-height: var(--tipTop-Badge__lineHeight);
@@ -73,7 +74,7 @@
   gap: var(--tipTop-Badge__gap);
   transition: var(--tipTop-Badge__transition);
   text-align: var(--tipTop-Badge__textAlign);
-  white-space: var(--tipTop-Badge__whiteSpace);
+  white-space: var(--tipTop-Badge__whiteSpace); */
 }
 
 /* Show Outline */
