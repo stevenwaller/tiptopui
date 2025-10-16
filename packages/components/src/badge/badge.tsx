@@ -27,8 +27,8 @@ export interface BadgeProps
     | 'light'
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
-  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  shape?: 'round' | 'pill' | 'circle' | 'square'
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
+  corners?: 'rounded' | 'pill' | 'sharp'
   fixedRatio?: boolean
   showOutline?: boolean
   position?:
@@ -65,7 +65,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       variant = 'primary',
       appearance = 'solid',
       size = 'md',
-      shape = 'pill',
+      corners = 'pill',
       showOutline,
       fixedRatio,
       position,
@@ -144,10 +144,10 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
           `tipTop-Badge--${appearance}`,
           `tipTop-Badge--${variant}`,
           `tipTop-Badge--${size}`,
-          `tipTop-Badge--${shape}`,
+          `tipTop-Badge--${corners}`,
           position && `tipTop-Badge--position-${position}`,
           showOutline && 'tipTop-Badge--showOutline',
-          (fixedRatio || shape === 'circle') && 'tipTop-Badge--fixedRatio',
+          fixedRatio && 'tipTop-Badge--fixedRatio',
           !children && !slotStart && !slotEnd && 'tipTop-Badge--empty',
           className,
           classNames?.root,

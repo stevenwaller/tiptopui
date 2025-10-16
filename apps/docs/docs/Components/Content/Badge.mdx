@@ -48,7 +48,7 @@ render(
 ## Size
 
 ```jsx live noInline
-const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
+const sizes = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl"];
 
 render(
   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -61,16 +61,16 @@ render(
 );
 ```
 
-## Shape
+## Corners
 
 ```jsx live noInline
-const shapes = ["rounded", "pill", "circle", "square"];
+const corners = ["rounded", "pill", "sharp"];
 
 render(
   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-    {shapes.map((shape) => (
-      <Badge key={shape} shape={shape}>
-        {shape}
+    {corners.map((corner) => (
+      <Badge key={corner} corners={corner}>
+        {corner}
       </Badge>
     ))}
   </div>
@@ -107,20 +107,17 @@ Content can be added to the start and end of the badge using the `slotStart` and
 
 ## Fixed Ratio
 
-When just using icons, you can set the `fixedRatio` prop to make sure the badge is always a square.
+When just using icons, you can set the `fixedRatio` prop to make sure the badge's width and height are equal.
 
 ```jsx live
 <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-  <Badge shape="rounded" fixedRatio>
+  <Badge corners="rounded" fixedRatio>
     <IconBell size={14} />
   </Badge>
-  <Badge shape="pill" variant="success" fixedRatio>
+  <Badge corners="pill" variant="success" fixedRatio>
     <IconCheck size={14} />
   </Badge>
-  <Badge shape="circle" variant="danger" fixedRatio>
-    <IconAlertTriangle size={14} />
-  </Badge>
-  <Badge shape="square" variant="warning" fixedRatio>
+  <Badge corners="sharp" variant="warning" fixedRatio>
     <IconClock size={14} />
   </Badge>
 </div>
@@ -133,7 +130,7 @@ When just using icons, you can set the `fixedRatio` prop to make sure the badge 
   <Badge>5</Badge>
   <Badge variant="danger">99+</Badge>
   <Badge variant="success">12</Badge>
-  <Badge variant="warning" shape="circle">
+  <Badge variant="warning" fixedRatio>
     3
   </Badge>
 </div>
@@ -157,7 +154,7 @@ The `showOutline` prop adds a white outline to help the badge stand out over bac
     <Badge variant="danger" showOutline>
       99+
     </Badge>
-    <Badge variant="success" showOutline shape="circle">
+    <Badge variant="success" showOutline fixedRatio>
       ✓
     </Badge>
   </div>
@@ -193,7 +190,7 @@ Badges can be absolutely positioned relative to their parent container using the
       borderRadius: "8px",
     }}
   >
-    <Badge position="top-left" variant="success" shape="circle" />
+    <Badge position="top-left" variant="success" fixedRatio />
   </div>
 
   <div

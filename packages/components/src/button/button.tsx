@@ -32,7 +32,7 @@ export interface ButtonProps
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
   size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  shape?: 'round' | 'pill' | 'circle' | 'square'
+  corners?: 'rounded' | 'pill' | 'sharp'
   fullWidth?: boolean
   justify?: 'start' | 'center' | 'end' | 'space-between' | 'space-around'
   children: React.ReactNode
@@ -52,12 +52,15 @@ export interface ButtonProps
 /**
  * TODO
  * - inverted
+ * - custom loading icon
+ * - Loading icon with text "Loading..."
  * - focus state
  * - active state
  * - dropdown
  * - button group
  *   - attached or not
  * - ellipsizeText
+ * - Invisible button
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -67,7 +70,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = 'primary',
       appearance = 'solid',
       size = 'md',
-      shape = 'rounded',
+      corners = 'rounded',
       fullWidth = false,
       justify = 'center',
       slotStart,
@@ -145,10 +148,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           `tipTop-Button--${appearance}`,
           `tipTop-Button--${variant}`,
           `tipTop-Button--${size}`,
-          `tipTop-Button--${shape}`,
+          `tipTop-Button--${corners}`,
           justify && `tipTop-Button--justify-${justify}`,
           loading && 'tipTop-Button--loading',
-          (fixedRatio || shape === 'circle') && 'tipTop-Button--fixedRatio',
+          fixedRatio && 'tipTop-Button--fixedRatio',
           fullWidth && 'tipTop-Button--fullWidth',
           className,
           classNames?.root,

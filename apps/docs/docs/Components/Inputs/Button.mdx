@@ -67,16 +67,16 @@ render(
 <Button fullWidth>Full Width</Button>
 ```
 
-## Shape
+## Corners
 
 ```jsx live noInline
-const shapes = ["rounded", "pill", "circle", "square"];
+const corners = ["rounded", "pill", "sharp"];
 
 render(
   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-    {shapes.map((shape) => (
-      <Button key={shape} shape={shape}>
-        {shape}
+    {corners.map((corner) => (
+      <Button key={corner} corners={corner}>
+        {corner}
       </Button>
     ))}
   </div>
@@ -100,21 +100,58 @@ Content can be added to the start and end of the button using the `slotStart` an
 
 ## Fixed Ratio
 
-When just using icons, you can set the `fixedRatio` prop to make sure the button is always a square.
+When just using icons, you can set the `fixedRatio` prop to make sure the button's width and height are equal.
 
 ```jsx live
 <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-  <Button shape="rounded" fixedRatio>
+  <Button corners="rounded" fixedRatio>
     <IconBell size={14} />
   </Button>
-  <Button shape="pill" variant="success" fixedRatio>
+  <Button corners="pill" variant="success" fixedRatio>
     <IconCheck size={14} />
   </Button>
-  <Button shape="circle" variant="danger" fixedRatio>
-    <IconAlertTriangle size={14} />
-  </Button>
-  <Button shape="square" variant="warning" fixedRatio>
+  <Button corners="sharp" variant="warning" fixedRatio>
     <IconClock size={14} />
+  </Button>
+</div>
+```
+
+## Badges
+
+You can use a badge in one of the slots. It is recommended that the badge be one size smaller than the button size. So a `md` button would use a `sm` badge.
+
+```jsx live
+<div style={{ display: "flex", gap: "10px" }}>
+  <Button
+    slotEnd={
+      <Badge size="sm" appearance="faded" corners="pill" fixedRatio>
+        3
+      </Badge>
+    }
+  >
+    Button
+  </Button>
+  <Button
+    corners="pill"
+    variant="danger"
+    slotEnd={
+      <Badge size="sm" appearance="faded" variant="danger">
+        Danger
+      </Badge>
+    }
+  >
+    Button
+  </Button>
+  <Button
+    appearance="outline"
+    corners="sharp"
+    slotEnd={
+      <Badge size="sm" appearance="outline" corners="sharp">
+        99+
+      </Badge>
+    }
+  >
+    Button
   </Button>
 </div>
 ```

@@ -1,7 +1,7 @@
 :root {
   /* ### Colors --------------------------------------------------------------- */
   --tipTop__color--primary: #0577b4;
-  --tipTop__color--secondary: rgb(143, 69, 188);
+  --tipTop__color--secondary: #8e45bc;
   --tipTop__color--neutral: #7e7e7e;
   --tipTop__color--danger: #9f2020;
   --tipTop__color--warning: #ffb700;
@@ -32,6 +32,8 @@
   --tipTop__space--40: 2.5rem;   /* 40px */
 
   /* ### Heights -------------------------------------------------------------- */
+  --tipTop__height--4xs: 0.375rem; /* 6px */
+  --tipTop__height--3xs: 0.75rem; /* 12px */
   --tipTop__height--2xs: 1.125rem; /* 18px */
   --tipTop__height--xs:  1.5rem;   /* 24px */
   --tipTop__height--sm:  1.875rem; /* 30px */
@@ -60,11 +62,12 @@
 
   /* ### Typography ----------------------------------------------------------- */
   /* #### Font Family */
-  --tipTop__fontFamily--heading: ui-serif, Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
-  --tipTop__fontFamily--text: system-ui, Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --tipTop__fontFamily--mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --tipTop__fontFamily--heading: ui-serif, charter, "Bitstream Charter", "Sitka Text", cambria, serif;
+  --tipTop__fontFamily--text: system-ui, arial, "Helvetica Neue", helvetica, sans-serif;
+  --tipTop__fontFamily--mono: ui-monospace, "Cascadia Code", "Source Code Pro", menlo, consolas, "DejaVu Sans Mono", monospace;
 
   /* ### Font Size */
+  --tipTop__fontSize--4xs:  0.5rem;   /* 6px */
   --tipTop__fontSize--3xs:  0.5rem;   /* 8px */
   --tipTop__fontSize--2xs:  0.625rem; /* 10px */
   --tipTop__fontSize--xs:   0.75rem;  /* 12px */

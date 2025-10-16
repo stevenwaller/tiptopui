@@ -126,41 +126,7 @@
   margin-right: var(--tipTop-Button__slot-margin);
 }
 
-/* Fixed Ratio------------------------------------------------------------- */
-.tipTop-Button--fixedRatio {
-  padding: 0;
-  aspect-ratio: 1;
-}
-
-.tipTop-Button--fixedRatio.tipTop-Button--2xs {
-  width: var(--tipTop-Button--2xs__height);
-}
-
-.tipTop-Button--fixedRatio.tipTop-Button--xs {
-  width: var(--tipTop-Button--xs__height);
-}
-
-.tipTop-Button--fixedRatio.tipTop-Button--sm {
-  width: var(--tipTop-Button--sm__height);
-}
-
-.tipTop-Button--fixedRatio.tipTop-Button--md {
-  width: var(--tipTop-Button--md__height);
-}
-
-.tipTop-Button--fixedRatio.tipTop-Button--lg {
-  width: var(--tipTop-Button--lg__height);
-}
-
-.tipTop-Button--fixedRatio.tipTop-Button--xl {
-  width: var(--tipTop-Button--xl__height);
-}
-
-.tipTop-Button--fixedRatio.tipTop-Button--2xl {
-  width: var(--tipTop-Button--2xl__height);
-}
-
-/* Variant ---------------------------------------------------------------- */
+/* Variants ---------------------------------------------------------------- */
 .tipTop-Button--primary {
   --tipTop-Button__backgroundColor: var(--tipTop__color--primary);
   --tipTop-Button__color: var(--tipTop__color--light);
@@ -253,7 +219,7 @@
   }
 }
 
-/* Size ------------------------------------------------------------------- */
+/* Sizes ------------------------------------------------------------------- */
 .tipTop-Button--2xs {
   font-size: var(--tipTop-Button--2xs__fontSize);
   height: var(--tipTop-Button--2xs__height);
@@ -303,7 +269,7 @@
   padding-inline: var(--tipTop-Button--2xl__paddingInline);
 }
 
-/* Shape ------------------------------------------------------------------ */
+/* Corners ------------------------------------------------------------------ */
 .tipTop-Button--rounded {
   border-radius: var(--tipTop-Button__borderRadius, var(--tipTop__borderRadius--normal));
 }
@@ -312,11 +278,7 @@
   border-radius: var(--tipTop__borderRadius--full);
 }
 
-.tipTop-Button--circle {
-  border-radius: 50%;
-}
-
-.tipTop-Button--square {
+.tipTop-Button--sharp {
   border-radius: 0;
 }
 
@@ -344,6 +306,40 @@
 
 .tipTop-Button--justify-space-around {
   justify-content: space-around;
+}
+
+/* Fixed Ratio------------------------------------------------------------- */
+.tipTop-Button--fixedRatio {
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--2xs {
+  width: var(--tipTop-Button--2xs__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--xs {
+  width: var(--tipTop-Button--xs__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--sm {
+  width: var(--tipTop-Button--sm__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--md {
+  width: var(--tipTop-Button--md__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--lg {
+  width: var(--tipTop-Button--lg__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--xl {
+  width: var(--tipTop-Button--xl__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--2xl {
+  width: var(--tipTop-Button--2xl__height);
 }
 
 /* Loading ---------------------------------------------------------------- */
