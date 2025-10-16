@@ -56,56 +56,130 @@ const sizes: ButtonProps['size'][] = [
   '2xl',
 ]
 
-const icons = [
+interface IconSet {
+  name: string
+  leftIcon?: React.ReactNode
+  rightIcon?: React.ReactNode
+}
+
+const arrowIcons: IconSet[] = [
   {
     name: 'Tabler Icons',
-    sets: [
-      { leftIcon: <IconArrowLeft />, rightIcon: <IconArrowRight /> },
-      {
-        leftIcon: <IconCircleChevronLeft />,
-        rightIcon: <IconCircleChevronRight />,
-      },
-    ],
+    leftIcon: <IconArrowLeft />,
+    rightIcon: <IconArrowRight />,
   },
   {
     name: 'Hero Icons',
-    sets: [
-      { leftIcon: <ArrowLeftIcon />, rightIcon: <ArrowRightIcon /> },
-      {
-        leftIcon: <ArrowLeftCircleIcon />,
-        rightIcon: <ArrowRightCircleIcon />,
-      },
-    ],
+    leftIcon: <ArrowLeftIcon />,
+    rightIcon: <ArrowRightIcon />,
   },
   {
     name: 'Font Awesome React',
-    sets: [
-      {
-        leftIcon: <FontAwesomeIcon icon={faArrowLeft} />,
-        rightIcon: <FontAwesomeIcon icon={faArrowRight} />,
-      },
-      {
-        leftIcon: <FontAwesomeIcon icon={faCircleArrowLeft} />,
-        rightIcon: <FontAwesomeIcon icon={faCircleArrowRight} />,
-      },
-    ],
+    leftIcon: <FontAwesomeIcon icon={faArrowLeft} />,
+    rightIcon: <FontAwesomeIcon icon={faArrowRight} />,
   },
   {
     name: 'Lucide Icons',
-    sets: [
-      { leftIcon: <ArrowLeft />, rightIcon: <ArrowRight /> },
-      { leftIcon: <CircleArrowLeft />, rightIcon: <CircleArrowRight /> },
-    ],
+    leftIcon: <ArrowLeft />,
+    rightIcon: <ArrowRight />,
   },
   {
     name: 'Ant Design (React Icons)',
-    sets: [
-      {
-        leftIcon: <AiOutlineArrowLeft />,
-        rightIcon: <AiOutlineArrowRight />,
-      },
-    ],
+    leftIcon: <AiOutlineArrowLeft />,
+    rightIcon: <AiOutlineArrowRight />,
   },
+]
+
+const circleIcons = [
+  {
+    name: 'Tabler Icons',
+    leftIcon: <IconCircleChevronLeft />,
+    rightIcon: <IconCircleChevronRight />,
+  },
+  {
+    name: 'Hero Icons',
+    leftIcon: <ArrowLeftCircleIcon />,
+    rightIcon: <ArrowRightCircleIcon />,
+  },
+  {
+    name: 'Font Awesome React',
+    leftIcon: <FontAwesomeIcon icon={faCircleArrowLeft} />,
+    rightIcon: <FontAwesomeIcon icon={faCircleArrowRight} />,
+  },
+  {
+    name: 'Lucide Icons',
+    leftIcon: <CircleArrowLeft />,
+    rightIcon: <CircleArrowRight />,
+  },
+]
+
+const leftIcons = [
+  {
+    name: 'Tabler Icons',
+    leftIcon: <IconCircleChevronRight />,
+  },
+  {
+    name: 'Hero Icons',
+    leftIcon: <ArrowRightCircleIcon />,
+  },
+  {
+    name: 'Font Awesome React',
+    leftIcon: <FontAwesomeIcon icon={faCircleArrowRight} />,
+  },
+  {
+    name: 'Lucide Icons',
+    leftIcon: <CircleArrowRight />,
+  },
+]
+
+const rightIcons = [
+  {
+    name: 'Tabler Icons',
+    rightIcon: <IconArrowRight />,
+  },
+  {
+    name: 'Hero Icons',
+    rightIcon: <ArrowRightIcon />,
+  },
+  {
+    name: 'Font Awesome React',
+    rightIcon: <FontAwesomeIcon icon={faArrowRight} />,
+  },
+  {
+    name: 'Lucide Icons',
+    rightIcon: <ArrowRight />,
+  },
+  {
+    name: 'Ant Design (React Icons)',
+    rightIcon: <AiOutlineArrowRight />,
+  },
+]
+
+const rightCircleIcons = [
+  {
+    name: 'Tabler Icons',
+    rightIcon: <IconCircleChevronRight />,
+  },
+  {
+    name: 'Hero Icons',
+    rightIcon: <ArrowRightCircleIcon />,
+  },
+  {
+    name: 'Font Awesome React',
+    rightIcon: <FontAwesomeIcon icon={faCircleArrowRight} />,
+  },
+  {
+    name: 'Lucide Icons',
+    rightIcon: <CircleArrowRight />,
+  },
+]
+
+const sets: IconSet[][] = [
+  arrowIcons,
+  circleIcons,
+  leftIcons,
+  rightIcons,
+  rightCircleIcons,
 ]
 
 const meta: Meta<typeof Button> = {
@@ -158,68 +232,31 @@ export const Sizes: Story = {
       {sizes.map((size) => (
         <>
           <h3>{size}</h3>
-          <div
-            key={size}
-            style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
-          >
-            {icons.map((icon) =>
-              icon.sets.map((set, index) => (
-                <Button
-                  key={index}
-                  size={size}
-                  slotStart={set.leftIcon}
-                  slotEnd={set.rightIcon}
-                  title={icon.name}
-                >
-                  Button
-                </Button>
-              )),
-            )}
-            <Button
-              size={size}
-              slotStart={<i className='fa fa-arrow-left'></i>}
-              slotEnd={<i className='fa fa-arrow-right'></i>}
-              title='Font Awesome Web Font'
-            >
-              Button
-            </Button>
-            <Button
-              size={size}
-              slotStart={
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18'
-                  />
-                </svg>
-              }
-              slotEnd={
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth='1.5'
-                  stroke='currentColor'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3'
-                  />
-                </svg>
-              }
-              title='SVG'
-            >
-              Button
-            </Button>
-            <Button size={size}>Button</Button>
+          <div key={size}>
+            {sets.map((set, setIndex) => (
+              <div
+                key={setIndex}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  marginBottom: '10px',
+                }}
+              >
+                {set.map((icon, iconIndex) => (
+                  <Button
+                    key={iconIndex}
+                    size={size}
+                    slotStart={icon.leftIcon}
+                    slotEnd={icon.rightIcon}
+                    title={icon.name}
+                  >
+                    Button
+                  </Button>
+                ))}
+                <Button size={size}>Button</Button>
+              </div>
+            ))}
           </div>
         </>
       ))}

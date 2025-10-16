@@ -6,6 +6,8 @@
   --tipTop-Button__fontWeight: var(--tipTop__fontWeight--medium);
   --tipTop-Button__transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
   --tipTop-Button--disabled__opacity: 0.5;
+  --tipTop-Button__whiteSpace: nowrap;
+  --tipTop-Button__lineHeight: 1rem;
   --tipTop-Button__svg-width: 1em;
   --tipTop-Button__svg-height: 1em;
 
@@ -32,81 +34,49 @@
   --tipTop-Button--faded__textColorMix-percent: 65%;
   --tipTop-Button--faded__textColorMix-blendColor: #000;
 
-  /* ### Slots */
-  --tipTop-Button-slot__marginBlockStart: 0;
-  --tipTop-Button-slot__marginBlockEnd: 0;
-  --tipTop-Button-slot__marginInlineStart: 0;
-  --tipTop-Button-slot__marginInlineEnd: 0;
-
-  /* #### Slot Start */
-  --tipTop-Button-slotStart__marginBlockStart: 0;
-  --tipTop-Button-slotStart__marginBlockEnd: 0;
-  --tipTop-Button-slotStart__marginInlineStart: calc(var(--tipTop__space--0-5) * -1);
-  --tipTop-Button-slotStart__marginInlineEnd: var(--tipTop__space--2);
-
-  /* #### Slot End */
-  --tipTop-Button-slotEnd__marginBlockStart: 0;
-  --tipTop-Button-slotEnd__marginBlockEnd: 0;
-  --tipTop-Button-slotEnd__marginInlineStart: var(--tipTop__space--2);
-  --tipTop-Button-slotEnd__marginInlineEnd: calc(var(--tipTop__space--0-5) * -1);
-
-  /* ### Children */
-  --tipTop-Button-children__marginBlockStart: 0;
-  --tipTop-Button-children__marginBlockEnd: 0;
-  --tipTop-Button-children__marginInlineStart: 0;
-  --tipTop-Button-children__marginInlineEnd: 0;
-
   /* ### Size */
   /* #### 2xs */
   --tipTop-Button--2xs__fontSize: var(--tipTop__fontSize--2xs);
-  --tipTop-Button--2xs__paddingBlockStart: var(--tipTop__space--1);
-  --tipTop-Button--2xs__paddingBlockEnd: var(--tipTop__space--1);
-  --tipTop-Button--2xs__paddingInlineStart: var(--tipTop__space--0-5);
-  --tipTop-Button--2xs__paddingInlineEnd: var(--tipTop__space--0-5);
+  --tipTop-Button--2xs__height: var(--tipTop__height--2xs);
+  --tipTop-Button--2xs__gap: var(--tipTop__space--4);
+  --tipTop-Button--2xs__paddingInline: var(--tipTop__space--10);
 
   /* #### xs */
   --tipTop-Button--xs__fontSize: var(--tipTop__fontSize--xs);
-  --tipTop-Button--xs__paddingBlockStart: var(--tipTop__space--0-5);
-  --tipTop-Button--xs__paddingBlockEnd: var(--tipTop__space--0-5);
-  --tipTop-Button--xs__paddingInlineStart: var(--tipTop__space--1);
-  --tipTop-Button--xs__paddingInlineEnd: var(--tipTop__space--1);
+  --tipTop-Button--xs__height: var(--tipTop__height--xs);
+  --tipTop-Button--xs__gap: var(--tipTop__space--6);
+  --tipTop-Button--xs__paddingInline: var(--tipTop__space--12);
 
   /* #### sm */
   --tipTop-Button--sm__fontSize: var(--tipTop__fontSize--sm);
-  --tipTop-Button--sm__paddingBlockStart: var(--tipTop__space--1-5);
-  --tipTop-Button--sm__paddingBlockEnd: var(--tipTop__space--1-5);
-  --tipTop-Button--sm__paddingInlineStart: var(--tipTop__space--2);
-  --tipTop-Button--sm__paddingInlineEnd: var(--tipTop__space--2);
+  --tipTop-Button--sm__height: var(--tipTop__height--sm);
+  --tipTop-Button--sm__gap: var(--tipTop__space--8);
+  --tipTop-Button--sm__paddingInline: var(--tipTop__space--14);
 
   /* #### md */
   --tipTop-Button--md__fontSize: var(--tipTop__fontSize--md);
-  --tipTop-Button--md__paddingBlockStart: var(--tipTop__space--2-5);
-  --tipTop-Button--md__paddingBlockEnd: var(--tipTop__space--2-5);
-  --tipTop-Button--md__paddingInlineStart: var(--tipTop__space--3-5);
-  --tipTop-Button--md__paddingInlineEnd: var(--tipTop__space--3-5);
+  --tipTop-Button--md__height: var(--tipTop__height--md);
+  --tipTop-Button--md__gap: var(--tipTop__space--10);
+  --tipTop-Button--md__paddingInline: var(--tipTop__space--16);
 
   /* #### lg */
   --tipTop-Button--lg__fontSize: var(--tipTop__fontSize--lg);
-  --tipTop-Button--lg__paddingBlockStart: var(--tipTop__space--3-5);
-  --tipTop-Button--lg__paddingBlockEnd: var(--tipTop__space--3-5);
-  --tipTop-Button--lg__paddingInlineStart: var(--tipTop__space--4);
-  --tipTop-Button--lg__paddingInlineEnd: var(--tipTop__space--4);
+  --tipTop-Button--lg__height: var(--tipTop__height--lg);
+  --tipTop-Button--lg__gap: var(--tipTop__space--12);
+  --tipTop-Button--lg__paddingInline: var(--tipTop__space--18);
 
   /* #### xl */
   --tipTop-Button--xl__fontSize: var(--tipTop__fontSize--xl);
-  --tipTop-Button--xl__paddingBlockStart: var(--tipTop__space--4);
-  --tipTop-Button--xl__paddingBlockEnd: var(--tipTop__space--4);
-  --tipTop-Button--xl__paddingInlineStart: var(--tipTop__space--5);
-  --tipTop-Button--xl__paddingInlineEnd: var(--tipTop__space--5);
+  --tipTop-Button--xl__height: var(--tipTop__height--xl);
+  --tipTop-Button--xl__gap: var(--tipTop__space--14);
+  --tipTop-Button--xl__paddingInline: var(--tipTop__space--20);
 
   /* #### 2xl */
-  --tipTop-Button--2xl__fontSize: var(--tipTop__fontSize--3xl);
-  --tipTop-Button--2xl__paddingBlockStart: var(--tipTop__space--4);
-  --tipTop-Button--2xl__paddingBlockEnd: var(--tipTop__space--4);
-  --tipTop-Button--2xl__paddingInlineStart: var(--tipTop__space--6);
-  --tipTop-Button--2xl__paddingInlineEnd: var(--tipTop__space--6);
+  --tipTop-Button--2xl__fontSize: var(--tipTop__fontSize--2xl);
+  --tipTop-Button--2xl__height: var(--tipTop__height--2xl);
+  --tipTop-Button--2xl__gap: var(--tipTop__space--16);
+  --tipTop-Button--2xl__paddingInline: var(--tipTop__space--22);
 }
-
 
 .tipTop-Button,
 .tipTop-Button * {
@@ -125,6 +95,8 @@
   border: var(--tipTop-Button__border);
   font-weight: var(--tipTop-Button__fontWeight);
   transition: var(--tipTop-Button__transition);
+  white-space: var(--tipTop-Button__whiteSpace);
+  line-height: var(--tipTop-Button__lineHeight);
 
   &:not([disabled]) {
     cursor: pointer;
@@ -147,31 +119,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block-start: var(--tipTop-Button-slot__marginBlockStart);
-  margin-block-end: var(--tipTop-Button-slot__marginBlockEnd);
-  margin-inline-start: var(--tipTop-Button-slot__marginInlineStart);
-  margin-inline-end: var(--tipTop-Button-slot__marginInlineEnd);
-}
-
-.tipTop-Button-slotStart {
-  margin-block-start: var(--tipTop-Button-slotStart__marginBlockStart);
-  margin-block-end: var(--tipTop-Button-slotStart__marginBlockEnd);
-  margin-inline-start: var(--tipTop-Button-slotStart__marginInlineStart);
-  margin-inline-end: var(--tipTop-Button-slotStart__marginInlineEnd);
-}
-
-.tipTop-Button-slotEnd {
-  margin-block-start: var(--tipTop-Button-slotEnd__marginBlockStart);
-  margin-block-end: var(--tipTop-Button-slotEnd__marginBlockEnd);
-  margin-inline-start: var(--tipTop-Button-slotEnd__marginInlineStart);
-  margin-inline-end: var(--tipTop-Button-slotEnd__marginInlineEnd);
-}
-
-.tipTop-Button-children {
-  margin-block-start: var(--tipTop-Button-children__marginBlockStart);
-  margin-block-end: var(--tipTop-Button-children__marginBlockEnd);
-  margin-inline-start: var(--tipTop-Button-children__marginInlineStart);
-  margin-inline-end: var(--tipTop-Button-children__marginInlineEnd);
 }
 
 /* Variant ---------------------------------------------------------------- */
@@ -267,84 +214,54 @@
   }
 }
 
-/* Loading ---------------------------------------------------------------- */
-.tipTop-Button--loading {
-  pointer-events: none;
-  cursor: not-allowed;
-
-  .tipTop-Button-children,
-  .tipTop-Button-slot {
-    visibility: hidden;
-  }
-
-  .tipTop-Button-loader {
-    display: block;
-  }
-}
-
-.tipTop-Button-loader {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /* Size ------------------------------------------------------------------- */
 .tipTop-Button--2xs {
   font-size: var(--tipTop-Button--2xs__fontSize);
-  padding-block-start: var(--tipTop-Button--2xs__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button--2xs__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button--2xs__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button--2xs__paddingInlineEnd);
+  height: var(--tipTop-Button--2xs__height);
+  gap: var(--tipTop-Button--2xs__gap);
+  padding-inline: var(--tipTop-Button--2xs__paddingInline);
 }
 
 .tipTop-Button--xs {
   font-size: var(--tipTop-Button--xs__fontSize);
-  padding-block-start: var(--tipTop-Button--xs__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button--xs__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button--xs__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button--xs__paddingInlineEnd);
+  height: var(--tipTop-Button--xs__height);
+  gap: var(--tipTop-Button--xs__gap);
+  padding-inline: var(--tipTop-Button--xs__paddingInline);
 }
 
 .tipTop-Button--sm {
   font-size: var(--tipTop-Button--sm__fontSize);
-  padding-block-start: var(--tipTop-Button--sm__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button--sm__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button--sm__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button--sm__paddingInlineEnd);
+  height: var(--tipTop-Button--sm__height);
+  gap: var(--tipTop-Button--sm__gap);
+  padding-inline: var(--tipTop-Button--sm__paddingInline);
 }
 
 .tipTop-Button--md {
   font-size: var(--tipTop-Button--md__fontSize);
-  padding-block-start: var(--tipTop-Button--md__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button--md__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button--md__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button--md__paddingInlineEnd);
+  height: var(--tipTop-Button--md__height);
+  gap: var(--tipTop-Button--md__gap);
+  padding-inline: var(--tipTop-Button--md__paddingInline);
 }
 
 .tipTop-Button--lg {
   font-size: var(--tipTop-Button--lg__fontSize);
-  padding-block-start: var(--tipTop-Button--lg__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button--lg__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button--lg__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button--lg__paddingInlineEnd);
+  height: var(--tipTop-Button--lg__height);
+  gap: var(--tipTop-Button--lg__gap);
+  padding-inline: var(--tipTop-Button--lg__paddingInline);
 }
 
 .tipTop-Button--xl {
   font-size: var(--tipTop-Button--xl__fontSize);
-  padding-block-start: var(--tipTop-Button--xl__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button--xl__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button--xl__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button--xl__paddingInlineEnd);
+  height: var(--tipTop-Button--xl__height);
+  gap: var(--tipTop-Button--xl__gap);
+  padding-inline: var(--tipTop-Button--xl__paddingInline);
 }
 
 .tipTop-Button--2xl {
   font-size: var(--tipTop-Button--2xl__fontSize);
-  padding-block-start: var(--tipTop-Button--2xl__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button--2xl__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button--2xl__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button--2xl__paddingInlineEnd);
+  height: var(--tipTop-Button--2xl__height);
+  gap: var(--tipTop-Button--2xl__gap);
+  padding-inline: var(--tipTop-Button--2xl__paddingInline);
 }
 
 /* Shape ------------------------------------------------------------------ */
@@ -388,6 +305,29 @@
 
 .tipTop-Button--justify-space-around {
   justify-content: space-around;
+}
+
+/* Loading ---------------------------------------------------------------- */
+.tipTop-Button--loading {
+  pointer-events: none;
+  cursor: not-allowed;
+
+  .tipTop-Button-children,
+  .tipTop-Button-slot {
+    visibility: hidden;
+  }
+
+  .tipTop-Button-loader {
+    display: block;
+  }
+}
+
+.tipTop-Button-loader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
