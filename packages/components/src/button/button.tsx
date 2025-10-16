@@ -32,7 +32,7 @@ export interface ButtonProps
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
   size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  corners?: 'rounded' | 'pill' | 'sharp'
+  shape?: 'rounded' | 'circular' | 'square'
   fullWidth?: boolean
   justify?: 'start' | 'center' | 'end' | 'space-between' | 'space-around'
   children: React.ReactNode
@@ -61,6 +61,8 @@ export interface ButtonProps
  *   - attached or not
  * - ellipsizeText
  * - Invisible button
+ * - As link
+ * - Split button
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -70,7 +72,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = 'primary',
       appearance = 'solid',
       size = 'md',
-      corners = 'rounded',
+      shape = 'rounded',
       fullWidth = false,
       justify = 'center',
       slotStart,
@@ -148,7 +150,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           `tipTop-Button--${appearance}`,
           `tipTop-Button--${variant}`,
           `tipTop-Button--${size}`,
-          `tipTop-Button--${corners}`,
+          `tipTop-Button--${shape}`,
           justify && `tipTop-Button--justify-${justify}`,
           loading && 'tipTop-Button--loading',
           fixedRatio && 'tipTop-Button--fixedRatio',

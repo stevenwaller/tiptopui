@@ -67,20 +67,38 @@ render(
 <Button fullWidth>Full Width</Button>
 ```
 
-## Corners
+## Shape
 
 ```jsx live noInline
-const corners = ["rounded", "pill", "sharp"];
+const shapes = ["rounded", "circular", "square"];
 
 render(
   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-    {corners.map((corner) => (
-      <Button key={corner} corners={corner}>
-        {corner}
+    {shapes.map((shape) => (
+      <Button key={shape} shape={shape}>
+        {shape}
       </Button>
     ))}
   </div>
 );
+```
+
+## Fixed Ratio
+
+When just using icons, you can set the `fixedRatio` prop to make sure the button's width and height are equal.
+
+```jsx live
+<div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+  <Button shape="rounded" fixedRatio>
+    <IconBell />
+  </Button>
+  <Button shape="circular" variant="success" fixedRatio>
+    <IconCheck />
+  </Button>
+  <Button shape="square" variant="warning" fixedRatio>
+    <IconClock />
+  </Button>
+</div>
 ```
 
 ## Slots
@@ -90,28 +108,12 @@ Content can be added to the start and end of the button using the `slotStart` an
 ```jsx live
 // Icons from https://tabler.io/docs/icons/react
 <div style={{ display: "flex", gap: "10px" }}>
-  <Button slotEnd={<IconArrowRight size={20} />}>With icon</Button>
+  <Button slotEnd={<IconArrowRight />}>With icon</Button>
+  <Button slotEnd={<IconChevronDown />}>With icon</Button>
+  <Button slotEnd={<IconX />}>With icon</Button>
   <Button slotStart="😀">With Emoji</Button>
   <Button slotStart="'Slot Start'" slotEnd="'Slot End'">
     With Text
-  </Button>
-</div>
-```
-
-## Fixed Ratio
-
-When just using icons, you can set the `fixedRatio` prop to make sure the button's width and height are equal.
-
-```jsx live
-<div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-  <Button corners="rounded" fixedRatio>
-    <IconBell size={14} />
-  </Button>
-  <Button corners="pill" variant="success" fixedRatio>
-    <IconCheck size={14} />
-  </Button>
-  <Button corners="sharp" variant="warning" fixedRatio>
-    <IconClock size={14} />
   </Button>
 </div>
 ```
@@ -124,7 +126,7 @@ You can use a badge in one of the slots. It is recommended that the badge be one
 <div style={{ display: "flex", gap: "10px" }}>
   <Button
     slotEnd={
-      <Badge size="sm" appearance="faded" corners="pill" fixedRatio>
+      <Badge size="sm" appearance="faded" shape="circular" fixedRatio>
         3
       </Badge>
     }
@@ -132,7 +134,7 @@ You can use a badge in one of the slots. It is recommended that the badge be one
     Button
   </Button>
   <Button
-    corners="pill"
+    shape="circular"
     variant="danger"
     slotEnd={
       <Badge size="sm" appearance="faded" variant="danger">
@@ -144,14 +146,31 @@ You can use a badge in one of the slots. It is recommended that the badge be one
   </Button>
   <Button
     appearance="outline"
-    corners="sharp"
+    shape="square"
     slotEnd={
-      <Badge size="sm" appearance="outline" corners="sharp">
+      <Badge size="sm" appearance="outline" shape="square">
         99+
       </Badge>
     }
   >
     Button
+  </Button>
+</div>
+```
+
+If you put the badge is the children of the button you can use the Badge's `position` prop to position it to the edge of the button.
+
+```jsx live
+<div style={{ display: "flex", gap: "10px" }}>
+  <Button>
+    Button
+    <Badge variant="danger" size="sm" position="top-right" />
+  </Button>
+  <Button>
+    Button
+    <Badge variant="success" size="sm" position="top-right" isNumeric>
+      3
+    </Badge>
   </Button>
 </div>
 ```

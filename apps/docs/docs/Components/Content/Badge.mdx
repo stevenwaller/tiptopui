@@ -61,32 +61,49 @@ render(
 );
 ```
 
-## Corners
+## Shape
 
 ```jsx live noInline
-const corners = ["rounded", "pill", "sharp"];
+const shapes = ["rounded", "circular", "square"];
 
 render(
   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-    {corners.map((corner) => (
-      <Badge key={corner} corners={corner}>
-        {corner}
+    {shapes.map((shape) => (
+      <Badge key={shape} shape={shape}>
+        {shape}
       </Badge>
     ))}
   </div>
 );
 ```
 
-## Empty Badge
+## Fixed Ratio
+
+When just using icons, you can set the `fixedRatio` prop to make sure the badge's width and height are equal.
+
+```jsx live
+<div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+  <Badge shape="circular" variant="success" fixedRatio>
+    <IconCheck />
+  </Badge>
+  <Badge shape="rounded" fixedRatio>
+    <IconBell />
+  </Badge>
+  <Badge shape="square" variant="warning" fixedRatio>
+    <IconClock />
+  </Badge>
+</div>
+```
+
+## Dots
 
 When no content is provided, the badge renders as just a shape with color.
 
 ```jsx live
 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-  <Badge />
-  <Badge variant="danger" />
-  <Badge variant="success" />
-  <Badge variant="warning" />
+  <Badge shape="circular" variant="success" />
+  <Badge shape="rounded" />
+  <Badge shape="square" variant="warning" />
 </div>
 ```
 
@@ -105,59 +122,28 @@ Content can be added to the start and end of the badge using the `slotStart` and
 </div>
 ```
 
-## Fixed Ratio
-
-When just using icons, you can set the `fixedRatio` prop to make sure the badge's width and height are equal.
-
-```jsx live
-<div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-  <Badge corners="rounded" fixedRatio>
-    <IconBell size={14} />
-  </Badge>
-  <Badge corners="pill" variant="success" fixedRatio>
-    <IconCheck size={14} />
-  </Badge>
-  <Badge corners="sharp" variant="warning" fixedRatio>
-    <IconClock size={14} />
-  </Badge>
-</div>
-```
-
 ## Numbers and Counters
 
+Setting the `isNumeric` prop adds negative left/right margin to the children so the Badge is more circular when there is a single digit.
+
 ```jsx live
 <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-  <Badge>5</Badge>
-  <Badge variant="danger">99+</Badge>
-  <Badge variant="success">12</Badge>
-  <Badge variant="warning" fixedRatio>
-    3
+  <Badge isNumeric>5</Badge>
+  <Badge variant="danger" isNumeric>
+    99+
   </Badge>
-</div>
-```
-
-## Show Outline
-
-The `showOutline` prop adds a white outline to help the badge stand out over backgrounds.
-
-```jsx live
-<div
-  style={{
-    background: "linear-gradient(45deg, #ff6b6b, #4ecdc4)",
-    padding: "20px",
-    borderRadius: "8px",
-  }}
->
-  <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-    <Badge>No Outline</Badge>
-    <Badge showOutline>With Outline</Badge>
-    <Badge variant="danger" showOutline>
-      99+
-    </Badge>
-    <Badge variant="success" showOutline fixedRatio>
-      ✓
-    </Badge>
-  </div>
+  <Badge variant="success" isNumeric>
+    12
+  </Badge>
+  <Badge variant="warning" isNumeric>
+    1
+  </Badge>
+  <Badge variant="dark" isNumeric>
+    100
+  </Badge>
+  <Badge variant="light" isNumeric>
+    1,100
+  </Badge>
 </div>
 ```
 
@@ -165,117 +151,79 @@ The `showOutline` prop adds a white outline to help the badge stand out over bac
 
 Badges can be absolutely positioned relative to their parent container using the `position` prop.
 
-```jsx live
-<div style={{ display: "flex", gap: "30px", alignItems: "center" }}>
-  <div
-    style={{
-      position: "relative",
-      width: "60px",
-      height: "60px",
-      background: "#f0f0f0",
-      borderRadius: "8px",
-    }}
-  >
-    <Badge position="top-right" variant="danger">
-      5
-    </Badge>
-  </div>
+```jsx live noInline
+const positions = [
+  "top",
+  "top-right",
+  "right",
+  "bottom-right",
+  "bottom",
+  "bottom-left",
+  "left",
+  "top-left",
+];
 
-  <div
-    style={{
-      position: "relative",
-      width: "60px",
-      height: "60px",
-      background: "#f0f0f0",
-      borderRadius: "8px",
-    }}
-  >
-    <Badge position="top-left" variant="success" fixedRatio />
+render(
+  <div style={{ display: "flex", gap: "30px", alignItems: "center" }}>
+    {positions.map((position) => (
+      <Button key={position}>
+        Button
+        <Badge position={position} variant="danger" fixedRatio size="sm">
+          3
+        </Badge>
+      </Button>
+    ))}
   </div>
-
-  <div
-    style={{
-      position: "relative",
-      width: "60px",
-      height: "60px",
-      background: "#f0f0f0",
-      borderRadius: "8px",
-    }}
-  >
-    <Badge position="bottom-right" variant="warning">
-      New
-    </Badge>
-  </div>
-
-  <div
-    style={{
-      position: "relative",
-      width: "60px",
-      height: "60px",
-      background: "#f0f0f0",
-      borderRadius: "8px",
-    }}
-  >
-    <Badge position="bottom" variant="neutral">
-      Info
-    </Badge>
-  </div>
-</div>
+);
 ```
 
-## Real-world Examples
+You can also use the `--inset` suffix to position the badge further inside the corner of the parent. This can be helpful when the parent has rounded corners.
 
-### Notification Badge on Avatar
+```jsx live noInline
+const positions = [
+  "top-right--inset",
+  "bottom-right--inset",
+  "bottom-left--inset",
+  "top-left--inset",
+];
 
-```jsx live
-<div style={{ position: "relative", display: "inline-block" }}>
-  <Avatar size="lg" />
-  <Badge position="top-right" variant="danger" showOutline>
-    3
-  </Badge>
-</div>
+render(
+  <div style={{ display: "flex", gap: "30px", alignItems: "center" }}>
+    {positions.map((position) => (
+      <Button key={position} shape="circular">
+        Button
+        <Badge position={position} variant="danger" fixedRatio size="sm">
+          3
+        </Badge>
+      </Button>
+    ))}
+  </div>
+);
 ```
 
-### Interactive Badges with Close
+## Show Outline
+
+The `showOutline` prop adds a white outline to help it visually cut into the shape it is over.
+The color of the outline can be customized with the `--tipTop-Badge--showOutline__boxShadow` CSS variable.
 
 ```jsx live
-<div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-  <Badge
-    slotEnd={
-      <IconX
-        size={14}
-        style={{ cursor: "pointer" }}
-        onClick={() => alert("Remove tag")}
-      />
-    }
-    variant="primary"
-  >
-    Tag 1
-  </Badge>
-  <Badge
-    slotEnd={
-      <IconX
-        size={14}
-        style={{ cursor: "pointer" }}
-        onClick={() => alert("Remove tag")}
-      />
-    }
-    variant="secondary"
-  >
-    Tag 2
-  </Badge>
-  <Badge
-    slotEnd={
-      <IconX
-        size={14}
-        style={{ cursor: "pointer" }}
-        onClick={() => alert("Remove tag")}
-      />
-    }
-    variant="success"
-  >
-    Tag 3
-  </Badge>
+<div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+  <Button>
+    Button
+    <Badge
+      position="top-right--inset"
+      variant="success"
+      isNumeric
+      size="sm"
+      showOutline
+    >
+      3
+    </Badge>
+  </Button>
+  <Button shape="circular">
+    Button
+    <Badge position="top-right--inset" variant="danger" size="xs" showOutline />
+  </Button>
 </div>
 ```
 

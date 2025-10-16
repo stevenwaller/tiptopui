@@ -6,17 +6,15 @@
   --tipTop-Badge__fontWeight: var(--tipTop__fontWeight--medium);
   --tipTop-Badge__whiteSpace: nowrap;
   --tipTop-Badge__lineHeight: 1rem;
-  --tipTop-Badge__svg-width: 1em;
-  --tipTop-Badge__svg-height: 1em;
+  --tipTop-Badge__svg-width: 1.1em;
+  --tipTop-Badge__svg-height: 1.1em;
   --tipTop-Badge__slot-margin: -0.2em;
 
   /* ### Show Outline */
   --tipTop-Badge--showOutline__boxShadow: 0 0 0 2px #fff;
 
   /* ### Position */
-  --tipTop-Badge--position__position: absolute;
   --tipTop-Badge--position__zIndex: 10;
-  --tipTop-Badge--position__transform: translate(50%, -50%);
 
   /* ### Variants */
 
@@ -74,6 +72,9 @@
   --tipTop-Badge--3xl__height: var(--tipTop__height--xl);
   --tipTop-Badge--3xl__gap: var(--tipTop__space--14);
   --tipTop-Badge--3xl__paddingInline: var(--tipTop__space--20);
+
+  /* ### Is Number */
+  --tipTop-Badge--isNumeric__paddingOffset: -0.3em;
 }
 
 .tipTop-Badge,
@@ -122,13 +123,17 @@
 /* Position ------------------------------------------------------------------- */
 .tipTop-Badge--position-top,
 .tipTop-Badge--position-top-right,
+.tipTop-Badge--position-top-right--inset,
 .tipTop-Badge--position-right,
 .tipTop-Badge--position-bottom-right,
+.tipTop-Badge--position-bottom-right--inset,
 .tipTop-Badge--position-bottom,
 .tipTop-Badge--position-bottom-left,
+.tipTop-Badge--position-bottom-left--inset,
 .tipTop-Badge--position-left,
-.tipTop-Badge--position-top-left {
-  position: var(--tipTop-Badge--position__position);
+.tipTop-Badge--position-top-left,
+.tipTop-Badge--position-top-left--inset {
+  position: absolute;
   z-index: var(--tipTop-Badge--position__zIndex);
 }
 
@@ -141,7 +146,13 @@
 .tipTop-Badge--position-top-right {
   top: 0;
   right: 0;
-  transform: var(--tipTop-Badge--position__transform);
+  transform: translate(38%, -38%);
+}
+
+.tipTop-Badge--position-top-right--inset {
+  top: 0;
+  right: 0;
+  transform: translate(25%, -25%);
 }
 
 .tipTop-Badge--position-right {
@@ -153,7 +164,13 @@
 .tipTop-Badge--position-bottom-right {
   bottom: 0;
   right: 0;
-  transform: translate(50%, 50%);
+  transform: translate(38%, 38%);
+}
+
+.tipTop-Badge--position-bottom-right--inset {
+  bottom: 0;
+  right: 0;
+  transform: translate(25%, 25%);
 }
 
 .tipTop-Badge--position-bottom {
@@ -165,7 +182,13 @@
 .tipTop-Badge--position-bottom-left {
   bottom: 0;
   left: 0;
-  transform: translate(-50%, 50%);
+  transform: translate(-38%, 38%);
+}
+
+.tipTop-Badge--position-bottom-left--inset {
+  bottom: 0;
+  left: 0;
+  transform: translate(-25%, 25%);
 }
 
 .tipTop-Badge--position-left {
@@ -177,9 +200,14 @@
 .tipTop-Badge--position-top-left {
   top: 0;
   left: 0;
-  transform: translate(-50%, -50%);
+  transform: translate(-38%, -38%);
 }
 
+.tipTop-Badge--position-top-left--inset {
+  top: 0;
+  left: 0;
+  transform: translate(-25%, -25%);
+}
 
 /* Variants ---------------------------------------------------------------- */
 .tipTop-Badge--primary {
@@ -256,6 +284,7 @@
 .tipTop-Badge--2xs {
   font-size: var(--tipTop-Badge--2xs__fontSize);
   height: var(--tipTop-Badge--2xs__height);
+  min-width: var(--tipTop-Badge--2xs__height);
   gap: var(--tipTop-Badge--2xs__gap);
   padding-inline: var(--tipTop-Badge--2xs__paddingInline);
 }
@@ -263,6 +292,7 @@
 .tipTop-Badge--xs {
   font-size: var(--tipTop-Badge--xs__fontSize);
   height: var(--tipTop-Badge--xs__height);
+  min-width: var(--tipTop-Badge--xs__height);
   gap: var(--tipTop-Badge--xs__gap);
   padding-inline: var(--tipTop-Badge--xs__paddingInline);
 }
@@ -270,6 +300,7 @@
 .tipTop-Badge--sm {
   font-size: var(--tipTop-Badge--sm__fontSize);
   height: var(--tipTop-Badge--sm__height);
+  min-width: var(--tipTop-Badge--sm__height);
   gap: var(--tipTop-Badge--sm__gap);
   padding-inline: var(--tipTop-Badge--sm__paddingInline);
 }
@@ -277,6 +308,7 @@
 .tipTop-Badge--md {
   font-size: var(--tipTop-Badge--md__fontSize);
   height: var(--tipTop-Badge--md__height);
+  min-width: var(--tipTop-Badge--md__height);
   gap: var(--tipTop-Badge--md__gap);
   padding-inline: var(--tipTop-Badge--md__paddingInline);
 }
@@ -284,6 +316,7 @@
 .tipTop-Badge--lg {
   font-size: var(--tipTop-Badge--lg__fontSize);
   height: var(--tipTop-Badge--lg__height);
+  min-width: var(--tipTop-Badge--lg__height);
   gap: var(--tipTop-Badge--lg__gap);
   padding-inline: var(--tipTop-Badge--lg__paddingInline);
 }
@@ -291,6 +324,7 @@
 .tipTop-Badge--xl {
   font-size: var(--tipTop-Badge--xl__fontSize);
   height: var(--tipTop-Badge--xl__height);
+  min-width: var(--tipTop-Badge--xl__height);
   gap: var(--tipTop-Badge--xl__gap);
   padding-inline: var(--tipTop-Badge--xl__paddingInline);
 }
@@ -298,6 +332,7 @@
 .tipTop-Badge--2xl {
   font-size: var(--tipTop-Badge--2xl__fontSize);
   height: var(--tipTop-Badge--2xl__height);
+  min-width: var(--tipTop-Badge--2xl__height);
   gap: var(--tipTop-Badge--2xl__gap);
   padding-inline: var(--tipTop-Badge--2xl__paddingInline);
 }
@@ -305,8 +340,15 @@
 .tipTop-Badge--3xl {
   font-size: var(--tipTop-Badge--3xl__fontSize);
   height: var(--tipTop-Badge--3xl__height);
+  min-width: var(--tipTop-Badge--3xl__height);
   gap: var(--tipTop-Badge--3xl__gap);
   padding-inline: var(--tipTop-Badge--3xl__paddingInline);
+}
+
+/* Is Number ------------------------------------------------------------- */
+.tipTop-Badge--isNumeric .tipTop-Badge-children {
+  margin-left: var(--tipTop-Badge--isNumeric__paddingOffset);
+  margin-right: var(--tipTop-Badge--isNumeric__paddingOffset);
 }
 
 /* Shape ------------------------------------------------------------------ */
@@ -314,12 +356,8 @@
   border-radius: var(--tipTop-Badge__borderRadius, var(--tipTop__borderRadius--normal));
 }
 
-.tipTop-Badge--pill {
+.tipTop-Badge--circular {
   border-radius: var(--tipTop__borderRadius--full);
-}
-
-.tipTop-Badge--circle {
-  border-radius: 50%;
 }
 
 .tipTop-Badge--square {

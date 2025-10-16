@@ -28,18 +28,23 @@ export interface BadgeProps
     | 'dark'
   appearance?: 'solid' | 'faded' | 'outline' | 'ghost' | 'text'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
-  corners?: 'rounded' | 'pill' | 'sharp'
+  shape?: 'rounded' | 'circular' | 'square'
   fixedRatio?: boolean
   showOutline?: boolean
+  isNumeric?: boolean
   position?:
     | 'top'
     | 'top-right'
+    | 'top-right--inset'
     | 'right'
     | 'bottom-right'
+    | 'bottom-right--inset'
     | 'bottom'
     | 'bottom-left'
+    | 'bottom-left--inset'
     | 'left'
     | 'top-left'
+    | 'top-left--inset'
   children?: React.ReactNode
   classNames?: {
     [key in BadgeParts]?: string
@@ -65,10 +70,11 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       variant = 'primary',
       appearance = 'solid',
       size = 'md',
-      corners = 'pill',
+      shape = 'circular',
       showOutline,
       fixedRatio,
       position,
+      isNumeric,
       slotStart,
       slotEnd,
       className,
@@ -144,10 +150,11 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
           `tipTop-Badge--${appearance}`,
           `tipTop-Badge--${variant}`,
           `tipTop-Badge--${size}`,
-          `tipTop-Badge--${corners}`,
+          `tipTop-Badge--${shape}`,
           position && `tipTop-Badge--position-${position}`,
           showOutline && 'tipTop-Badge--showOutline',
           fixedRatio && 'tipTop-Badge--fixedRatio',
+          isNumeric && 'tipTop-Badge--isNumeric',
           !children && !slotStart && !slotEnd && 'tipTop-Badge--empty',
           className,
           classNames?.root,

@@ -8,8 +8,8 @@
   --tipTop-Button--disabled__opacity: 0.5;
   --tipTop-Button__whiteSpace: nowrap;
   --tipTop-Button__lineHeight: 1rem;
-  --tipTop-Button__svg-width: 1em;
-  --tipTop-Button__svg-height: 1em;
+  --tipTop-Button__svg-width: 1.1em;
+  --tipTop-Button__svg-height: 1.1em;
   --tipTop-Button__slot-margin: -0.2em;
 
   /* ### Variants */
@@ -269,16 +269,16 @@
   padding-inline: var(--tipTop-Button--2xl__paddingInline);
 }
 
-/* Corners ------------------------------------------------------------------ */
+/* Shape ------------------------------------------------------------------ */
 .tipTop-Button--rounded {
   border-radius: var(--tipTop-Button__borderRadius, var(--tipTop__borderRadius--normal));
 }
 
-.tipTop-Button--pill {
+.tipTop-Button--circular {
   border-radius: var(--tipTop__borderRadius--full);
 }
 
-.tipTop-Button--sharp {
+.tipTop-Button--square {
   border-radius: 0;
 }
 
