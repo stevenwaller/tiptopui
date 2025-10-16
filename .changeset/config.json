@@ -6,5 +6,5 @@
   "linked": [],
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["@tiptopui/docs"]
+  "ignore": ["@repo/docs", "@repo/storybook"]
 }
