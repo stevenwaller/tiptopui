@@ -4,18 +4,11 @@
   --tipTop-Badge__borderRadius: var(--tipTop__borderRadius--md);
   --tipTop-Badge__fontSize: var(--tipTop__fontSize--md);
   --tipTop-Badge__fontWeight: var(--tipTop__fontWeight--medium);
-  --tipTop-Badge__lineHeight: 1;
-  --tipTop-Badge__minHeight: 1.25rem;
-  --tipTop-Badge__minWidth: 1.25rem;
-  --tipTop-Badge__paddingBlock: var(--tipTop__space--4);
-  --tipTop-Badge__paddingInline: var(--tipTop__space--8);
-  --tipTop-Badge__display: inline-flex;
-  --tipTop-Badge__alignItems: center;
-  --tipTop-Badge__justifyContent: center;
-  --tipTop-Badge__gap: var(--tipTop__space--4);
-  --tipTop-Badge__transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-  --tipTop-Badge__textAlign: center;
   --tipTop-Badge__whiteSpace: nowrap;
+  --tipTop-Badge__lineHeight: 1rem;
+  --tipTop-Badge__svg-width: 1em;
+  --tipTop-Badge__svg-height: 1em;
+  --tipTop-Badge__slot-margin: -0.2em;
 
   /* ### Show Outline */
   --tipTop-Badge--showOutline__boxShadow: 0 0 0 2px #fff;
@@ -38,50 +31,137 @@
   --tipTop-Badge--faded__textColorMix-percent: 65%;
   --tipTop-Badge--faded__textColorMix-blendColor: #000;
 
-  /* ### Slot */
-  --tipTop-Badge-slot__display: inline-flex;
-  --tipTop-Badge-slot__alignItems: center;
-  --tipTop-Badge-slot__justifyContent: center;
+  /* ### Size */
+  /* #### 2xs */
+  --tipTop-Badge--2xs__fontSize: var(--tipTop__fontSize--2xs);
+  --tipTop-Badge--2xs__height: var(--tipTop__height--2xs);
+  --tipTop-Badge--2xs__gap: var(--tipTop__space--4);
+  --tipTop-Badge--2xs__paddingInline: var(--tipTop__space--10);
 
-  /* #### Slot Start */
-  --tipTop-Badge-slotStart__marginInlineEnd: var(--tipTop__space--4);
+  /* #### xs */
+  --tipTop-Badge--xs__fontSize: var(--tipTop__fontSize--xs);
+  --tipTop-Badge--xs__height: var(--tipTop__height--xs);
+  --tipTop-Badge--xs__gap: var(--tipTop__space--6);
+  --tipTop-Badge--xs__paddingInline: var(--tipTop__space--12);
 
-  /* #### Slot End */
-  --tipTop-Badge-slotEnd__marginInlineStart: var(--tipTop__space--4);
+  /* #### sm */
+  --tipTop-Badge--sm__fontSize: var(--tipTop__fontSize--sm);
+  --tipTop-Badge--sm__height: var(--tipTop__height--sm);
+  --tipTop-Badge--sm__gap: var(--tipTop__space--8);
+  --tipTop-Badge--sm__paddingInline: var(--tipTop__space--14);
 
-  /* ### Children */
-  --tipTop-Badge-children__display: inline-flex;
-  --tipTop-Badge-children__alignItems: center;
-  --tipTop-Badge-children__justifyContent: center;
+  /* #### md */
+  --tipTop-Badge--md__fontSize: var(--tipTop__fontSize--md);
+  --tipTop-Badge--md__height: var(--tipTop__height--md);
+  --tipTop-Badge--md__gap: var(--tipTop__space--10);
+  --tipTop-Badge--md__paddingInline: var(--tipTop__space--16);
+
+  /* #### lg */
+  --tipTop-Badge--lg__fontSize: var(--tipTop__fontSize--lg);
+  --tipTop-Badge--lg__height: var(--tipTop__height--lg);
+  --tipTop-Badge--lg__gap: var(--tipTop__space--12);
+  --tipTop-Badge--lg__paddingInline: var(--tipTop__space--18);
+
+  /* #### xl */
+  --tipTop-Badge--xl__fontSize: var(--tipTop__fontSize--xl);
+  --tipTop-Badge--xl__height: var(--tipTop__height--xl);
+  --tipTop-Badge--xl__gap: var(--tipTop__space--14);
+  --tipTop-Badge--xl__paddingInline: var(--tipTop__space--20);
+
+  /* #### 2xl */
+  --tipTop-Badge--2xl__fontSize: var(--tipTop__fontSize--2xl);
+  --tipTop-Badge--2xl__height: var(--tipTop__height--2xl);
+  --tipTop-Badge--2xl__gap: var(--tipTop__space--16);
+  --tipTop-Badge--2xl__paddingInline: var(--tipTop__space--22);
+}
+
+.tipTop-Badge,
+.tipTop-Badge * {
+  box-sizing: border-box;
 }
 
 /* Base Badge Root Styles */
 .tipTop-Badge {
-  border-width: var(--tipTop-Badge__borderWidth);
-  border-style: solid;
-  border-radius: var(--tipTop-Badge__borderRadius);
-  font-size: var(--tipTop-Badge__fontSize);
-  font-weight: var(--tipTop-Badge__fontWeight);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: var(--tipTop-Badge__borderRadius); */
+  /* font-size: var(--tipTop-Badge__fontSize);
+  font-weight: var(--tipTop-Badge__fontWeight); */
   line-height: var(--tipTop-Badge__lineHeight);
-  min-height: var(--tipTop-Badge__minHeight);
-  min-width: var(--tipTop-Badge__minWidth);
-  padding-block: var(--tipTop-Badge__paddingBlock);
-  padding-inline: var(--tipTop-Badge__paddingInline);
-  display: var(--tipTop-Badge__display);
-  align-items: var(--tipTop-Badge__alignItems);
-  justify-content: var(--tipTop-Badge__justifyContent);
+  /* min-height: var(--tipTop-Badge__minHeight);
+  min-width: var(--tipTop-Badge__minWidth); */
+  /* padding-block: var(--tipTop-Badge__paddingBlock); */
+  /* padding-inline: var(--tipTop-Badge__paddingInline); */
+  /* justify-content: var(--tipTop-Badge__justifyContent); */
   gap: var(--tipTop-Badge__gap);
-  transition: var(--tipTop-Badge__transition);
-  text-align: var(--tipTop-Badge__textAlign);
+  /* transition: var(--tipTop-Badge__transition); */
+  /* text-align: var(--tipTop-Badge__textAlign); */
   white-space: var(--tipTop-Badge__whiteSpace);
 }
 
-/* Show Outline */
+/* Icons ------------------------------------------------------------------ */
+.tipTop-Badge svg {
+  width: var(--tipTop-Badge__svg-width);
+  height: var(--tipTop-Badge__svg-height);
+  display: block;
+}
+
+/* Slots ------------------------------------------------------------------ */
+.tipTop-Badge-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tipTop-Badge-slot--start {
+  margin-left: var(--tipTop-Badge__slot-margin);
+}
+
+.tipTop-Badge-slot--end {
+  margin-right: var(--tipTop-Badge__slot-margin);
+}
+
+/* Fixed Ratio------------------------------------------------------------- */
+.tipTop-Badge--fixedRatio {
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.tipTop-Badge--fixedRatio.tipTop-Badge--2xs {
+  width: var(--tipTop-Badge--2xs__height);
+}
+
+.tipTop-Badge--fixedRatio.tipTop-Badge--xs {
+  width: var(--tipTop-Badge--xs__height);
+}
+
+.tipTop-Badge--fixedRatio.tipTop-Badge--sm {
+  width: var(--tipTop-Badge--sm__height);
+}
+
+.tipTop-Badge--fixedRatio.tipTop-Badge--md {
+  width: var(--tipTop-Badge--md__height);
+}
+
+.tipTop-Badge--fixedRatio.tipTop-Badge--lg {
+  width: var(--tipTop-Badge--lg__height);
+}
+
+.tipTop-Badge--fixedRatio.tipTop-Badge--xl {
+  width: var(--tipTop-Badge--xl__height);
+}
+
+.tipTop-Badge--fixedRatio.tipTop-Badge--2xl {
+  width: var(--tipTop-Badge--2xl__height);
+}
+
+/* Outline ------------------------------------------------------------------- */
 .tipTop-Badge--showOutline {
   box-shadow: var(--tipTop-Badge--showOutline__boxShadow);
 }
 
-/* Position Styles */
+/* Position ------------------------------------------------------------------- */
 .tipTop-Badge--position-top,
 .tipTop-Badge--position-top-right,
 .tipTop-Badge--position-right,
@@ -142,87 +222,151 @@
   transform: translate(-50%, -50%);
 }
 
-/* Size Styles */
+
+/* Variant ---------------------------------------------------------------- */
+.tipTop-Badge--primary {
+  --tipTop-Badge__backgroundColor: var(--tipTop__color--primary);
+  --tipTop-Badge__color: var(--tipTop__color--light);
+}
+
+.tipTop-Badge--secondary {
+  --tipTop-Badge__backgroundColor: var(--tipTop__color--secondary);
+  --tipTop-Badge__color: var(--tipTop__color--light);
+}
+
+.tipTop-Badge--neutral {
+  --tipTop-Badge__backgroundColor: var(--tipTop__color--neutral);
+  --tipTop-Badge__color: var(--tipTop__color--light);
+}
+
+.tipTop-Badge--danger {
+  --tipTop-Badge__backgroundColor: var(--tipTop__color--danger);
+  --tipTop-Badge__color: var(--tipTop__color--light);
+}
+
+.tipTop-Badge--warning {
+  --tipTop-Badge__backgroundColor: var(--tipTop__color--warning);
+  --tipTop-Badge__color: var(--tipTop__color--light);
+}
+
+.tipTop-Badge--success {
+  --tipTop-Badge__backgroundColor: var(--tipTop__color--success);
+  --tipTop-Badge__color: var(--tipTop__color--light);
+}
+
+.tipTop-Badge--light {
+  --tipTop-Badge__backgroundColor: var(--tipTop__color--light);
+  --tipTop-Badge__color: var(--tipTop__color--dark);
+}
+
+.tipTop-Badge--dark {
+  --tipTop-Badge__backgroundColor: var(--tipTop__color--dark);
+  --tipTop-Badge__color: var(--tipTop__color--light);
+}
+
+/* Appearance ------------------------------------------------------------- */
+.tipTop-Badge--solid {
+  background-color: var(--tipTop-Badge__backgroundColor);
+  color: var(--tipTop-Badge__color);
+}
+
+.tipTop-Badge--faded {
+  background-color: color-mix(in var(--tipTop-Badge--faded__bgColorMix-colorSpace), var(--tipTop-Badge__backgroundColor) var(--tipTop-Badge--faded__bgColorMix-percent), var(--tipTop-Badge--faded__bgColorMix-blendColor));
+  color: color-mix(in var(--tipTop-Badge--faded__textColorMix-colorSpace), var(--tipTop-Badge__backgroundColor) var(--tipTop-Badge--faded__textColorMix-percent), var(--tipTop-Badge--faded__textColorMix-blendColor));
+}
+
+.tipTop-Badge--outline {
+  background-color: transparent;
+  border-width: var(--tipTop-Badge__borderWidth);
+  border-style: solid;
+  border-color: var(--tipTop-Badge__backgroundColor);
+  color: var(--tipTop-Badge__backgroundColor);
+}
+
+.tipTop-Badge--ghost {
+  background-color: transparent;
+  color: var(--tipTop-Badge__backgroundColor);
+}
+
+.tipTop-Badge--text {
+  background-color: transparent;
+  color: var(--tipTop-Badge__backgroundColor);
+  padding: 0;
+}
+
+/* Size ------------------------------------------------------------------- */
 .tipTop-Badge--2xs {
-  font-size: var(--tipTop__fontSize--2xs);
-  padding-block: var(--tipTop__space--2);
-  padding-inline: var(--tipTop__space--4);
-  min-height: 0.875rem;
-  min-width: 0.875rem;
-  gap: var(--tipTop__space--2);
+  font-size: var(--tipTop-Badge--2xs__fontSize);
+  height: var(--tipTop-Badge--2xs__height);
+  gap: var(--tipTop-Badge--2xs__gap);
+  padding-inline: var(--tipTop-Badge--2xs__paddingInline);
 }
 
 .tipTop-Badge--xs {
-  font-size: var(--tipTop__fontSize--xs);
-  padding-block: var(--tipTop__space--2);
-  padding-inline: var(--tipTop__space--4);
-  min-height: 0.875rem;
-  min-width: 0.875rem;
-  gap: var(--tipTop__space--2);
+  font-size: var(--tipTop-Badge--xs__fontSize);
+  height: var(--tipTop-Badge--xs__height);
+  gap: var(--tipTop-Badge--xs__gap);
+  padding-inline: var(--tipTop-Badge--xs__paddingInline);
 }
 
 .tipTop-Badge--sm {
-  font-size: var(--tipTop__fontSize--sm);
-  padding-block: var(--tipTop__space--2);
-  padding-inline: var(--tipTop__space--6);
-  min-height: 1rem;
-  min-width: 1rem;
-  gap: var(--tipTop__space--2);
+  font-size: var(--tipTop-Badge--sm__fontSize);
+  height: var(--tipTop-Badge--sm__height);
+  gap: var(--tipTop-Badge--sm__gap);
+  padding-inline: var(--tipTop-Badge--sm__paddingInline);
 }
 
 .tipTop-Badge--md {
-  font-size: var(--tipTop__fontSize--md);
-  padding-block: var(--tipTop__space--2);
-  padding-inline: var(--tipTop__space--6);
-  min-height: 1rem;
-  min-width: 1rem;
-  gap: var(--tipTop__space--2);
+  font-size: var(--tipTop-Badge--md__fontSize);
+  height: var(--tipTop-Badge--md__height);
+  gap: var(--tipTop-Badge--md__gap);
+  padding-inline: var(--tipTop-Badge--md__paddingInline);
 }
 
 .tipTop-Badge--lg {
-  font-size: var(--tipTop__fontSize--lg);
-  padding-block: var(--tipTop__space--6);
-  padding-inline: var(--tipTop__space--10);
-  min-height: 1.5rem;
-  min-width: 1.5rem;
-  gap: var(--tipTop__space--6);
+  font-size: var(--tipTop-Badge--lg__fontSize);
+  height: var(--tipTop-Badge--lg__height);
+  gap: var(--tipTop-Badge--lg__gap);
+  padding-inline: var(--tipTop-Badge--lg__paddingInline);
 }
 
 .tipTop-Badge--xl {
-  font-size: var(--tipTop__fontSize--xl);
-  padding-block: var(--tipTop__space--8);
-  padding-inline: var(--tipTop__space--12);
-  min-height: 1.75rem;
-  min-width: 1.75rem;
-  gap: var(--tipTop__space--8);
+  font-size: var(--tipTop-Badge--xl__fontSize);
+  height: var(--tipTop-Badge--xl__height);
+  gap: var(--tipTop-Badge--xl__gap);
+  padding-inline: var(--tipTop-Badge--xl__paddingInline);
 }
 
 .tipTop-Badge--2xl {
-  font-size: var(--tipTop__fontSize--2xl);
-  padding-block: var(--tipTop__space--10);
-  padding-inline: var(--tipTop__space--14);
-  min-height: 2rem;
-  min-width: 2rem;
-  gap: var(--tipTop__space--8);
+  font-size: var(--tipTop-Badge--2xl__fontSize);
+  height: var(--tipTop-Badge--2xl__height);
+  gap: var(--tipTop-Badge--2xl__gap);
+  padding-inline: var(--tipTop-Badge--2xl__paddingInline);
 }
 
-/* Shape Styles */
-.tipTop-Badge--circle {
-  border-radius: 50%;
-  aspect-ratio: 1;
-  padding-inline: var(--tipTop-Badge__paddingBlock);
+/* Shape ------------------------------------------------------------------ */
+.tipTop-Badge--rounded {
+  border-radius: var(--tipTop-Badge__borderRadius, var(--tipTop__borderRadius--normal));
 }
 
 .tipTop-Badge--pill {
-  border-radius: 9999px;
+  border-radius: var(--tipTop__borderRadius--full);
 }
 
-/* Empty Badge (no content) */
+.tipTop-Badge--circle {
+  border-radius: 50%;
+}
+
+.tipTop-Badge--square {
+  border-radius: 0;
+}
+
+/* Empty ------------------------------------------------------------------ */
 .tipTop-Badge--empty {
   padding: 0;
-  width: var(--tipTop-Badge__minWidth);
-  height: var(--tipTop-Badge__minHeight);
+  aspect-ratio: 1;
 }
+/*
 
 .tipTop-Badge--empty.tipTop-Badge--xs {
   width: 0.875rem;
@@ -247,362 +391,7 @@
 .tipTop-Badge--empty.tipTop-Badge--xl {
   width: 2rem;
   height: 2rem;
-}
+} */
 
-/* Variant: Primary */
-.tipTop-Badge--solid.tipTop-Badge--primary {
-  background-color: var(--tipTop__color--primary);
-  border-color: var(--tipTop__color--primary);
-  color: #fff;
-}
 
-.tipTop-Badge--faded.tipTop-Badge--primary {
-  background-color: color-mix(
-    in var(--tipTop-Badge--faded__bgColorMix-colorSpace),
-    var(--tipTop__color--primary) var(--tipTop-Badge--faded__bgColorMix-percent),
-    var(--tipTop-Badge--faded__bgColorMix-blendColor)
-  );
-  border-color: transparent;
-  color: color-mix(
-    in var(--tipTop-Badge--faded__textColorMix-colorSpace),
-    var(--tipTop__color--primary) var(--tipTop-Badge--faded__textColorMix-percent),
-    var(--tipTop-Badge--faded__textColorMix-blendColor)
-  );
-}
 
-.tipTop-Badge--outline.tipTop-Badge--primary {
-  background-color: transparent;
-  border-color: var(--tipTop__color--primary);
-  color: var(--tipTop__color--primary);
-}
-
-.tipTop-Badge--ghost.tipTop-Badge--primary {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--primary);
-}
-
-.tipTop-Badge--text.tipTop-Badge--primary {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--primary);
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
-}
-
-/* Variant: Secondary */
-.tipTop-Badge--solid.tipTop-Badge--secondary {
-  background-color: var(--tipTop__color--secondary);
-  border-color: var(--tipTop__color--secondary);
-  color: #fff;
-}
-
-.tipTop-Badge--faded.tipTop-Badge--secondary {
-  background-color: color-mix(
-    in var(--tipTop-Badge--faded__bgColorMix-colorSpace),
-    var(--tipTop__color--secondary) var(--tipTop-Badge--faded__bgColorMix-percent),
-    var(--tipTop-Badge--faded__bgColorMix-blendColor)
-  );
-  border-color: transparent;
-  color: color-mix(
-    in var(--tipTop-Badge--faded__textColorMix-colorSpace),
-    var(--tipTop__color--secondary) var(--tipTop-Badge--faded__textColorMix-percent),
-    var(--tipTop-Badge--faded__textColorMix-blendColor)
-  );
-}
-
-.tipTop-Badge--outline.tipTop-Badge--secondary {
-  background-color: transparent;
-  border-color: var(--tipTop__color--secondary);
-  color: var(--tipTop__color--secondary);
-}
-
-.tipTop-Badge--ghost.tipTop-Badge--secondary {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--secondary);
-}
-
-.tipTop-Badge--text.tipTop-Badge--secondary {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--secondary);
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
-}
-
-/* Variant: Neutral */
-.tipTop-Badge--solid.tipTop-Badge--neutral {
-  background-color: var(--tipTop__color--neutral);
-  border-color: var(--tipTop__color--neutral);
-  color: #fff;
-}
-
-.tipTop-Badge--faded.tipTop-Badge--neutral {
-  background-color: color-mix(
-    in var(--tipTop-Badge--faded__bgColorMix-colorSpace),
-    var(--tipTop__color--neutral) var(--tipTop-Badge--faded__bgColorMix-percent),
-    var(--tipTop-Badge--faded__bgColorMix-blendColor)
-  );
-  border-color: transparent;
-  color: color-mix(
-    in var(--tipTop-Badge--faded__textColorMix-colorSpace),
-    var(--tipTop__color--neutral) var(--tipTop-Badge--faded__textColorMix-percent),
-    var(--tipTop-Badge--faded__textColorMix-blendColor)
-  );
-}
-
-.tipTop-Badge--outline.tipTop-Badge--neutral {
-  background-color: transparent;
-  border-color: var(--tipTop__color--neutral);
-  color: var(--tipTop__color--neutral);
-}
-
-.tipTop-Badge--ghost.tipTop-Badge--neutral {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--neutral);
-}
-
-.tipTop-Badge--text.tipTop-Badge--neutral {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--neutral);
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
-}
-
-/* Variant: Danger */
-.tipTop-Badge--solid.tipTop-Badge--danger {
-  background-color: var(--tipTop__color--danger);
-  border-color: var(--tipTop__color--danger);
-  color: #fff;
-}
-
-.tipTop-Badge--faded.tipTop-Badge--danger {
-  background-color: color-mix(
-    in var(--tipTop-Badge--faded__bgColorMix-colorSpace),
-    var(--tipTop__color--danger) var(--tipTop-Badge--faded__bgColorMix-percent),
-    var(--tipTop-Badge--faded__bgColorMix-blendColor)
-  );
-  border-color: transparent;
-  color: color-mix(
-    in var(--tipTop-Badge--faded__textColorMix-colorSpace),
-    var(--tipTop__color--danger) var(--tipTop-Badge--faded__textColorMix-percent),
-    var(--tipTop-Badge--faded__textColorMix-blendColor)
-  );
-}
-
-.tipTop-Badge--outline.tipTop-Badge--danger {
-  background-color: transparent;
-  border-color: var(--tipTop__color--danger);
-  color: var(--tipTop__color--danger);
-}
-
-.tipTop-Badge--ghost.tipTop-Badge--danger {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--danger);
-}
-
-.tipTop-Badge--text.tipTop-Badge--danger {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--danger);
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
-}
-
-/* Variant: Warning */
-.tipTop-Badge--solid.tipTop-Badge--warning {
-  background-color: var(--tipTop__color--warning);
-  border-color: var(--tipTop__color--warning);
-  color: #000;
-}
-
-.tipTop-Badge--faded.tipTop-Badge--warning {
-  background-color: color-mix(
-    in var(--tipTop-Badge--faded__bgColorMix-colorSpace),
-    var(--tipTop__color--warning) var(--tipTop-Badge--faded__bgColorMix-percent),
-    var(--tipTop-Badge--faded__bgColorMix-blendColor)
-  );
-  border-color: transparent;
-  color: color-mix(
-    in var(--tipTop-Badge--faded__textColorMix-colorSpace),
-    var(--tipTop__color--warning) var(--tipTop-Badge--faded__textColorMix-percent),
-    var(--tipTop-Badge--faded__textColorMix-blendColor)
-  );
-}
-
-.tipTop-Badge--outline.tipTop-Badge--warning {
-  background-color: transparent;
-  border-color: var(--tipTop__color--warning);
-  color: var(--tipTop__color--warning);
-}
-
-.tipTop-Badge--ghost.tipTop-Badge--warning {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--warning);
-}
-
-.tipTop-Badge--text.tipTop-Badge--warning {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--warning);
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
-}
-
-/* Variant: Success */
-.tipTop-Badge--solid.tipTop-Badge--success {
-  background-color: var(--tipTop__color--success);
-  border-color: var(--tipTop__color--success);
-  color: #fff;
-}
-
-.tipTop-Badge--faded.tipTop-Badge--success {
-  background-color: color-mix(
-    in var(--tipTop-Badge--faded__bgColorMix-colorSpace),
-    var(--tipTop__color--success) var(--tipTop-Badge--faded__bgColorMix-percent),
-    var(--tipTop-Badge--faded__bgColorMix-blendColor)
-  );
-  border-color: transparent;
-  color: color-mix(
-    in var(--tipTop-Badge--faded__textColorMix-colorSpace),
-    var(--tipTop__color--success) var(--tipTop-Badge--faded__textColorMix-percent),
-    var(--tipTop-Badge--faded__textColorMix-blendColor)
-  );
-}
-
-.tipTop-Badge--outline.tipTop-Badge--success {
-  background-color: transparent;
-  border-color: var(--tipTop__color--success);
-  color: var(--tipTop__color--success);
-}
-
-.tipTop-Badge--ghost.tipTop-Badge--success {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--success);
-}
-
-.tipTop-Badge--text.tipTop-Badge--success {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--success);
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
-}
-
-/* Variant: Dark */
-.tipTop-Badge--solid.tipTop-Badge--dark {
-  background-color: var(--tipTop__color--dark);
-  border-color: var(--tipTop__color--dark);
-  color: #fff;
-}
-
-.tipTop-Badge--faded.tipTop-Badge--dark {
-  background-color: color-mix(
-    in var(--tipTop-Badge--faded__bgColorMix-colorSpace),
-    var(--tipTop__color--dark) var(--tipTop-Badge--faded__bgColorMix-percent),
-    var(--tipTop-Badge--faded__bgColorMix-blendColor)
-  );
-  border-color: transparent;
-  color: color-mix(
-    in var(--tipTop-Badge--faded__textColorMix-colorSpace),
-    var(--tipTop__color--dark) var(--tipTop-Badge--faded__textColorMix-percent),
-    var(--tipTop-Badge--faded__textColorMix-blendColor)
-  );
-}
-
-.tipTop-Badge--outline.tipTop-Badge--dark {
-  background-color: transparent;
-  border-color: var(--tipTop__color--dark);
-  color: var(--tipTop__color--dark);
-}
-
-.tipTop-Badge--ghost.tipTop-Badge--dark {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--dark);
-}
-
-.tipTop-Badge--text.tipTop-Badge--dark {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--dark);
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
-}
-
-/* Variant: Light */
-.tipTop-Badge--solid.tipTop-Badge--light {
-  background-color: var(--tipTop__color--light);
-  border-color: var(--tipTop__color--light);
-  color: var(--tipTop__color--dark);
-}
-
-.tipTop-Badge--faded.tipTop-Badge--light {
-  background-color: color-mix(
-    in var(--tipTop-Badge--faded__bgColorMix-colorSpace),
-    var(--tipTop__color--light) var(--tipTop-Badge--faded__bgColorMix-percent),
-    var(--tipTop-Badge--faded__bgColorMix-blendColor)
-  );
-  border-color: transparent;
-  color: color-mix(
-    in var(--tipTop-Badge--faded__textColorMix-colorSpace),
-    var(--tipTop__color--light) var(--tipTop-Badge--faded__textColorMix-percent),
-    var(--tipTop-Badge--faded__textColorMix-blendColor)
-  );
-}
-
-.tipTop-Badge--outline.tipTop-Badge--light {
-  background-color: transparent;
-  border-color: var(--tipTop__color--light);
-  color: var(--tipTop__color--light);
-}
-
-.tipTop-Badge--ghost.tipTop-Badge--light {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--light);
-}
-
-.tipTop-Badge--text.tipTop-Badge--light {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--tipTop__color--light);
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
-}
-
-/* Slot Styles */
-.tipTop-Badge-slot {
-  display: var(--tipTop-Badge-slot__display);
-  align-items: var(--tipTop-Badge-slot__alignItems);
-  justify-content: var(--tipTop-Badge-slot__justifyContent);
-}
-
-.tipTop-Badge-slotStart {
-  margin-inline-end: var(--tipTop-Badge-slotStart__marginInlineEnd);
-}
-
-.tipTop-Badge-slotEnd {
-  margin-inline-start: var(--tipTop-Badge-slotEnd__marginInlineStart);
-}
-
-/* Children Styles */
-.tipTop-Badge-children {
-  display: var(--tipTop-Badge-children__display);
-  align-items: var(--tipTop-Badge-children__alignItems);
-  justify-content: var(--tipTop-Badge-children__justifyContent);
-}

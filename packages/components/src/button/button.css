@@ -10,6 +10,7 @@
   --tipTop-Button__lineHeight: 1rem;
   --tipTop-Button__svg-width: 1em;
   --tipTop-Button__svg-height: 1em;
+  --tipTop-Button__slot-margin: -0.2em;
 
   /* ### Variants */
   /* #### `solid` */
@@ -88,11 +89,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-block-start: var(--tipTop-Button__paddingBlockStart);
-  padding-block-end: var(--tipTop-Button__paddingBlockEnd);
-  padding-inline-start: var(--tipTop-Button__paddingInlineStart);
-  padding-inline-end: var(--tipTop-Button__paddingInlineEnd);
-  border: var(--tipTop-Button__border);
+  border: none;
   font-weight: var(--tipTop-Button__fontWeight);
   transition: var(--tipTop-Button__transition);
   white-space: var(--tipTop-Button__whiteSpace);
@@ -119,6 +116,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tipTop-Button-slot--start {
+  margin-left: var(--tipTop-Button__slot-margin);
+}
+
+.tipTop-Button-slot--end {
+  margin-right: var(--tipTop-Button__slot-margin);
+}
+
+/* Fixed Ratio------------------------------------------------------------- */
+.tipTop-Button--fixedRatio {
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--2xs {
+  width: var(--tipTop-Button--2xs__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--xs {
+  width: var(--tipTop-Button--xs__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--sm {
+  width: var(--tipTop-Button--sm__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--md {
+  width: var(--tipTop-Button--md__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--lg {
+  width: var(--tipTop-Button--lg__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--xl {
+  width: var(--tipTop-Button--xl__height);
+}
+
+.tipTop-Button--fixedRatio.tipTop-Button--2xl {
+  width: var(--tipTop-Button--2xl__height);
 }
 
 /* Variant ---------------------------------------------------------------- */
@@ -308,6 +347,14 @@
 }
 
 /* Loading ---------------------------------------------------------------- */
+.tipTop-Button-loader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .tipTop-Button--loading {
   pointer-events: none;
   cursor: not-allowed;
@@ -322,13 +369,7 @@
   }
 }
 
-.tipTop-Button-loader {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 
 

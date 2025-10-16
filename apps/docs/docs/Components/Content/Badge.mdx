@@ -64,7 +64,7 @@ render(
 ## Shape
 
 ```jsx live noInline
-const shapes = ["pill", "circle"];
+const shapes = ["rounded", "pill", "circle", "square"];
 
 render(
   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -96,28 +96,31 @@ Content can be added to the start and end of the badge using the `slotStart` and
 
 ```jsx live
 // Icons from https://tabler.io/docs/icons/react
-<div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-  <Badge slotStart={<IconStar size={14} />}>Starred</Badge>
-  <Badge slotEnd={<IconX size={14} />}>Close</Badge>
-  <Badge slotStart="🔥">Hot</Badge>
-  <Badge slotStart="99+" slotEnd={<IconX size={14} />} variant="danger" />
+<div style={{ display: "flex", gap: "10px" }}>
+  <Badge slotEnd={<IconArrowRight size={20} />}>With icon</Badge>
+  <Badge slotStart="😀">With Emoji</Badge>
+  <Badge slotStart="'Slot Start'" slotEnd="'Slot End'">
+    With Text
+  </Badge>
 </div>
 ```
 
-## With Icons
+## Fixed Ratio
+
+When just using icons, you can set the `fixedRatio` prop to make sure the badge is always a square.
 
 ```jsx live
 <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-  <Badge shape="circle">
+  <Badge shape="rounded" fixedRatio>
     <IconBell size={14} />
   </Badge>
-  <Badge shape="circle" variant="success">
+  <Badge shape="pill" variant="success" fixedRatio>
     <IconCheck size={14} />
   </Badge>
-  <Badge shape="circle" variant="danger">
+  <Badge shape="circle" variant="danger" fixedRatio>
     <IconAlertTriangle size={14} />
   </Badge>
-  <Badge shape="circle" variant="warning">
+  <Badge shape="square" variant="warning" fixedRatio>
     <IconClock size={14} />
   </Badge>
 </div>
@@ -129,9 +132,7 @@ Content can be added to the start and end of the badge using the `slotStart` and
 <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
   <Badge>5</Badge>
   <Badge variant="danger">99+</Badge>
-  <Badge variant="success" size="sm">
-    12
-  </Badge>
+  <Badge variant="success">12</Badge>
   <Badge variant="warning" shape="circle">
     3
   </Badge>
@@ -234,49 +235,6 @@ Badges can be absolutely positioned relative to their parent container using the
   <Avatar size="lg" />
   <Badge position="top-right" variant="danger" showOutline>
     3
-  </Badge>
-</div>
-```
-
-### Status Indicators
-
-```jsx live
-<div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
-  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-    <Badge variant="success" size="sm" />
-    <span>Online</span>
-  </div>
-
-  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-    <Badge variant="warning" size="sm" />
-    <span>Away</span>
-  </div>
-
-  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-    <Badge variant="neutral" size="sm" />
-    <span>Offline</span>
-  </div>
-</div>
-```
-
-### Category Tags
-
-```jsx live
-<div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-  <Badge appearance="faded" variant="primary">
-    React
-  </Badge>
-  <Badge appearance="faded" variant="secondary">
-    TypeScript
-  </Badge>
-  <Badge appearance="faded" variant="success">
-    CSS
-  </Badge>
-  <Badge appearance="faded" variant="warning">
-    JavaScript
-  </Badge>
-  <Badge appearance="outline" variant="neutral">
-    Documentation
   </Badge>
 </div>
 ```

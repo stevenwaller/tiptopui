@@ -20,6 +20,7 @@ export interface ButtonProps
   slotStart?: React.ReactNode | string
   slotEnd?: React.ReactNode | string
   loading?: boolean
+  fixedRatio?: boolean
   variant?:
     | 'primary'
     | 'secondary'
@@ -62,6 +63,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       loading,
+      fixedRatio,
       variant = 'primary',
       appearance = 'solid',
       size = 'md',
@@ -90,7 +92,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           <span
             className={cx(
               'tipTop-Button-slot',
-              'tipTop-Button-slotStart',
+              'tipTop-Button-slot--start',
               classNames?.slot,
               classNames?.slotStart,
             )}
@@ -109,7 +111,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           <span
             className={cx(
               'tipTop-Button-slot',
-              'tipTop-Button-slotEnd',
+              'tipTop-Button-slot--end',
               classNames?.slot,
               classNames?.slotEnd,
             )}
@@ -146,6 +148,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           `tipTop-Button--${shape}`,
           justify && `tipTop-Button--justify-${justify}`,
           loading && 'tipTop-Button--loading',
+          (fixedRatio || shape === 'circle') && 'tipTop-Button--fixedRatio',
           fullWidth && 'tipTop-Button--fullWidth',
           className,
           classNames?.root,

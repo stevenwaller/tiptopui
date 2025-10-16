@@ -92,7 +92,30 @@ Content can be added to the start and end of the button using the `slotStart` an
 <div style={{ display: "flex", gap: "10px" }}>
   <Button slotEnd={<IconArrowRight size={20} />}>With icon</Button>
   <Button slotStart="😀">With Emoji</Button>
-  <Button slotStart="Foo -">With Text</Button>
+  <Button slotStart="'Slot Start'" slotEnd="'Slot End'">
+    With Text
+  </Button>
+</div>
+```
+
+## Fixed Ratio
+
+When just using icons, you can set the `fixedRatio` prop to make sure the button is always a square.
+
+```jsx live
+<div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+  <Button shape="rounded" fixedRatio>
+    <IconBell size={14} />
+  </Button>
+  <Button shape="pill" variant="success" fixedRatio>
+    <IconCheck size={14} />
+  </Button>
+  <Button shape="circle" variant="danger" fixedRatio>
+    <IconAlertTriangle size={14} />
+  </Button>
+  <Button shape="square" variant="warning" fixedRatio>
+    <IconClock size={14} />
+  </Button>
 </div>
 ```
 
